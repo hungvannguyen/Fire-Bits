@@ -1,0 +1,92 @@
+@theme {
+    --font-Unbounded: 'Unbounded', sans-serif;
+    --font-Satoshi: 'Satoshi', sans-serif;
+    --font-Winky: 'Winky Sans', sans-serif;
+
+    --color-lightTone: #F58327;
+    --color-darkTone: #0A0A0A;
+    --color-text: #0A0A0A;
+    --color-lightGray: rgba(51, 66, 50, 0.05);
+    --color-mediumGray: rgba(56, 64, 54, 0.5);
+    --color-blacko5: rgba(13, 13, 13, 0.05);
+    --color-blacko10: rgba(13, 13, 13, 0.1);
+    --color-black: rgba(13, 13, 13, 1);
+    --color-white: rgba(255, 255, 255, 1);
+    --color-whiteo5: rgba(255, 255, 255, 0.05);
+    --color-whiteo10: rgba(255, 255, 255, 0.1);
+    --color-whiteo15: rgba(255, 255, 255, 0.15);
+    --color-whiteo30: rgba(255, 255, 255, 0.3);
+    --color-whiteo50: rgba(255, 255, 255, 0.5);
+    --color-whiteo80: rgba(255, 255, 255, 0.8);
+    --color-lightBlack: #1F1D1D;
+}
+
+@layer base {
+    h1 {
+        @apply font-Unbounded font-normal text-white text-[70px] leading-[0.9em];
+    }
+
+    h1.inner-page {
+        @apply font-Unbounded font-normal text-white text-[50px] leading-[1.1em];
+    }
+
+    h2 {
+        @apply font-Unbounded font-normal text-white text-[40px] leading-[1.1em];
+    }
+
+    h3 {
+        @apply font-Unbounded font-normal text-white text-[20px] leading-[1.3em];
+    }
+
+    h4 {
+        @apply font-Unbounded font-light text-white text-[16px] leading-[150%];
+    }
+
+    h5 {
+        @apply font-Unbounded font-medium text-[#333333] text-[14px] leading-[1.4em];
+    }
+
+    .paragraphL {
+        @apply font-Satoshi font-normal text-white text-[30px] leading-[1.3em];
+    }
+
+    .paragraphM {
+        @apply font-Satoshi font-normal text-white text-[20px] leading-[1.5em];
+    }
+
+    .paragraphS {
+        @apply font-Satoshi font-normal text-white text-[18px] leading-[1.5em];
+    }
+
+    .paragraphXS {
+        @apply font-Satoshi font-normal text-white text-[16px] leading-[1.5em];
+    }
+
+    .bodyXXL {
+        @apply font-Unbounded font-normal text-white text-[96px] leading-[1.2em];
+    }
+
+    .bodyUppercase {
+        @apply font-Unbounded font-normal text-white text-[20px] leading-[1.3em] uppercase;
+    }
+
+    .displayText {
+        @apply font-Unbounded font-semibold text-white text-[50px] leading-[0.8em];
+    }
+
+    .label {
+        @apply font-Satoshi font-black text-white uppercase text-[11px] leading-[2em];
+    }
+
+    .navText {
+        @apply font-Unbounded font-normal text-text text-[12px] leading-[2em];
+    }
+
+    .footerLink {
+        @apply text-white no-underline hover:text-white hover:underline;
+    }
+
+    .link {
+        @apply text-white no-underline hover:text-lightTone hover:underline;
+    }
+}
