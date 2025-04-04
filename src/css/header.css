@@ -6,7 +6,7 @@
   }
 
   .__logo {
-    @apply text-lightTone text-2xl font-bold;
+    @apply text-2xl font-bold text-lightTone;
   }
 
   .__nav {
@@ -17,7 +17,7 @@
     }
 
     .active {
-      @apply rounded-[220px] bg-whiteo30 text-lightTone;
+      @apply rounded-[220px] bg-whiteo30 text-lightTone transition-all duration-200 hover:scale-90;
     }
   }
 }

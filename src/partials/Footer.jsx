@@ -171,12 +171,16 @@ export default function Footer() {
 
               <form className="__subscribe">
                 <input type="email" placeholder="Your email" />
+
+                <button type="submit" className="__btn">
+                  Subscribe for newsletter
+                </button>
               </form>
             </div>
           </div>
         </div>
         <div className="__credit">
-          <span>
+          <span className="footerLink">
             &copy; {new Date().getFullYear()} Firebits. All rights reserved.
           </span>
         </div>

@@ -103,11 +103,25 @@
         }
 
         .__subscribe {
+          @apply flex gap-[6px];
+
           input {
-            @apply h-[48.5px] rounded-[20px] p-[15px];
+            @apply box-border h-[48.5px] rounded-[20px] border border-whiteo15 bg-whiteo10 p-[15px] text-white outline-none placeholder:text-sm placeholder:text-whiteo15;
+          }
+
+          .__btn {
+            @apply flex h-[48.5px] cursor-pointer items-center rounded-[20px] bg-lightTone p-[15px] font-Unbounded text-black;
           }
         }
       }
+    }
+  }
+
+  .__credit {
+    @apply mx-auto h-[16.5px] w-full max-w-[1200px] border border-t-whiteo15 pt-2.5;
+
+    span {
+      @apply flex justify-end font-Inter text-xs leading-[1.2em] font-medium text-[#888888];
     }
   }
 }
