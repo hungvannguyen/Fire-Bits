@@ -1,0 +1,40 @@
+.hero {
+  @apply relative flex h-min w-full flex-col justify-center gap-[31px] overflow-hidden pt-[180px];
+
+  .heading-content {
+    @apply relative flex w-full flex-col items-center justify-center gap-[32px] overflow-visible px-[40px];
+
+    .subheading {
+      @apply relative flex h-min w-full max-w-[800px] flex-wrap items-center justify-center gap-[10px] p-0;
+
+      .__text {
+        @apply flex shrink-[0] flex-col justify-start overflow-visible outline-none;
+      }
+
+      .bg-text {
+        @apply bg-lightTone rotate-[3deg];
+
+        h1 {
+          @apply text-darkTone rotate-[-3deg];
+        }
+      }
+
+      .bg-icon {
+        @apply flex items-center justify-center overflow-hidden p-0 h-[73px] w-[73px] rounded-full bg-lightTone;
+
+        .__icon{
+            @apply rotate-[-16deg];
+        }
+      }
+    }
+    .rich-text {
+      @apply relative h-auto w-full max-w-[600px] flex-none whitespace-pre-wrap;
+      word-break: break-word;
+      word-wrap: break-word;
+
+      p{
+        @apply text-center;
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
   }
 
   .__logo {
-    @apply text-2xl font-bold text-lightTone;
+    @apply text-lightTone text-2xl font-bold;
   }
 
   .__nav {

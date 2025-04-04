@@ -5,6 +5,10 @@
 @import "./config.css";
 @import "./header.css";
 @import "./footer.css";
+@import './common.css';
+@import './pages/home.css';
+@import './config.css';
+@import './header.css';
 
 body {
   @apply bg-black;
