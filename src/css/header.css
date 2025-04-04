@@ -1,23 +1,23 @@
 .header {
-  @apply fixed left-0 right-0 top-0 z-20 bg-transparent backdrop-blur-md;
+  @apply fixed top-0 right-0 left-0 z-20 bg-transparent backdrop-blur-md;
 
   .__container {
-    @apply px- mx-auto flex max-w-[1200px] items-center justify-between px-10 py-2.5;
+    @apply mx-auto flex max-w-[1200px] items-center justify-between px-10 py-2.5;
   }
 
   .__logo {
-    @apply text-lightTone text-2xl font-bold;
+    @apply text-2xl font-bold text-lightTone;
   }
 
   .__nav {
-    @apply border-whiteo15 flex items-center rounded-[160px] border bg-black p-2.5;
+    @apply flex items-center rounded-[160px] border border-whiteo15 bg-black p-2.5;
 
     a {
       @apply flex h-10 w-fit items-center justify-center px-5 text-white no-underline;
     }
 
     .active {
-      @apply bg-whiteo30 text-lightTone rounded-[220px];
+      @apply rounded-[220px] bg-whiteo30 text-lightTone;
     }
   }
 }
