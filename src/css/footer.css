@@ -1,0 +1,62 @@
+.footer {
+  @apply w-full;
+
+  .__container {
+    @apply mx-auto flex flex-col items-center justify-between px-10 pt-[100px] pb-[65px];
+  }
+
+  .__head {
+    @apply grid grid-cols-2 items-center justify-between gap-[30px];
+
+    .__left {
+      p {
+        @apply font-Unbounded text-[156px] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone;
+      }
+    }
+
+    .__right {
+      @apply rounded-[20px] bg-whiteo5 px-7.5 py-10;
+
+      form {
+        @apply flex flex-col items-start justify-start gap-5;
+
+        .__label {
+          @apply flex flex-col items-start justify-start gap-2.5;
+
+          span {
+            @apply font-Inter text-xs leading-[1.2em] font-medium text-[#888888];
+          }
+
+          div {
+            @apply w-[675px] rounded-[20px] bg-[rgba(187,187,187,0.15)] p-3 focus-within:outline focus-within:outline-lightTone;
+
+            input {
+              @apply h-9 w-full text-xs text-white outline-none placeholder:text-sm placeholder:text-[#999999];
+            }
+
+            textarea {
+              @apply min-h-[127px] w-full text-xs text-white outline-none placeholder:text-sm placeholder:text-[#999999];
+            }
+          }
+        }
+
+        .__btn {
+          @apply flex h-10 w-full items-center justify-center rounded-[10px] bg-lightTone font-Unbounded hover:bg-white;
+        }
+      }
+    }
+  }
+
+  .__footer {
+    .__container {
+      @apply grid grid-cols-2 items-center justify-between;
+
+      .__top {
+        @apply rounded-[30px] bg-whiteo5;
+
+        .__left {
+        }
+      }
+    }
+  }
+}

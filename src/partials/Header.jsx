@@ -16,14 +16,8 @@ export default function Header() {
           <a href="/contact" className="navText">
             Services
           </a>
-          <a href="/projects" className="navText">
-            Projects
-          </a>
           <a href="/reviews" className="navText">
             Reviews
-          </a>
-          <a href="/blog" className="navText">
-            Blog
           </a>
           <a href="/contact" className="navText">
             Contact
