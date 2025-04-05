@@ -85,27 +85,27 @@ export default function Footer() {
                   <h5 className="__label">Menu</h5>
                   <ul className="__list">
                     <li>
-                      <a className="footerLink" href="/">
+                      <a className="footerLink paragraphXS" href="/">
                         Home
                       </a>
                     </li>
                     <li>
-                      <a className="footerLink" href="/about">
+                      <a className="footerLink paragraphXS" href="/about">
                         About
                       </a>
                     </li>
                     <li>
-                      <a className="footerLink" href="/services">
+                      <a className="footerLink paragraphXS" href="/services">
                         Services
                       </a>
                     </li>
                     <li>
-                      <a className="footerLink" href="/reviews">
+                      <a className="footerLink paragraphXS" href="/reviews">
                         Reviews
                       </a>
                     </li>
                     <li>
-                      <a className="footerLink" href="/contact">
+                      <a className="footerLink paragraphXS" href="/contact">
                         Contact
                       </a>
                     </li>
@@ -145,30 +145,31 @@ export default function Footer() {
               </div>
             </div>
             <div className="__bottom">
-              <h5 className="__label">Follow us</h5>
-              <ul className="__list">
-                <li>
-                  <a className="footerLink __social-logo" href="/">
-                    <FacebookLogo size={24} weight="fill" />
-                  </a>
-                </li>
-                <li>
-                  <a className="footerLink __social-logo" href="/about">
-                    <TwitterLogo size={24} weight="fill" />
-                  </a>
-                </li>
-                <li>
-                  <a className="footerLink __social-logo" href="/services">
-                    <LinkedinLogo size={24} weight="fill" />
-                  </a>
-                </li>
-                <li>
-                  <a className="footerLink __social-logo" href="/reviews">
-                    <InstagramLogo size={24} weight="fill" />
-                  </a>
-                </li>
-              </ul>
-
+              <div className="__follow">
+                <h5 className="__label">Follow us</h5>
+                <ul className="__list">
+                  <li>
+                    <a className="footerLink __social-logo" href="/">
+                      <FacebookLogo size={24} weight="fill" />
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footerLink __social-logo" href="/about">
+                      <TwitterLogo size={24} weight="fill" />
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footerLink __social-logo" href="/services">
+                      <LinkedinLogo size={24} weight="fill" />
+                    </a>
+                  </li>
+                  <li>
+                    <a className="footerLink __social-logo" href="/reviews">
+                      <InstagramLogo size={24} weight="fill" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <form className="__subscribe">
                 <input type="email" placeholder="Your email" />
 

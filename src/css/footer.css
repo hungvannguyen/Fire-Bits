@@ -1,16 +1,16 @@
 .footer {
-  @apply relative w-full;
+  @apply relative w-full px-5 pt-[30px] pb-5 md:px-10 md:pt-[100px] md:pb-[65px] lg:pt-10;
 
   .__container {
-    @apply mx-auto flex flex-col items-center justify-between gap-10 px-10 pt-[100px] pb-[65px];
+    @apply mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-10;
   }
 
   .__head {
-    @apply grid grid-cols-2 items-center justify-between gap-[30px];
+    @apply grid w-full grid-cols-1 items-center justify-between gap-[30px] lg:grid-cols-2;
 
     .__left {
       p {
-        @apply font-Unbounded text-[156px] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone;
+        @apply flex w-full justify-center object-cover font-Unbounded text-[156px] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone lg:justify-start;
       }
     }
 
@@ -18,17 +18,17 @@
       @apply rounded-[20px] bg-whiteo5 px-7.5 py-10;
 
       form {
-        @apply flex flex-col items-start justify-start gap-5;
+        @apply flex w-full flex-col items-start justify-start gap-5;
 
         .__label {
-          @apply flex flex-col items-start justify-start gap-2.5;
+          @apply flex w-full max-w-screen flex-col items-start justify-start gap-2.5;
 
           span {
             @apply font-Inter text-xs leading-[1.2em] font-medium text-[#888888];
           }
 
           div {
-            @apply w-[675px] rounded-[20px] bg-[rgba(187,187,187,0.15)] p-3 focus-within:outline focus-within:outline-lightTone;
+            @apply w-full rounded-[20px] bg-[rgba(187,187,187,0.15)] p-3 focus-within:outline focus-within:outline-lightTone;
 
             input {
               @apply h-9 w-full text-xs text-white outline-none placeholder:text-sm placeholder:text-[#999999];
@@ -51,8 +51,10 @@
     @apply w-full;
 
     .__wrapper {
+      @apply flex flex-col gap-2.5;
+
       .__top {
-        @apply grid w-full grid-cols-2 justify-between gap-[300px] rounded-[30px] bg-whiteo5 p-5;
+        @apply grid w-full grid-cols-1 justify-between gap-[30px] rounded-[30px] bg-whiteo5 px-2.5 pt-2.5 pb-5 md:gap-0 lg:grid-cols-2 lg:py-5 lg:pr-[30px] lg:pl-5;
 
         .__left {
           @apply flex w-full flex-col items-start justify-start gap-2.5;
@@ -67,24 +69,24 @@
         }
 
         .__right {
-          @apply flex gap-[73px];
+          @apply flex flex-col items-center justify-center gap-[73px] p-5 md:flex-row md:items-baseline lg:p-0;
 
           .__item {
             @apply flex flex-col gap-[15px];
 
             .__label {
-              @apply text-lightTone;
+              @apply text-center text-lightTone md:text-start;
             }
 
             .__list {
-              @apply flex flex-col gap-2.5;
+              @apply flex flex-col text-center md:gap-2.5 md:text-start;
             }
           }
         }
       }
 
       .__bottom {
-        @apply flex w-full flex-col items-center gap-[15px] rounded-[30px] bg-whiteo5 p-5;
+        @apply flex w-full flex-col items-center gap-[22px] rounded-[30px] bg-whiteo5 p-[30px];
 
         .__label {
           @apply text-lightTone;
@@ -100,6 +102,10 @@
               @apply fill-whiteo80 text-whiteo80;
             }
           }
+        }
+
+        .__follow {
+          @apply flex flex-col items-center justify-start gap-[15px];
         }
 
         .__subscribe {
