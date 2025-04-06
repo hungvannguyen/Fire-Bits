@@ -1,0 +1,15 @@
+.hero {
+    @apply pt-10 pb-[60px] h-[80vh] relative;
+
+    .__image {
+        @apply rounded-[30px] w-full object-cover bg-amber-400 h-[510px] overflow-hidden;
+
+        image {
+            @apply w-full h-full object-cover rounded-[30px];
+        }
+    }
+
+    .__content {
+        @apply absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-center max-w-[740px] mx-auto;
+    }
+}
