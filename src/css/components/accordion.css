@@ -1,0 +1,25 @@
+.accordion {
+  @apply box-border flex flex-col gap-[38px] rounded-[30px] border border-whiteo15 bg-whiteo10 p-5;
+
+  .__header {
+    @apply flex w-full justify-between;
+
+    .__title {
+      @apply flex items-center gap-[10px] transition-transform duration-300 ease-in-out;
+
+      h4 {
+        @apply group-hover:text-lightTone;
+      }
+    }
+
+    .__icon {
+      @apply flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-whiteo15 text-white group-hover:bg-lightTone group-hover:text-black;
+    }
+  }
+
+  .__content {
+    p {
+      @apply font-thin;
+    }
+  }
+}
