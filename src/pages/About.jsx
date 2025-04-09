@@ -213,7 +213,7 @@ export default function About() {
     </div>,
   ];
   return (
-    <>
+    <div className="about">
       <div className="hero">
         <div className="__image">
           <div className="absolute inset-0 z-[1] h-full flex-none overflow-hidden bg-[linear-gradient(180deg,rgba(191,51,19,0)_19.980063795853216%,var(--token-2f560859-5998-4075-847c-9f666c5cfc0b,rgb(10,10,10))_73%)] opacity-75"></div>
@@ -424,6 +424,6 @@ export default function About() {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }

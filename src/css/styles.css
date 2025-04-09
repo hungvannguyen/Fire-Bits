@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url("https://fonts.cdnfonts.com/css/satoshi");
 @import "tailwindcss";
 @import "./config.css";
 @import "./header.css";
 @import "./footer.css";
-@import './components/ExploreButton.css';
-@import './components/TagAndHeading.css';
-@import './components/ServiceCard.css';
+@import "./components/ExploreButton.css";
+@import "./components/TagAndHeading.css";
+@import "./components/ServiceCard.css";
 @import "./common.css";
 @import "./pages/home.css";
 @import "./pages/about.css";
-@import "./components/accordion.css";
-@import "./components/marquee-carousel.css";
-@import "./components/gallery-item.css";
+@import "./components/Accordion.css";
+@import "./components/MarqueeCarousel.css";
+@import "./components/GalleryItem.css";
 
 body {
   @apply bg-black;

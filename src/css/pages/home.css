@@ -1,274 +1,279 @@
-.hero {
-  @apply relative flex h-min w-full flex-col justify-center gap-[31px] overflow-hidden pt-[180px];
+.home {
+  .hero {
+    @apply relative flex h-min w-full flex-col justify-center gap-[31px] overflow-hidden pt-[180px];
 
-  .heading-content {
-    @apply relative flex w-full flex-col items-center justify-center gap-[32px] sm:px-[20px] overflow-visible px-[40px];
+    .heading-content {
+      @apply relative flex w-full flex-col items-center justify-center gap-[32px] overflow-visible px-[40px] sm:px-[20px];
 
-    .subheading {
-      @apply relative flex h-min w-full max-w-[800px] flex-wrap items-center sm:content-center md:content-normal justify-center gap-[10px] p-0 overflow-visible;
+      .subheading {
+        @apply relative flex h-min w-full max-w-[800px] flex-wrap items-center justify-center gap-[10px] overflow-visible p-0 sm:content-center md:content-normal;
 
-      .__text {
-        @apply flex shrink-[0] flex-col justify-start overflow-visible outline-none md:max-w-none sm:max-w-[400px] h-auto relative whitespace-pre-wrap w-auto;
+        .__text {
+          @apply relative flex h-auto w-auto shrink-[0] flex-col justify-start overflow-visible whitespace-pre-wrap outline-none sm:max-w-[400px] md:max-w-none;
+          word-break: break-word;
+          word-wrap: break-word;
+        }
+
+        .bg-text {
+          @apply rotate-[3deg] bg-lightTone;
+
+          h1 {
+            @apply rotate-[-3deg] text-darkTone;
+          }
+        }
+
+        .bg-icon {
+          @apply flex h-[73px] w-[73px] items-center justify-center overflow-hidden rounded-full bg-lightTone p-0 sm:h-[48px] sm:w-[48px];
+
+          .__icon {
+            @apply rotate-[-16deg];
+          }
+        }
+      }
+
+      .rich-text {
+        @apply relative h-auto w-full flex-none whitespace-pre-wrap sm:max-w-[400px] md:max-w-[600px];
         word-break: break-word;
         word-wrap: break-word;
-      }
 
-      .bg-text {
-        @apply rotate-[3deg] bg-lightTone;
-
-        h1 {
-          @apply rotate-[-3deg] text-darkTone;
-        }
-      }
-
-      .bg-icon {
-        @apply flex h-[73px] w-[73px] sm:h-[48px] sm:w-[48px] items-center justify-center overflow-hidden rounded-full bg-lightTone p-0;
-
-        .__icon {
-          @apply rotate-[-16deg];
+        p {
+          @apply text-center;
         }
       }
     }
-    .rich-text {
-      @apply relative h-auto w-full md:max-w-[600px] sm:max-w-[400px] flex-none whitespace-pre-wrap;
-      word-break: break-word;
-      word-wrap: break-word;
 
-      p {
-        @apply text-center;
+    .background_gradient {
+      @apply absolute bottom-0 z-[-1] h-[855px] w-full overflow-hidden sm:h-[331px] md:h-[671px];
+      background: linear-gradient(
+        180deg,
+        rgba(191, 51, 19, 0) 16.353996101364523%,
+        var(--color-lightTone, rgb(191, 51, 19)) 77.35485380116958%
+      );
+      flex: none;
+      left: calc(50.00000000000002% - 100% / 2);
+    }
+
+    .image_content {
+      @apply relative w-full flex-none cursor-pointer overflow-visible opacity-100 sm:h-[241px] md:h-[441px] lg:h-[678px];
+      filter: contrast(1.23) grayscale(0.14);
+      will-change: transform;
+      transform: perspective(1200px);
+
+      .image_container {
+        @apply absolute;
+        border-radius: inherit;
+        inset: 0px;
+
+        img {
+          @apply block h-full w-full;
+          border-radius: inherit;
+          object-position: center center;
+          object-fit: contain;
+        }
+      }
+
+      .text_runner {
+        @apply absolute z-[-1] h-[320px] w-full sm:top-[-69px] md:top-[46px] lg:top-[196px];
+        left: calc(50.00000000000002% - 100% / 2);
+
+        section {
+          @apply m-0 flex h-full max-h-full w-full max-w-full list-none place-items-center overflow-hidden p-[10px] opacity-100;
+
+          ul {
+            @apply relative m-0 flex h-full w-full list-none place-items-center gap-[50px] p-0;
+
+            .wrapper {
+              @apply relative flex h-[127px] w-min shrink-0 flex-nowrap items-center justify-center gap-[10px] overflow-hidden p-0;
+
+              .text_container {
+                @apply relative flex h-auto w-auto shrink-0 flex-col justify-start whitespace-pre outline-none;
+              }
+            }
+          }
+        }
+      }
+
+      .background_gradient-2 {
+        @apply absolute bottom-0 left-0 h-[182px] w-full flex-none overflow-hidden sm:h-[52px] md:h-[72px];
+        background: linear-gradient(
+          180deg,
+          rgba(84, 84, 84, 0) 41.63993900835976%,
+          var(--color-darkTone, rgb(0, 0, 0)) 100%
+        );
+        @media only screen and (max-width: 809px) {
+          left: calc(50.00000000000002% - 100% / 2);
+        }
       }
     }
   }
 
-  .background_gradient {
-    @apply absolute bottom-0 z-[-1] h-[855px] md:h-[671px] sm:h-[331px] w-full overflow-hidden;
-    background: linear-gradient(
-      180deg,
-      rgba(191, 51, 19, 0) 16.353996101364523%,
-      var(--color-lightTone, rgb(191, 51, 19)) 77.35485380116958%
-    );
-    flex: none;
-    left: calc(50.00000000000002% - 100% / 2);
-  }
-
-  .image_content {
-    @apply relative lg:h-[678px] md:h-[441px] sm:h-[241px] w-full flex-none cursor-pointer overflow-visible opacity-100;
-    filter: contrast(1.23) grayscale(0.14);
+  .service_section {
+    @apply relative z-[1] flex h-min w-full flex-none items-center justify-center overflow-visible;
     will-change: transform;
     transform: perspective(1200px);
 
-    .image_container {
-      @apply absolute;
-      border-radius: inherit;
-      inset: 0px;
+    ._container {
+      @apply relative flex h-min max-w-[1440px] flex-col flex-nowrap items-start justify-center gap-[60px] p-0 sm:gap-[40px];
+      flex: 1 0 0px;
 
-      img {
-        @apply block h-full w-full;
-        border-radius: inherit;
-        object-position: center center;
-        object-fit: contain;
+      .heading {
+        @apply relative z-[1] flex w-full flex-none flex-col flex-nowrap justify-center gap-[30px] overflow-hidden p-0 sm:items-center md:items-end;
+
+        .content_1 {
+          @apply relative z-[1] h-auto w-full flex-none sm:max-w-none md:max-w-[1440px];
+
+          .box {
+            @apply relative flex h-min w-full max-w-full flex-col flex-nowrap items-start justify-center gap-[20px] overflow-visible p-0;
+          }
+        }
+      }
+
+      .service_container {
+        @apply relative flex h-min w-full flex-none flex-col flex-nowrap items-center justify-center gap-[10px] overflow-visible p-0;
+
+        ._grid {
+          @apply relative h-min w-full flex-none justify-center gap-[10px] overflow-visible p-0 sm:flex sm:flex-col sm:items-center md:grid;
+          grid-auto-rows: min-content;
+          grid-template-columns: repeat(2, minmax(200px, 1fr));
+          grid-template-rows: repeat(2, min-content);
+        }
       }
     }
+  }
 
-    .text_runner {
-      @apply absolute lg:top-[196px] md:top-[46px] sm:top-[-69px] z-[-1] h-[320px] w-full;
+  .whyUs_section {
+    @apply relative z-[1] flex w-full flex-none flex-col flex-nowrap items-center overflow-visible sm:h-min sm:justify-center sm:gap-[100px] sm:px-[12px] sm:py-[50px] md:h-[120vh] md:justify-between md:gap-0 md:px-[20px] md:py-[80px] lg:pt-[40px] lg:pb-[50px];
+
+    .backGround_img {
+      @apply absolute z-[1] h-full w-full flex-none overflow-hidden;
+      filter: contrast(2) grayscale(0.48);
       left: calc(50.00000000000002% - 100% / 2);
+      opacity: 0.6;
+      top: calc(50.00000000000002% - 100% / 2);
 
-      section {
-        @apply m-0 flex h-full max-h-full w-full max-w-full list-none place-items-center overflow-hidden p-[10px] opacity-100;
+      div {
+        @apply absolute inset-0;
 
-        ul {
-          @apply relative m-0 flex h-full w-full list-none place-items-center gap-[50px] p-0;
-
-          .wrapper {
-            @apply relative flex h-[127px] w-min shrink-0 flex-nowrap items-center justify-center gap-[10px] overflow-hidden p-0;
-
-            .text_container {
-              @apply relative flex h-auto w-auto shrink-0 flex-col justify-start whitespace-pre outline-none;
-            }
-          }
+        img {
+          @apply block h-full w-full;
+          border-radius: inherit;
+          object-position: center center;
+          object-fit: cover;
         }
       }
     }
 
-    .background_gradient-2 {
-      @apply absolute flex-none bottom-0 left-0 h-[182px] md:h-[72px] sm:h-[52px] w-full overflow-hidden;
-      background: linear-gradient(
-        180deg,
-        rgba(84, 84, 84, 0) 41.63993900835976%,
+    .overlay {
+      @apply absolute bottom-0 z-[1] h-full w-full flex-none overflow-hidden;
+      background: radial-gradient(
+        45.1% 44.7% at 52.6% 42.8%,
+        var(--color-lightTone, #d94c00) 0%,
         var(--color-darkTone, rgb(0, 0, 0)) 100%
       );
+      left: calc(50.00000000000002% - 100% / 2);
+      mix-blend-mode: multiply;
+      opacity: 0.91;
+
       @media only screen and (max-width: 809px) {
-         left: calc(50.00000000000002% - 100% / 2);
+        height: 100%;
+        bottom: unset;
+        top: calc(49.964763918252316% - 99.92952783650459% / 2);
       }
+    }
 
-     }
-  }
-}
+    .topContent {
+      @apply relative flex h-min w-min flex-none flex-nowrap items-center justify-center gap-[10px] overflow-visible pe-[16px];
 
-.service_section {
-  @apply relative z-[1] flex h-min w-full flex-none items-center justify-center overflow-visible;
-  will-change: transform;
-  transform: perspective(1200px);
-
-  ._container {
-    @apply relative flex h-min max-w-[1440px] flex-col flex-nowrap items-start justify-center gap-[60px] sm:gap-[40px] p-0;
-    flex: 1 0 0px;
-
-    .heading {
-      @apply relative z-[1] flex w-full flex-none flex-col flex-nowrap md:items-end sm:items-center justify-center gap-[30px] overflow-hidden p-0;
-
-      .content_1 {
-        @apply relative z-[1] h-auto w-full md:max-w-[1440px] sm:max-w-none flex-none;
-
-        .box {
-          @apply relative flex h-min w-full max-w-full flex-col flex-nowrap items-start justify-center gap-[20px] overflow-visible p-0;
+      .statistics {
+        @apply relative z-[1] grid h-min w-min flex-none justify-center p-0;
+        grid-auto-rows: minmax(0, 1fr);
+        grid-template-columns: repeat(4, minmax(170px, 1fr));
+        grid-template-rows: repeat(1, minmax(0, 1fr));
+        @media only screen and (max-width: 809px) {
+          grid-template-columns: repeat(2, minmax(170px, 1fr));
         }
-      }
-    }
 
-    .service_container {
-      @apply relative flex h-min w-full flex-none flex-col flex-nowrap items-center justify-center gap-[10px] overflow-visible p-0;
+        ._item {
+          @apply relative h-full w-full flex-none self-start justify-self-start;
 
-      ._grid {
-        @apply relative md:grid h-min w-full flex-none justify-center gap-[10px] overflow-visible p-0 sm:flex sm:flex-col sm:items-center;
-        grid-auto-rows: min-content;
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-        grid-template-rows: repeat(2, min-content);
-      }
-    }
-  }
-}
+          ._circleBox {
+            @apply relative flex h-[187px] w-[187px] flex-col flex-nowrap items-center justify-center gap-[3px] overflow-hidden rounded-full bg-whiteo10 p-[54px];
+            backdrop-filter: blur(5px);
 
-.whyUs_section {
-  @apply relative z-[1] flex md:h-[120vh] sm:h-min sm:gap-[100px] md:gap-0 w-full flex-none flex-col flex-nowrap items-center md:justify-between sm:justify-center overflow-visible md:px-[20px] md:py-[80px] lg:pt-[40px] lg:pb-[50px] sm:px-[12px] sm:py-[50px];
+            ._circleContent {
+              @apply relative flex w-min flex-col items-center justify-center overflow-visible;
 
-  .backGround_img {
-    @apply absolute z-[1] h-full w-full flex-none overflow-hidden;
-    filter: contrast(2) grayscale(0.48);
-    left: calc(50.00000000000002% - 100% / 2);
-    opacity: 0.6;
-    top: calc(50.00000000000002% - 100% / 2);
+              .-heading {
+                @apply relative flex h-[31px] w-auto shrink-0 flex-col justify-start whitespace-pre outline-none;
 
-    div {
-      @apply absolute inset-0;
+                p {
+                  @apply font-Unbounded text-[40px] leading-[0.8em] text-white;
+                  letter-spacing: -0.05em;
+                }
+              }
 
-      img {
-        @apply block h-full w-full;
-        border-radius: inherit;
-        object-position: center center;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .overlay{
-    @apply flex-none h-full absolute bottom-0 w-full z-[1] overflow-hidden;
-    background: radial-gradient(45.1% 44.7% at 52.6% 42.8%, var(--color-lightTone, #d94c00) 0%, var(--color-darkTone, rgb(0, 0, 0)) 100%);
-    left: calc(50.00000000000002% - 100% / 2);
-    mix-blend-mode: multiply;
-    opacity: .91;
-
-    @media only screen and (max-width: 809px) {
-      height: 100%;
-      bottom: unset;
-      top: calc(49.964763918252316% - 99.92952783650459% / 2);
-    }
-  }
-
-  .topContent{
-    @apply flex flex-none flex-nowrap items-center justify-center gap-[10px] h-min w-min overflow-visible pe-[16px] relative;
-
-    .statistics{
-      @apply grid flex-none h-min w-min justify-center p-0 relative z-[1];
-      grid-auto-rows: minmax(0, 1fr);
-      grid-template-columns: repeat(4, minmax(170px, 1fr));
-      grid-template-rows: repeat(1, minmax(0, 1fr));
-      @media only screen and (max-width: 809px) {
-        grid-template-columns: repeat(2, minmax(170px, 1fr));
-        
-      }
-
-      ._item{
-        @apply self-start flex-none h-full justify-self-start relative w-full;
-
-        ._circleBox{
-          @apply flex flex-col flex-nowrap items-center justify-center gap-[3px] rounded-full h-[187px] w-[187px] bg-whiteo10 p-[54px] overflow-hidden relative;
-          backdrop-filter: blur(5px);
-
-          ._circleContent{
-            @apply flex flex-col items-center justify-center relative w-min overflow-visible;
-
-            .-heading{
-              @apply outline-none flex flex-col justify-start shrink-0 h-[31px] relative whitespace-pre w-auto;
-
-              p{
-                @apply text-[40px] font-Unbounded text-white leading-[0.8em];
-                letter-spacing: -0.05em;
+              .-subText {
+                @apply relative z-[1] flex h-auto w-auto shrink-0 flex-col justify-start whitespace-pre outline-none;
               }
             }
-
-            .-subText{
-              @apply outline-none flex flex-col justify-start shrink-0 h-auto relative whitespace-pre w-auto z-[1];
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .bottomContent{
-    @apply flex flex-col items-start gap-[23px] h-min w-full justify-center max-w-[1440px] overflow-hidden p-0 relative;
-
-    ._content1{
-      @apply flex sm:flex-col items-center justify-center gap-[10px] md:gap-[3px] h-min overflow-hidden p-0 relative w-full z-[1]; 
-
-      .-itemContainer{
-        @apply flex-1 h-auto relative;
-
-        .-itemBox{
-          @apply border border-whiteo10 bg-whiteo5 rounded-[20px] w-full gap-[25px] flex items-center flex-col h-min justify-center overflow-hidden p-[20px] relative;
-          backdrop-filter: blur(10px);
-
-          .-icon{
-            @apply border-lightTone rounded-[20px] border bg-whiteo5 flex items-center gap-[10px] h-[42px] w-[42px] justify-center overflow-visible p-[30px] relative;
-          }
-
-          .-text{
-            @apply flex items-center flex-col gap-[6px] h-min justify-center overflow-visible p-0 relative w-full;
-
-            ._heading{
-              @apply outline-none flex flex-col justify-start shrink-0 h-auto whitespace-pre-wrap relative w-full;
-              word-break: break-word;
-              word-wrap: break-word;
-            }
-
-            ._subText{
-              @apply outline-none flex flex-col justify-start shrink-0 h-auto whitespace-pre-wrap relative w-full;
-              word-break: break-word;
-              word-wrap: break-word;
-            }
           }
         }
       }
     }
 
-    ._content2{
-      @apply flex flex-none flex-row items-center content-center flex-wrap gap-[8px] h-min justify-center overflow-hidden px-[80px] relative w-full;
+    .bottomContent {
+      @apply relative flex h-min w-full max-w-[1440px] flex-col items-start justify-center gap-[23px] overflow-hidden p-0;
 
-      .-itemContainer{
-        @apply h-auto relative w-auto z-[1];
+      ._content1 {
+        @apply relative z-[1] flex h-min w-full items-center justify-center gap-[10px] overflow-hidden p-0 sm:flex-col md:gap-[3px];
 
-        .-itemBox{
-          @apply rounded-full bg-whiteo10 flex items-center gap-[4px] h-min justify-center overflow-hidden px-[20px] py-[10px] relative w-min;
-          backdrop-filter: blur(5px);
-          
-          .-icon{
-            @apply w-[20px] h-[20px] relative;
+        .-itemContainer {
+          @apply relative h-auto flex-1;
+
+          .-itemBox {
+            @apply relative flex h-min w-full flex-col items-center justify-center gap-[25px] overflow-hidden rounded-[20px] border border-whiteo10 bg-whiteo5 p-[20px];
+            backdrop-filter: blur(10px);
+
+            .-icon {
+              @apply relative flex h-[42px] w-[42px] items-center justify-center gap-[10px] overflow-visible rounded-[20px] border border-lightTone bg-whiteo5 p-[30px];
+            }
+
+            .-text {
+              @apply relative flex h-min w-full flex-col items-center justify-center gap-[6px] overflow-visible p-0;
+
+              ._heading {
+                @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
+                word-break: break-word;
+                word-wrap: break-word;
+              }
+
+              ._subText {
+                @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
+                word-break: break-word;
+                word-wrap: break-word;
+              }
+            }
           }
+        }
+      }
 
-          .-text{
-            @apply outline-none flex flex-col justify-start shrink-0 h-auto whitespace-pre relative w-auto;
+      ._content2 {
+        @apply relative flex h-min w-full flex-none flex-row flex-wrap content-center items-center justify-center gap-[8px] overflow-hidden px-[80px];
+
+        .-itemContainer {
+          @apply relative z-[1] h-auto w-auto;
+
+          .-itemBox {
+            @apply relative flex h-min w-min items-center justify-center gap-[4px] overflow-hidden rounded-full bg-whiteo10 px-[20px] py-[10px];
+            backdrop-filter: blur(5px);
+
+            .-icon {
+              @apply relative h-[20px] w-[20px];
+            }
+
+            .-text {
+              @apply relative flex h-auto w-auto shrink-0 flex-col justify-start whitespace-pre outline-none;
+            }
           }
         }
       }

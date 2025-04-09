@@ -8,7 +8,7 @@ import { House, Graph, Rocket, UserFocus, Atom } from "@phosphor-icons/react";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="home">
         {/* hero section */}
       <div className="hero">
         <div className="heading-content">
