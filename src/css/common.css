@@ -18,9 +18,17 @@
 
 
 .my_container{
-    @apply max-w-[1440px] mx-auto px-[40px];
+    @apply max-w-[1440px] mx-auto px-[40px] sm:px-[20px];
+}
+
+.my_wrapper{
+    @apply md:px-[40px] md:pt-[150px] md:pb-[100px] sm:px-[12px] sm:py-[50px];
 }
 
 .main{
     @apply relative z-[1] w-full overflow-hidden h-fit; 
+}
+
+.flex-none-nowrap{
+    @apply flex flex-none flex-nowrap;
 }

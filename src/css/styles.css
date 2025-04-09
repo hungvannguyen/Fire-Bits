@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/satoshi');
 @import "tailwindcss";
 @import "./config.css";
 @import "./header.css";
@@ -9,6 +10,9 @@
 @import './pages/home.css';
 @import './config.css';
 @import './header.css';
+@import './componets/ExploreButton.css';
+@import './componets/TagAndHeading.css';
+@import './componets/ServiceCard.css';
 
 body {
   @apply bg-black;

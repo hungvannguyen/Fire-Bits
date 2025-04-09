@@ -1,0 +1,48 @@
+.ServiceCard {
+  @apply relative z-[1] h-auto w-full flex-none self-start justify-self-start;
+  will-change: transform;
+  transform: perspective(1200px);
+
+  ._SVcontainer {
+    @apply relative flex h-[374px] w-[390px] cursor-pointer flex-col flex-nowrap items-start justify-between overflow-hidden rounded-[30px] bg-[#1F1D1D] p-[20px] opacity-100;
+
+    ._iconAndName {
+      @apply relative flex h-min w-full flex-none flex-col flex-nowrap items-start justify-center gap-[17px] overflow-visible p-0;
+
+      .-icon {
+        @apply h-min w-min items-center justify-center overflow-visible rounded-[20px] bg-whiteo5 p-[10px] text-lightTone;
+      }
+
+      .-name {
+        @apply relative flex h-auto w-full flex-none shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
+        word-break: break-word;
+        word-wrap: break-word;
+      }
+    }
+
+    ._richTextContainer {
+      @apply relative flex h-full w-full max-w-[600px] flex-[1_0_0px] shrink-0 flex-col justify-end whitespace-pre-wrap outline-none;
+      transform: none;
+      word-break: break-word;
+      word-wrap: break-word;
+    }
+
+    ._buttonContainer {
+      @apply relative h-min w-min items-center justify-start gap-[10px] overflow-visible pt-[20px];
+
+      .-text {
+        @apply relative flex h-auto w-auto flex-none shrink-0 flex-col justify-start whitespace-pre outline-none;
+
+        p {
+          @apply font-Unbounded text-[12px] leading-[2em] font-normal text-white uppercase;
+          letter-spacing: -0.1px;
+          paragraph-spacing: 1px;
+        }
+      }
+
+      .-icon {
+        @apply relative flex h-[28px] w-[28px] flex-none flex-nowrap items-center justify-center overflow-hidden rounded-full border border-whiteo10 p-[7px];
+      }
+    }
+  }
+}
