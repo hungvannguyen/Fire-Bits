@@ -10,9 +10,9 @@
 @import './pages/home.css';
 @import './config.css';
 @import './header.css';
-@import './componets/ExploreButton.css';
-@import './componets/TagAndHeading.css';
-@import './componets/ServiceCard.css';
+@import './components/ExploreButton.css';
+@import './components/TagAndHeading.css';
+@import './components/ServiceCard.css';
 
 body {
   @apply bg-black;
