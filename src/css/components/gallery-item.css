@@ -1,0 +1,11 @@
+.__item {
+  @apply flex h-[480px] gap-2.5;
+
+  .__short {
+    @apply h-full w-[50%] overflow-hidden rounded-[30px] object-cover brightness-100 grayscale filter transition-all duration-600 ease-in-out;
+  }
+
+  .__long {
+    @apply h-full w-full overflow-hidden rounded-[30px] object-cover transition-all duration-600 ease-in-out;
+  }
+}

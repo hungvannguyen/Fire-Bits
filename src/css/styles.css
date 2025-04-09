@@ -11,6 +11,8 @@
 @import "./config.css";
 @import "./header.css";
 @import "./components/accordion.css";
+@import "./components/marquee-carousel.css";
+@import "./components/gallery-item.css";
 
 body {
   @apply bg-black;
