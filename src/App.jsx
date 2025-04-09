@@ -10,7 +10,7 @@ function App() {
         <div className="bg-pattern"></div>
       </div>
       <div className="main">
-        <div className="my_container mt-[82px]">
+        <div className="">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

@@ -1,0 +1,27 @@
+.ExploreButton{
+    @apply flex items-center cursor-pointer h-min overflow-hidden relative w-min rounded-[30px];
+
+    .__wrapText{
+        @apply bg-lightTone flex items-center gap-[10px] h-[50px] justify-start px-[30px] py-[25px] relative w-min overflow-visible;
+        flex: none;
+
+        .__text{
+            @apply outline-none flex flex-col justify-start shrink-0 w-auto h-auto;
+            white-space: pre;
+
+            p{
+                @apply text-[13px] leading-[1.5em] font-normal text-darkTone font-Unbounded uppercase;
+            }
+        }
+    }
+
+    .__icon{
+        @apply bg-lightTone flex flex-none flex-col gap-[10px] flex-nowrap items-center justify-center self-stretch h-auto p-0 relative w-[50px] overflow-visible;
+        transform: none;
+        transform-origin: 50% 50% 0px;
+
+        svg{
+            @apply rotate-[45deg] h-[20px] w-[20px];
+        }
+    }
+}

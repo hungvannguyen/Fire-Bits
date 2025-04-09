@@ -1,0 +1,19 @@
+.TagAndHeading{
+    @apply flex sm:flex-col lg:flex-row items-center md:items-start flex-none flex-nowrap justify-start gap-[24px] h-min overflow-visible p-0 relative w-full; 
+
+    .tag_name{
+        @apply rounded-full flex flex-nowrap items-center justify-center overflow-visible gap-[7px] px-[12px] py-[3px] relative w-min h-min bg-whiteo10;
+
+        p{
+            @apply text-lightTone;
+        }
+    }
+
+    .section_name{
+        @apply flex flex-col justify-start shrink-0 outline-none;
+
+        h2{
+            @apply sm:text-center;
+        }
+    }
+}
