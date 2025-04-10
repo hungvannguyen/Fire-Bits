@@ -54,21 +54,31 @@ export default function Header() {
 
       {isOpen && (
         <nav className="__nav-mobile">
-          <a href="/" className="navText active">
-            Home
-          </a>
-          <a href="/about" className="navText">
-            About
-          </a>
-          <a href="/contact" className="navText">
-            Services
-          </a>
-          <a href="/reviews" className="navText">
-            Reviews
-          </a>
-          <a href="/contact" className="navText">
-            Contact
-          </a>
+          <div>
+            <a href="/" className="navText active">
+              Home
+            </a>
+          </div>
+          <div>
+            <a href="/about" className="navText">
+              About
+            </a>
+          </div>
+          <div>
+            <a href="/contact" className="navText">
+              Services
+            </a>
+          </div>
+          <div>
+            <a href="/reviews" className="navText">
+              Reviews
+            </a>
+          </div>
+          <div>
+            <a href="/contact" className="navText">
+              Contact
+            </a>
+          </div>
         </nav>
       )}
     </header>

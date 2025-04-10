@@ -10,7 +10,7 @@
 
     .__left {
       p {
-        @apply flex w-full justify-center object-cover font-Unbounded text-[156px] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone lg:justify-start;
+        @apply flex w-full justify-center object-fill font-Unbounded text-[156px] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone lg:justify-start;
       }
     }
 
@@ -54,13 +54,13 @@
       @apply flex flex-col gap-2.5;
 
       .__top {
-        @apply grid w-full grid-cols-1 justify-between gap-[30px] rounded-[30px] bg-whiteo5 px-2.5 pt-2.5 pb-5 md:gap-0 lg:grid-cols-2 lg:py-5 lg:pr-[30px] lg:pl-5;
+        @apply grid w-full grid-cols-1 justify-between gap-[31px] rounded-[30px] bg-whiteo5 px-2.5 pt-2.5 pb-5 md:max-h-[726px] lg:max-h-[372px] lg:grid-cols-2 lg:gap-0 lg:py-5 lg:pr-[30px] lg:pl-5;
 
         .__left {
           @apply flex w-full flex-col items-start justify-start gap-2.5;
 
           .__item {
-            @apply flex w-full flex-col items-start justify-start gap-2.5 rounded-[30px] bg-[rgba(187,187,187,0.15)] px-7.5 py-5;
+            @apply flex h-fit w-full flex-col items-start justify-start gap-2.5 rounded-[30px] bg-[rgba(187,187,187,0.15)] px-7.5 py-5;
 
             .__icon {
               @apply text-lightTone;
@@ -69,10 +69,10 @@
         }
 
         .__right {
-          @apply flex flex-col items-center justify-center gap-[73px] p-5 md:flex-row md:items-baseline lg:p-0;
+          @apply flex h-fit flex-col items-center justify-center gap-[39px] p-5 md:flex-row md:items-baseline md:gap-[73px] lg:p-0;
 
           .__item {
-            @apply flex flex-col gap-[15px];
+            @apply flex h-fit flex-col gap-[15px];
 
             .__label {
               @apply text-center text-lightTone md:text-start;
@@ -120,7 +120,7 @@
           }
 
           .__btn {
-            @apply flex h-[48.5px] cursor-pointer items-center rounded-[20px] bg-lightTone p-[15px] font-Unbounded text-black;
+            @apply flex h-[48.5px] cursor-pointer items-center rounded-[20px] bg-lightTone p-[15px] font-Unbounded font-normal text-black;
           }
         }
       }
