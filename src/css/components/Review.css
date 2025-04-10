@@ -3,7 +3,7 @@
 
   .__head {
     .__stars {
-      @apply flex w-[97px] justify-between;
+      @apply flex h-[60px] w-[97px] items-center justify-between;
 
       .__icon {
         @apply text-lightTone;
@@ -12,7 +12,7 @@
   }
 
   .__footer {
-    @apply flex gap-2.5;
+    @apply mb-[21px] flex gap-2.5;
 
     .__avatar {
       @apply h-[44px] w-[44px] rounded-[20px];
