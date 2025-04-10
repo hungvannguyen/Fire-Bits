@@ -1,8 +1,10 @@
-const TagAndHeading = ({ tag = "", heading = "" }) => {
+const TagAndHeading = ({ tag = "", heading = "", className = "" }) => {
   return (
-    <div className="TagAndHeading">
-      <div className="tag_name">
-        <p className="label">{tag}</p>
+    <div className={`TagAndHeading ${className}`}>
+      <div className="flex-none w-auto h-auto relative">
+        <div className="tag_name">
+          <p className="label">{tag}</p>
+        </div>
       </div>
 
       <div className="section_name">

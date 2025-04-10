@@ -141,7 +141,7 @@
     }
   }
 
-  .whyUs_section {
+  .aboutUs_section {
     @apply relative z-[1] flex w-full flex-none flex-col flex-nowrap items-center overflow-visible sm:h-min sm:justify-center sm:gap-[100px] sm:px-[12px] sm:py-[50px] md:h-[120vh] md:justify-between md:gap-0 md:px-[20px] md:py-[80px] lg:pt-[40px] lg:pb-[50px];
 
     .backGround_img {
@@ -225,7 +225,7 @@
       @apply relative flex h-min w-full max-w-[1440px] flex-col items-start justify-center gap-[23px] overflow-hidden p-0;
 
       ._content1 {
-        @apply relative z-[1] flex h-min w-full items-center justify-center gap-[10px] overflow-hidden p-0 sm:flex-col md:gap-[3px];
+        @apply relative z-[1] flex h-min w-full items-center justify-center gap-[10px] overflow-hidden p-0 sm:flex-col md:flex-row md:gap-[3px];
 
         .-itemContainer {
           @apply relative h-auto flex-1;
@@ -273,6 +273,166 @@
 
             .-text {
               @apply relative flex h-auto w-auto shrink-0 flex-col justify-start whitespace-pre outline-none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .video_section {
+    @apply relative z-[1] flex h-min w-full flex-[0_0_auto] items-center gap-[60px] overflow-visible p-0;
+    flex-flow: row;
+
+    ._container {
+      @apply relative mx-auto flex h-min max-w-[1440px] flex-[1_0_0px] items-center gap-[60px] overflow-hidden pb-[100px] sm:gap-[30px] sm:pb-[50px];
+      flex-flow: column;
+
+      .bgGradient {
+        @apply absolute top-[-107px] z-[0] h-[148px] w-[589px] overflow-hidden rounded-full bg-lightTone;
+        left: calc(46.6667% - 294.5px);
+        filter: blur(67px);
+      }
+
+      ._videoContainer {
+        @apply relative flex h-min w-full max-w-full flex-[0_0_auto] gap-[10px] overflow-hidden px-[40px] sm:px-[12px];
+        flex-flow: row;
+        @media only screen and (max-width: 809px) {
+          flex-flow: column;
+        }
+
+        ._videoBox {
+          @apply relative flex h-min flex-col items-center gap-[20px] overflow-hidden rounded-[30px] bg-whiteo10 px-[10px] pt-[10px] pb-[20px] sm:flex-none md:flex-[1_0_0px];
+
+          .video {
+            @apply relative h-auto w-full flex-[0_0_auto] overflow-hidden rounded-[30px];
+            aspect-ratio: 1.77778/1;
+
+            iframe {
+              @apply absolute top-0 left-0 h-full w-full;
+            }
+          }
+        }
+
+        ._titleBox {
+          @apply relative flex h-min w-full flex-[0_0_auto] flex-col items-center overflow-hidden p-0;
+        }
+      }
+    }
+  }
+
+  .whyUs_section {
+    @apply relative z-[1] flex h-min w-full flex-none items-center justify-center overflow-visible;
+    will-change: transform;
+    transform: perspective(1200px);
+
+    ._container {
+      @apply relative flex h-min max-w-[1440px] flex-col flex-nowrap items-start justify-center gap-[60px] p-0 sm:gap-[40px];
+      flex: 1 0 0px;
+
+      .heading {
+        @apply relative z-[1] flex w-full flex-none flex-col flex-nowrap justify-center gap-[30px] overflow-hidden p-0 sm:items-center md:items-end;
+
+        .content_1 {
+          @apply relative z-[1] h-auto w-full flex-none sm:max-w-none md:max-w-[1440px];
+
+          .box {
+            @apply relative flex h-min w-full max-w-full flex-col flex-nowrap items-start justify-center gap-[20px] overflow-visible p-0 sm:gap-0;
+          }
+        }
+
+        .content_2 {
+          @apply relative flex h-min w-full flex-none flex-nowrap items-center gap-[10px] overflow-visible p-0 sm:justify-center lg:justify-end;
+
+          ._textRichContainer {
+            @apply relative flex h-auto max-w-[500px] flex-[1_0_0px] shrink-0 flex-col justify-start whitespace-pre-wrap outline-none sm:text-center lg:text-left;
+            word-break: break-word;
+            word-wrap: break-word;
+          }
+        }
+      }
+
+      .whyUs_container {
+        @apply relative flex h-min w-full flex-none flex-col flex-nowrap items-center justify-center gap-[10px] overflow-hidden p-0;
+
+        .-content_flex {
+          @apply relative flex w-full items-center gap-[10px] overflow-hidden  sm:flex-col md:flex-row;
+        }
+
+        ._content-center {
+          @apply justify-center sm:h-[879px] md:h-[460px];
+
+          .item1 {
+            @apply relative flex flex-col items-start justify-end overflow-hidden rounded-[30px] p-[30px] sm:h-[1px] sm:w-full sm:flex-[1_0_0px] sm:gap-[20px] md:h-full md:w-[1px] md:flex-[2_0_0px] md:gap-[9px] lg:gap-[20px];
+
+            ._background-img {
+              @apply absolute inset-0 border-inherit;
+
+              img {
+                @apply block h-full w-full border-inherit object-cover;
+                object-position: center center;
+              }
+            }
+
+            ._background-gradient {
+              @apply absolute inset-0 z-[0] flex-none overflow-hidden;
+              background: linear-gradient(
+                243deg,
+                rgba(84, 84, 84, 0) 54.70541257678578%,
+                var(--color-darkTone, rgb(0, 0, 0)) 84.420754785216%
+              );
+            }
+
+            ._heading {
+              @apply relative flex h-min flex-col items-start overflow-hidden sm:w-full md:w-1/2;
+
+              ._text {
+                @apply text-white sm:h-[53px] md:h-[70px] lg:h-[90px];
+              }
+            }
+
+            ._description {
+              @apply relative flex h-min w-full items-center justify-center gap-[10px] overflow-hidden rounded-[20px] py-[10px] pe-[10px];
+              backdrop-filter: blur(5px);
+            }
+          }
+
+          .item2 {
+            @apply relative flex flex-col items-center overflow-hidden rounded-[30px] p-[30px] sm:h-min sm:flex-none sm:gap-[40px] md:h-full md:flex-[1_0_0px] md:justify-between;
+            background-color: var(--color-lightBlack, #1f1d1d);
+
+            ._heading {
+              @apply relative flex h-min w-full flex-col items-start overflow-hidden;
+            }
+          }
+        }
+
+        ._content-end {
+          @apply justify-end md:h-[460px] sm:h-min;
+
+          .item1 {
+            @apply relative flex flex-col flex-nowrap items-center justify-center gap-[10px] overflow-hidden rounded-[30px] sm:h-min sm:w-full sm:flex-none md:h-full md:w-[1px] md:flex-[1_0_0px] lg:flex-[.5_0_0px];
+
+            ._background-img {
+              @apply absolute inset-0 border-inherit;
+
+              img {
+                @apply block h-full w-full border-inherit object-cover;
+                object-position: center center;
+              }
+            }
+
+            ._circle-tag{
+              @apply border border-whiteo50 rounded-full flex-none h-[366px] overflow-hidden relative w-[366px];
+              backdrop-filter: blur(8px);
+            }
+          }
+
+          .item2 {
+            @apply relative flex md:h-full flex-col items-center justify-between md:gap-[10px] overflow-hidden rounded-[30px] bg-lightTone p-[30px] sm:h-min sm:w-full sm:flex-none sm:justify-center sm:gap-[40px] md:flex-[.7_0_0px] md:gap-0 lg:flex-[.5_0_0px];
+
+            ._heading {
+              @apply relative flex h-min w-full flex-none flex-col items-start justify-center overflow-hidden text-darkTone;
             }
           }
         }
