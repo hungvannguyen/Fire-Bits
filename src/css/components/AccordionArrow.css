@@ -1,0 +1,23 @@
+.accordion-arrow {
+  @apply box-border flex w-full flex-col gap-[38px] rounded-[30px] border border-whiteo15 bg-whiteo10 p-5;
+
+  .__heading {
+    @apply flex w-full justify-between;
+
+    .__title {
+      @apply flex items-center gap-[10px] transition-transform duration-300 ease-in-out;
+    }
+
+    .__icon {
+      @apply flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-lightTone text-black;
+    }
+  }
+
+  .__content {
+    @apply mx-auto max-w-[800px];
+
+    p {
+      @apply font-thin;
+    }
+  }
+}
