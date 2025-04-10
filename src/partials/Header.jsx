@@ -29,7 +29,8 @@ export default function Header() {
             Contact
           </a>
         </nav>
-        <div></div>
+
+        <div className="hidden w-[144px] lg:flex"></div>
 
         <div
           className={`__hamburger ${isOpen ? "active" : ""}`}

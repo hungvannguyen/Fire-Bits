@@ -1,0 +1,19 @@
+.reviews {
+  @apply mt-[74px];
+
+  .__heading {
+    @apply flex justify-center py-[40px];
+
+    h1 {
+      @apply text-center;
+    }
+  }
+
+  .__reviews {
+    @apply px-3 py-[30px] md:px-[40px] md:py-[40px] lg:pb-[65px];
+
+    .__wrapper {
+      @apply mx-auto grid max-w-[1440px] grid-cols-1 gap-2.5 lg:grid-cols-2;
+    }
+  }
+}
