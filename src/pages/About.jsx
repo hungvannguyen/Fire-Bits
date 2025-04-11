@@ -2,6 +2,7 @@ import Accordion from "../components/Accordion.jsx";
 import MarqueeCarousel from "../components/MarqueeCarousel.jsx";
 import GalleryItem from "../components/GalleryItem.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
+import TagAndHeading from "../components/TagAndHeading.jsx";
 
 export default function About() {
   const items = [
@@ -231,12 +232,7 @@ export default function About() {
 
       <div className="company">
         <div className="__wrapper">
-          <div className="__header">
-            <div className="__badge">
-              <p className="paragraphL">who we are</p>
-            </div>
-            <h2 className="__title">About our Company</h2>
-          </div>
+          <TagAndHeading tag="who are we" heading="About our Company" />
 
           <div className="__footer">
             <p className="__content paragraphL">
@@ -266,12 +262,11 @@ export default function About() {
 
       <div className="brand">
         <div className="__wrapper">
-          <div className="__header">
-            <div className="__badge">
-              <p className="paragraphL">Brands</p>
-            </div>
-            <h2 className="__title">Brands we have worked with</h2>
-          </div>
+          <TagAndHeading
+            tag="brands"
+            heading="Brands we have worked with"
+            className="only_center"
+          />
 
           <div className="__footer">
             <MarqueeCarousel
@@ -292,18 +287,17 @@ export default function About() {
 
       <div className="value">
         <div className="__wrapper">
-          <p className="__text">Values </p>
+          <p className="__text">Values</p>
         </div>
       </div>
 
       <div className="process">
         <div className="__wrapper">
-          <div className="__header">
-            <div className="__badge">
-              <p className="paragraphL">How we work</p>
-            </div>
-            <h2 className="__title">Our 4 Stage Process</h2>
-          </div>
+          <TagAndHeading
+            tag="how we work"
+            heading="Our 4 Stage Process"
+            className="only_center"
+          />
 
           <div className="__footer">
             <div className="__step">
@@ -396,12 +390,7 @@ export default function About() {
       <div className="gallery">
         <div className="__wrapper">
           <div className="__wrapper">
-            <div className="__header">
-              <div className="__badge">
-                <p className="paragraphL">who we are</p>
-              </div>
-              <h2 className="__title">About our Company</h2>
-            </div>
+            <TagAndHeading tag="gallery" heading="Our Agency Snaps" />
             <div className="__sub-header">
               <p className="parageaphS">
                 At Firebits, we believe that a great work environment fuels
@@ -436,14 +425,12 @@ export default function About() {
 
       <div className="questions">
         <div className="__wrapper">
-          <div className="__header">
-            <div className="__badge">
-              <p className="paragraphL">Frequently Asked Questions</p>
-            </div>
-            <h2 className="__title">
-              Got Questions? <br /> We've Got Answers!{" "}
-            </h2>
-          </div>
+          <TagAndHeading
+            tag="Frequently Asked Questions"
+            heading="Got Questions?
+We've Got Answers!"
+            className="only_center"
+          />
 
           <div className="__accordion">
             <AccordionArrow
