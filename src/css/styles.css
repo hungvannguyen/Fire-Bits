@@ -12,6 +12,7 @@
 @import "./pages/home.css";
 @import "./pages/about.css";
 @import "./pages/reviews.css";
+@import "./pages/contact.css";
 @import "./components/Accordion.css";
 @import "./components/MarqueeCarousel.css";
 @import "./components/GalleryItem.css";
