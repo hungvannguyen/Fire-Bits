@@ -1,9 +1,9 @@
 .about {
   .hero {
-    @apply h-[80vh] overflow-hidden pt-[90px] pb-[60px];
+    @apply h-[50vh] overflow-hidden pt-[90px] pb-[40px] sm:px-3 md:px-10 lg:h-[80vh] lg:pb-[60px];
 
     .__image {
-      @apply relative flex h-[510px] w-full flex-col items-center overflow-hidden rounded-[30px] bg-amber-400 object-cover;
+      @apply relative z-2 flex h-[510px] w-full flex-col items-center overflow-hidden rounded-[30px] bg-amber-400 object-cover;
 
       image {
         @apply h-full w-full rounded-[30px] object-cover object-center;
@@ -19,124 +19,11 @@
     }
   }
 
-  .about {
-    @apply flex flex-col gap-[60px] px-10 py-[100px];
-
-    .__header {
-      @apply flex items-center gap-[24px];
-
-      .__badge {
-        @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
-
-        p {
-          @apply flex h-[22px] items-center text-[11px] text-lightTone uppercase;
-        }
-      }
-    }
-
-    .__footer {
-      @apply grid grid-cols-2 gap-[60px];
-
-      .__content {
-        @apply break-normal text-whiteo50;
-      }
-
-      .__accordion {
-        @apply flex flex-col gap-2.5;
-      }
-    }
-  }
-
-  .brand {
-    @apply flex flex-col gap-[20px] px-10 py-[100px];
-
-    .__header {
-      @apply flex flex-col items-center gap-[24px];
-
-      .__badge {
-        @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
-
-        p {
-          @apply flex h-[22px] items-center text-[11px] text-lightTone uppercase;
-        }
-      }
-    }
-
-    .__footer {
-      @apply shrink-0;
-    }
-  }
-
-  .value {
-    @apply flex w-full items-center justify-center px-10 py-[200px];
-
-    .__text {
-      @apply flex h-[301px] w-full items-center justify-center text-center font-Unbounded text-[400px] leading-[1.2] font-normal text-white;
-    }
-  }
-
-  .process {
-    @apply flex flex-col gap-[60px] px-[50px] py-[100px];
-
-    .__header {
-      @apply flex flex-col items-center gap-[24px];
-
-      .__badge {
-        @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
-
-        p {
-          @apply flex h-[22px] items-center text-[11px] text-lightTone uppercase;
-        }
-      }
-    }
-
-    .__footer {
-      @apply flex h-[447] flex-col items-center justify-center;
-
-      .__step {
-        @apply flex gap-[48px];
-
-        .__wrapper {
-          @apply flex h-full flex-col items-center justify-center gap-[20px];
-
-          .__timeline {
-            @apply px-[18px] pt-[20px] font-Unbounded text-[66px] leading-[0.7em] text-[rgba(255,221,0,0.43)];
-            letter-spacing: -1px;
-          }
-
-          .__progress-bar {
-            @apply h-[295px] w-[3px] bg-whiteo5;
-          }
-        }
-
-        .__content {
-          @apply flex h-fit max-w-[600px] flex-col gap-2.5 rounded-[30px] bg-whiteo5 px-[30px] pt-5 pb-[30px];
-
-          .__header {
-            @apply flex flex-col items-start gap-[11px];
-
-            .__badge {
-              @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
-
-              p {
-                @apply flex h-[22px] items-center text-[11px] text-lightTone uppercase;
-              }
-            }
-          }
-
-          .__text {
-            @apply font-thin;
-          }
-        }
-      }
-    }
-  }
-
-  .gallery {
-    @apply px-2.5 py-[100px];
+  .company {
+    @apply px-3 py-[50px] md:px-10 md:py-[80px] lg:py-[100px];
 
     .__wrapper {
-      @apply flex flex-col gap-5 px-[30px] pb-[60px];
+      @apply mx-auto flex max-w-[1440px] flex-col gap-[32px] md:gap-[60px];
 
       .__header {
         @apply flex items-center gap-[24px];
@@ -145,18 +32,187 @@
           @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
 
           p {
-            @apply flex h-[22px] items-center text-[11px] text-lightTone uppercase;
+            @apply flex h-[22px] items-center text-[11px] font-bold text-lightTone uppercase;
           }
         }
       }
 
-      .__sub-header {
-        @apply max-w-[500px] font-thin text-white;
+      .__footer {
+        @apply grid grid-cols-1 gap-[40px] md:gap-[60px] lg:grid-cols-2;
+
+        .__content {
+          @apply break-normal text-whiteo50;
+        }
+
+        .__accordion {
+          @apply flex flex-col gap-2.5;
+        }
       }
     }
+  }
 
-    .__gallery {
-      @apply flex flex-col gap-2.5;
+  .brand {
+    @apply px-5 py-[50px] md:px-10 md:py-[80px] lg:py-[100px];
+
+    .__wrapper {
+      @apply mx-auto flex max-w-[1440px] flex-col gap-[20px];
+
+      .__header {
+        @apply flex flex-col items-center gap-[24px];
+
+        .__badge {
+          @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
+
+          p {
+            @apply flex h-[22px] items-center text-[11px] font-bold text-lightTone uppercase;
+          }
+        }
+      }
+
+      .__footer {
+        @apply shrink-0;
+      }
+    }
+  }
+
+  .value {
+    @apply px-5 py-[100px] md:px-10 md:py-[200px];
+
+    .__wrapper {
+      @apply mx-auto flex w-full max-w-[1440px] items-center justify-center;
+
+      .__text {
+        @apply flex h-[301px] w-full items-center justify-center text-center font-Unbounded text-[400px] leading-[1.2] font-normal text-white;
+      }
+    }
+  }
+
+  .process {
+    @apply px-3 py-[50px] md:py-[80px] lg:px-[50px] lg:py-[100px];
+
+    .__wrapper {
+      @apply mx-auto flex max-w-[1440px] flex-col gap-[60px];
+
+      .__header {
+        @apply flex flex-col items-center gap-[24px];
+
+        .__badge {
+          @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
+
+          p {
+            @apply flex h-[22px] items-center text-[11px] font-bold text-lightTone uppercase;
+          }
+        }
+      }
+
+      .__footer {
+        @apply flex h-[447] flex-col items-center justify-center gap-2.5 md:gap-0;
+
+        .__step {
+          @apply flex gap-[48px];
+
+          .__wrapper {
+            @apply hidden h-full flex-col items-center justify-center gap-[20px] md:flex;
+
+            .__timeline {
+              @apply px-[18px] pt-[20px] font-Unbounded text-[66px] leading-[0.7em] text-[rgba(255,221,0,0.43)];
+              letter-spacing: -1px;
+            }
+
+            .__progress-bar {
+              @apply h-[295px] w-[3px] bg-whiteo5;
+            }
+          }
+
+          .__content {
+            @apply flex h-fit max-w-[600px] flex-col gap-2.5 rounded-[30px] bg-whiteo5 px-[30px] pt-5 pb-[30px];
+
+            .__header {
+              @apply flex flex-col items-start gap-[11px];
+
+              .__badge {
+                @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
+
+                p {
+                  @apply flex h-[22px] items-center text-[11px] font-bold text-lightTone uppercase;
+                }
+              }
+            }
+
+            .__text {
+              @apply font-thin;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gallery {
+    @apply px-2.5 py-[50px] md:py-[80px] lg:px-10 lg:py-[100px];
+
+    .__wrapper {
+      @apply mx-auto max-w-[1440px];
+
+      .__wrapper {
+        @apply flex flex-col gap-5 px-[30px] pb-[60px];
+
+        .__header {
+          @apply flex items-center gap-[24px];
+
+          .__badge {
+            @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
+
+            p {
+              @apply flex h-[22px] items-center text-[11px] text-lightTone uppercase;
+            }
+          }
+        }
+
+        .__sub-header {
+          @apply flex justify-center lg:justify-end;
+
+          p {
+            @apply max-w-[500px] text-center font-thin text-white lg:text-left;
+          }
+        }
+      }
+
+      .__gallery {
+        @apply flex flex-col gap-2.5;
+      }
+    }
+  }
+
+  .questions {
+    @apply px-3 py-[50px] md:px-10 md:py-[80px] lg:py-[100px];
+
+    .__wrapper {
+      @apply mx-auto flex max-w-[1440px] flex-col gap-[60px];
+
+      .__header {
+        @apply flex flex-col items-center gap-[24px];
+
+        .__badge {
+          @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
+
+          p {
+            @apply flex h-[22px] items-center text-[11px] font-bold text-lightTone uppercase;
+          }
+        }
+
+        .__title {
+          @apply text-center;
+        }
+      }
+
+      .__accordion {
+        @apply flex flex-col items-center justify-center gap-5;
+
+        .__accordion-item {
+          @apply h-fit max-w-[1000px];
+        }
+      }
     }
   }
 }

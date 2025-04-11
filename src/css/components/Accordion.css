@@ -1,7 +1,7 @@
 .accordion {
   @apply box-border flex flex-col gap-[38px] rounded-[30px] border border-whiteo15 bg-whiteo10 p-5;
 
-  .__header {
+  .__heading {
     @apply flex w-full justify-between;
 
     .__title {

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Plus } from "@phosphor-icons/react";
+import { CaretDown } from "@phosphor-icons/react";
 
-export default function Accordion({
+export default function AccordionArrow({
+  className = "",
   initialOpen = false,
   title = "",
   subtitle = "",
@@ -11,7 +12,7 @@ export default function Accordion({
 
   return (
     <div
-      className="accordion group cursor-pointer"
+      className={`accordion-arrow group cursor-pointer ${className}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="__heading">
@@ -20,9 +21,9 @@ export default function Accordion({
           {subtitle && <h4>{subtitle}</h4>}
         </div>
         <div className="__icon">
-          <Plus
+          <CaretDown
             className={`transition-transform duration-300 ease-in-out ${
-              isOpen ? "rotate-45" : "rotate-0"
+              isOpen ? "-rotate-180" : "rotate-0"
             }`}
             size={14}
           />

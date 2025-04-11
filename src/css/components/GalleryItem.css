@@ -1,8 +1,8 @@
 .__item {
-  @apply flex h-[480px] gap-2.5;
+  @apply flex h-[480px] flex-col gap-2.5 lg:flex-row;
 
   .__short {
-    @apply h-full w-[50%] overflow-hidden rounded-[30px] object-cover brightness-100 grayscale filter transition-all duration-600 ease-in-out;
+    @apply h-full overflow-hidden rounded-[30px] object-cover brightness-100 filter transition-all duration-600 ease-in-out lg:w-[50%] lg:grayscale;
   }
 
   .__long {
