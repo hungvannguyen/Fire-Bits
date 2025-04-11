@@ -5,7 +5,18 @@ import ExploreButton from "../components/ExploreButton";
 import TagAndHeading from "../components/TagAndHeading";
 import ServiceCard from "../components/ServiceCard";
 import CardBgBlur from "../components/CardBgBlur";
-import { Network, Cloud, ShieldCheck, ShoppingCart, Robot, Graph, Rocket, UserFocus, Atom } from "@phosphor-icons/react";
+import CircleTag from "../components/CircleTag";
+import {
+  Network,
+  Cloud,
+  ShieldCheck,
+  ShoppingCart,
+  Robot,
+  Graph,
+  Rocket,
+  UserFocus,
+  Atom,
+} from "@phosphor-icons/react";
 
 export default function Home() {
   return (
@@ -379,7 +390,7 @@ export default function Home() {
                   <img
                     decoding="async"
                     sizes="max((min(max(100vw - 80px, 1px), 1440px) - 10px) / 1.5, 1px)"
-                    srcset="https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=512 512w,https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=1024 1024w,https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=2048 2048w,https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg 3392w"
+                    srcSet="https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=512 512w,https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=1024 1024w,https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=2048 2048w,https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg 3392w"
                     src="https://framerusercontent.com/images/4kHUitVXjDybX5JAOM1zzCTKd4.jpg?scale-down-to=1024"
                     alt=""
                   />
@@ -433,151 +444,7 @@ export default function Home() {
                     alt=""
                   />
                 </div>
-                <div className="_circle-tag">
-                  <div className="-item bottom-0 left-[50%]" style={{transform:"translateX(-50%)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Quality</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[47px] left-[47px]" style={{transform:"rotate(2deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Personalization</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[37px] left-[222px]" style={{transform:"rotate(-4deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Reliability</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[91px] left-[201px]" style={{transform:"rotate(-17deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Collaboration</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[101px] left-[48%]" style={{transform:"translateX(-50%) rotate(-14deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Innovation</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[151px] left-[-5px]" style={{transform:"rotate(11deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Customer Focus</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[154px] left-[125px]" style={{transform:"rotate(11deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Long-Term Relationships</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[208px] left-[17px]" style={{transform:"rotate(-15deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Positive Experience</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[194px] right-[-16px]" style={{transform:"rotate(3deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Trustworthiness</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[255px] left-[192px]" style={{transform:"rotate(24deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Passion</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="-item bottom-[273px] left-[28px]" style={{transform:"rotate(-28deg)"}}>
-                    <div className="-wrapper">
-                      <div className="-icon">
-                        <div>
-                          <Atom size={20} className="relative text-darkTone" />
-                        </div>
-                      </div>
-
-                      <div className="-text richTextContainer">
-                        <p className="paragraphXS text-darkTone">Customer Support</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <CircleTag />
               </div>
 
               <div className="item2">

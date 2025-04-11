@@ -392,27 +392,6 @@
                 object-position: center center;
               }
             }
-
-            ._circle-tag{
-              @apply border border-whiteo50 rounded-full flex-none h-[366px] overflow-hidden relative w-[366px];
-              backdrop-filter: blur(8px);
-
-              .-item{
-                @apply absolute h-auto w-auto z-[1] cursor-grab;
-
-                .-wrapper{
-                  @apply flex items-center flex-nowrap gap-[4px] h-min justify-center overflow-hidden px-[20px] py-[10px] relative w-min bg-lightTone rounded-full;
-
-                  .-icon{
-                    @apply flex-none h-[20px] w-[20px] relative text-darkTone;
-                  }
-
-                  .-text{
-                    @apply flex-none h-auto relative whitespace-pre w-auto text-darkTone;
-                  }
-                }
-              }
-            }
           }
 
           .item2 {

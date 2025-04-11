@@ -21,6 +21,7 @@
 @import "./components/Review.css";
 @import "./components/PageHeading.css";
 @import "./components/CardBgBlur.css";
+@import "./components/CircleTag.css";
 
 body {
   @apply bg-black;
