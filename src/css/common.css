@@ -32,3 +32,9 @@
 .flex-none-nowrap{
     @apply flex flex-none flex-nowrap;
 }
+
+.richTextContainer{
+    @apply outline-none flex flex-col shrink-0 whitespace-pre-wrap w-full;
+    word-break: break-word;
+    word-wrap: break-word;
+}

@@ -1,19 +1,31 @@
-.TagAndHeading{
-    @apply flex sm:flex-col lg:flex-row items-center md:items-start flex-none flex-nowrap justify-start gap-[24px] h-min overflow-visible p-0 relative w-full; 
+.TagAndHeading {
+  @apply relative flex h-min w-full flex-none flex-nowrap items-center justify-start gap-[24px] sm:gap-[10px] overflow-visible p-0;
 
-    .tag_name{
-        @apply rounded-full flex flex-nowrap items-center justify-center overflow-visible gap-[7px] px-[12px] py-[3px] relative w-min h-min bg-whiteo10;
+  .tag_name {
+    @apply relative flex h-min w-auto flex-nowrap items-center justify-center gap-[7px] overflow-visible rounded-full bg-whiteo10 px-[12px] py-[3px];
 
-        p{
-            @apply text-lightTone;
-        }
+    p {
+      @apply text-lightTone;
     }
+  }
 
-    .section_name{
-        @apply flex flex-col justify-start shrink-0 outline-none;
+  .section_name {
+    @apply flex shrink-0 flex-col justify-start outline-none;
 
-        h2{
-            @apply sm:text-center;
-        }
+    h2 {
+      @apply sm:text-center;
     }
+  }
+}
+
+.ver2{
+    @apply sm:flex-col md:items-center lg:flex-row;
+}
+
+.ver1{
+    @apply sm:flex-col sm:items-center md:flex-row;
+}
+
+.only_center{
+    @apply items-center flex-col;
 }
