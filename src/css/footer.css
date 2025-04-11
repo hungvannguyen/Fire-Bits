@@ -10,7 +10,7 @@
 
     .__left {
       p {
-        @apply flex w-full justify-center object-fill font-Unbounded text-[156px] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone lg:justify-start;
+        @apply flex w-full justify-center object-fill font-Unbounded text-[30vw] leading-[0.7em] font-normal text-white first:text-white last:text-lightTone lg:justify-start lg:text-[156px];
       }
     }
 
