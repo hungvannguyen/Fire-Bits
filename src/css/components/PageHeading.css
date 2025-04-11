@@ -1,0 +1,8 @@
+.PageHeading{
+    @apply flex items-center justify-center gap-[10px] lg:h-[40vh] overflow-hidden relative w-screen lg:pt-[40px] md:p-0 sm:h-[30vh] sm:px-[20px] sm:pt-[40px];
+
+    ._container{
+        @apply flex-[1_0_0px] h-auto max-w-[740px] relative z-[1] justify-center items-center;
+        text-shadow: rgb(0, 0, 0) 0px 1px 100px;
+    }
+}

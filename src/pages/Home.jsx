@@ -4,7 +4,8 @@ import whyUsImage from "../assets/img/whyUs.jpg";
 import ExploreButton from "../components/ExploreButton";
 import TagAndHeading from "../components/TagAndHeading";
 import ServiceCard from "../components/ServiceCard";
-import { House, Graph, Rocket, UserFocus, Atom } from "@phosphor-icons/react";
+import CardBgBlur from "../components/CardBgBlur";
+import { Network, Cloud, ShieldCheck, ShoppingCart, Robot, Graph, Rocket, UserFocus, Atom } from "@phosphor-icons/react";
 
 export default function Home() {
   return (
@@ -103,7 +104,11 @@ export default function Home() {
           <div className="heading">
             <div className="content_1">
               <div className="box">
-                <TagAndHeading tag="Service" heading="What we are offering" className="ver1" />
+                <TagAndHeading
+                  tag="Service"
+                  heading="What we are offering"
+                  className="ver1"
+                />
                 <div className="h-min w-full"></div>
               </div>
             </div>
@@ -115,31 +120,31 @@ export default function Home() {
           <div className="service_container">
             <div className="_grid">
               <ServiceCard
-                icon={House}
+                icon={Network}
                 title="Outsourcing"
                 description="We offer high-quality outsourcing services that help businesses reduce costs and optimize operations by outsourcing tasks such as software development, customer support, and IT services."
                 link="#"
               />
               <ServiceCard
-                icon={House}
+                icon={Cloud}
                 title="SaaS (Software as a Service)"
                 description="We provide SaaS solutions that allow businesses to access powerful tools without worrying about infrastructure and maintenance, enabling more efficient and scalable operations."
                 link="#"
               />
               <ServiceCard
-                icon={House}
+                icon={ShieldCheck}
                 title="SEO (Search Engine Optimization)"
                 description="Our SEO services help businesses enhance their online presence, improve search engine rankings, attract potential customers, and increase revenue."
                 link="#"
               />
               <ServiceCard
-                icon={House}
+                icon={ShoppingCart}
                 title="Ecommerce"
                 description="Firebits offers comprehensive eCommerce solutions that empower businesses to build and scale online stores, optimize user experience, and drive revenue growth in the digital marketplace."
                 link="#"
               />
               <ServiceCard
-                icon={House}
+                icon={Robot}
                 title="AI Agency"
                 description="Our AI services help businesses implement artificial intelligence solutions, from data analysis to process automation, optimizing efficiency and boosting creativity in business strategies."
                 link="#"
@@ -223,97 +228,25 @@ export default function Home() {
 
         <div className="bottomContent">
           <div className="_content1">
-            <div>
-              <div className="-itemContainer">
-                <div className="-itemBox">
-                  <div className="-icon">
-                    <div>
-                      <Rocket size={42} className="relative text-lightTone" />
-                    </div>
-                  </div>
+            <CardBgBlur
+              icon={Rocket}
+              heading="heading"
+              subText="we have built a reputation as a trusted and reliable partner in achieving business success."
+            />
 
-                  <div className="-text">
-                    <div className="_heading">
-                      <h3 className="text-center">heading</h3>
-                    </div>
-                    <div className="_subText">
-                      <p className="paragraphXS text-center text-white/80">
-                        we have built a reputation as a trusted and reliable
-                        partner in achieving business success.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <CardBgBlur
+              icon={Graph}
+              heading="Tailored Solutions"
+              subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
+            />
 
-            <div>
-              <div className="-itemContainer">
-                <div className="-itemBox">
-                  <div className="-icon">
-                    <div>
-                      <Graph size={42} className="relative text-lightTone" />
-                    </div>
-                  </div>
-
-                  <div className="-text">
-                    <div className="_heading">
-                      <h3 className="text-center">heading</h3>
-                    </div>
-                    <div className="_subText">
-                      <p className="paragraphXS text-center text-white/80">
-                        we have built a reputation as a trusted and reliable
-                        partner in achieving business success.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div className="-itemContainer">
-                <div className="-itemBox">
-                  <div className="-icon">
-                    <div>
-                      <UserFocus
-                        size={42}
-                        className="relative text-lightTone"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="-text">
-                    <div className="_heading">
-                      <h3 className="text-center">heading</h3>
-                    </div>
-                    <div className="_subText">
-                      <p className="paragraphXS text-center text-white/80">
-                        we have built a reputation as a trusted and reliable
-                        partner in achieving business success.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <CardBgBlur
+              icon={UserFocus}
+              heading="Client-Centric Focus"
+              subText="Your success is our priority. We prioritize understanding your business goals."
+            />
           </div>
           <div className="_content2">
-            <div className="-itemContainer">
-              <div className="-itemBox">
-                <div className="-icon">
-                  <div>
-                    <Atom size={20} className="relative text-lightTone" />
-                  </div>
-                </div>
-
-                <div className="-text">
-                  <p className="paragraphXS text-white">
-                    Continuous Innovation
-                  </p>
-                </div>
-              </div>
-            </div>
             <div className="-itemContainer">
               <div className="-itemBox">
                 <div className="-icon">
@@ -501,7 +434,149 @@ export default function Home() {
                   />
                 </div>
                 <div className="_circle-tag">
-                    
+                  <div className="-item bottom-0 left-[50%]" style={{transform:"translateX(-50%)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Quality</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[47px] left-[47px]" style={{transform:"rotate(2deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Personalization</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[37px] left-[222px]" style={{transform:"rotate(-4deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Reliability</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[91px] left-[201px]" style={{transform:"rotate(-17deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Collaboration</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[101px] left-[48%]" style={{transform:"translateX(-50%) rotate(-14deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Innovation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[151px] left-[-5px]" style={{transform:"rotate(11deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Customer Focus</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[154px] left-[125px]" style={{transform:"rotate(11deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Long-Term Relationships</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[208px] left-[17px]" style={{transform:"rotate(-15deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Positive Experience</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[194px] right-[-16px]" style={{transform:"rotate(3deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Trustworthiness</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[255px] left-[192px]" style={{transform:"rotate(24deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Passion</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="-item bottom-[273px] left-[28px]" style={{transform:"rotate(-28deg)"}}>
+                    <div className="-wrapper">
+                      <div className="-icon">
+                        <div>
+                          <Atom size={20} className="relative text-darkTone" />
+                        </div>
+                      </div>
+
+                      <div className="-text richTextContainer">
+                        <p className="paragraphXS text-darkTone">Customer Support</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 

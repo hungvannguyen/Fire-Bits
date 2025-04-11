@@ -1,13 +1,13 @@
 import Review from "../components/Review.jsx";
+import PageHeading from "../components/PageHeading.jsx";
 
 export default function Reviews() {
   return (
     <div className="reviews">
-      <div className="__heading">
-        <h1 className="inner-page">
-          Check Our Works With <br /> Real Results{" "}
-        </h1>
-      </div>
+      <PageHeading
+        title="Check Our Works With"
+        titleLine2="Real Results"
+      />
 
       <div className="__reviews">
         <div className="__wrapper">

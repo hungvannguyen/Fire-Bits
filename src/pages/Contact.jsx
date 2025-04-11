@@ -4,13 +4,14 @@ import {
   LinkedinLogo,
   TwitterLogo,
 } from "@phosphor-icons/react";
+import PageHeading from "../components/PageHeading";
 
 export default function Contact() {
   return (
     <div className="contact">
-      <div className="__heading">
-        <h1 className="inner-page">Let's Work Together </h1>
-      </div>
+      <PageHeading
+        title="Let's Work Together"
+      />
 
       <div className="__contact">
         <div className="__wrapper">

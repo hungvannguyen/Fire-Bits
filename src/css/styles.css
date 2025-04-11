@@ -13,11 +13,14 @@
 @import "./pages/about.css";
 @import "./pages/reviews.css";
 @import "./pages/contact.css";
+@import "./pages/services.css";
 @import "./components/Accordion.css";
 @import "./components/AccordionArrow.css";
 @import "./components/MarqueeCarousel.css";
 @import "./components/GalleryItem.css";
 @import "./components/Review.css";
+@import "./components/PageHeading.css";
+@import "./components/CardBgBlur.css";
 
 body {
   @apply bg-black;

@@ -222,39 +222,10 @@
     }
 
     .bottomContent {
-      @apply relative flex h-min w-full max-w-[1440px] flex-col items-start justify-center gap-[23px] overflow-hidden p-0;
+      @apply relative flex-none flex-nowrap flex h-min w-full max-w-[1440px] flex-col items-start justify-center gap-[23px] overflow-hidden p-0;
 
       ._content1 {
-        @apply relative z-[1] flex h-min w-full items-center justify-center gap-[10px] overflow-hidden p-0 sm:flex-col md:flex-row md:gap-[3px];
-
-        .-itemContainer {
-          @apply relative h-auto flex-1;
-
-          .-itemBox {
-            @apply relative flex h-min w-full flex-col items-center justify-center gap-[25px] overflow-hidden rounded-[20px] border border-whiteo10 bg-whiteo5 p-[20px];
-            backdrop-filter: blur(10px);
-
-            .-icon {
-              @apply relative flex h-[42px] w-[42px] items-center justify-center gap-[10px] overflow-visible rounded-[20px] border border-lightTone bg-whiteo5 p-[30px];
-            }
-
-            .-text {
-              @apply relative flex h-min w-full flex-col items-center justify-center gap-[6px] overflow-visible p-0;
-
-              ._heading {
-                @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
-                word-break: break-word;
-                word-wrap: break-word;
-              }
-
-              ._subText {
-                @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
-                word-break: break-word;
-                word-wrap: break-word;
-              }
-            }
-          }
-        }
+        @apply relative z-[1] flex flex-none flex-nowrap h-min w-full items-center justify-center gap-[10px] overflow-hidden p-0 sm:flex-col md:flex-row md:gap-[3px];
       }
 
       ._content2 {
@@ -425,6 +396,22 @@
             ._circle-tag{
               @apply border border-whiteo50 rounded-full flex-none h-[366px] overflow-hidden relative w-[366px];
               backdrop-filter: blur(8px);
+
+              .-item{
+                @apply absolute h-auto w-auto z-[1] cursor-grab;
+
+                .-wrapper{
+                  @apply flex items-center flex-nowrap gap-[4px] h-min justify-center overflow-hidden px-[20px] py-[10px] relative w-min bg-lightTone rounded-full;
+
+                  .-icon{
+                    @apply flex-none h-[20px] w-[20px] relative text-darkTone;
+                  }
+
+                  .-text{
+                    @apply flex-none h-auto relative whitespace-pre w-auto text-darkTone;
+                  }
+                }
+              }
             }
           }
 
