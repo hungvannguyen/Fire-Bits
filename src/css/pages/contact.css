@@ -2,7 +2,7 @@
   @apply mt-[74px];
 
   .__heading {
-    @apply flex justify-center py-[40px];
+    @apply flex justify-center py-[40px] lg:py-[80px];
 
     h1 {
       @apply text-center;
@@ -10,7 +10,7 @@
   }
 
   .__contact {
-    @apply px-[15px] pb-[50px] md:px-[40px] md:pt-[40px] md:pb-[80px] lg:py-0;
+    @apply px-[15px] pb-[50px] md:px-[40px] md:pt-[40px] md:pb-[80px];
 
     .__wrapper {
       @apply mx-auto flex max-w-[1200px] flex-col gap-2.5 rounded-[30px] bg-whiteo5 p-5;
