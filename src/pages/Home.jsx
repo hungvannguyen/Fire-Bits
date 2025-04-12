@@ -33,6 +33,7 @@ export default function Home() {
               </div>
             </div>
             <div className="__text">
+              Brands that trust us
               <h1>Solution.</h1>
             </div>
           </div>
@@ -103,7 +104,11 @@ export default function Home() {
           <div className="heading">
             <div className="content_1">
               <div className="box">
-                <TagAndHeading tag="Service" heading="What we are offering" className="ver1" />
+                <TagAndHeading
+                  tag="Service"
+                  heading="What we are offering"
+                  className="ver1"
+                />
                 <div className="h-min w-full"></div>
               </div>
             </div>
@@ -500,9 +505,7 @@ export default function Home() {
                     alt=""
                   />
                 </div>
-                <div className="_circle-tag">
-                    
-                </div>
+                <div className="_circle-tag"></div>
               </div>
 
               <div className="item2">

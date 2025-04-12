@@ -1,6 +1,6 @@
 import { Star } from "@phosphor-icons/react";
 
-export default function Review({
+export default function ReviewWithIcon({
   content = "",
   avatar = "",
   name = "",
@@ -32,7 +32,7 @@ export default function Review({
         </ul>
       </div>
 
-      <div className="__content">
+      <div className="_content">
         <p className="paragraphS">{content}</p>
       </div>
 
