@@ -1,0 +1,15 @@
+.headingPageWithButton {
+  @apply flex flex-col items-center justify-center gap-[30px];
+
+  .__head {
+    @apply flex flex-col items-center justify-center gap-[10px];
+
+    p {
+      @apply max-w-[510px] text-center text-white opacity-[0.6];
+    }
+  }
+
+  .__btn {
+    @apply box-border h-[43px] rounded-[30px] border-[0.1px] border-white bg-lightTone px-5 py-2.5 uppercase;
+  }
+}

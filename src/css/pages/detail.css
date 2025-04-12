@@ -1,0 +1,29 @@
+.detail {
+  .__headingPage {
+    @apply flex flex-col gap-[60px] px-[40px] pt-[120px];
+
+    .__image {
+      @apply mx-auto max-w-[1440px];
+
+      img {
+        @apply w-[1fr] rounded-[30px] object-cover;
+      }
+    }
+  }
+
+  .benefits {
+    @apply px-[40px] py-[100px];
+
+    .__wrapper {
+      @apply mx-auto flex max-w-[1440px] flex-col gap-[39px];
+
+      p {
+        @apply font-thin;
+      }
+
+      .__accordion {
+        @apply grid grid-cols-2 gap-2.5;
+      }
+    }
+  }
+}

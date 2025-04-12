@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Reviews from "./pages/Reviews.jsx";
 import Contact from "./pages/Contact.jsx";
+import Outsourcing from "./pages/Outsourcing.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/outsourcing" element={<Outsourcing />} />
           </Routes>
         </div>
       </div>
