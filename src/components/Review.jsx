@@ -32,7 +32,7 @@ export default function Review({
         </ul>
       </div>
 
-      <div className="_content">
+      <div className="__content">
         <p className="paragraphS">{content}</p>
       </div>
 

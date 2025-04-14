@@ -115,11 +115,7 @@ export default function Home() {
           <div className="heading">
             <div className="content_1">
               <div className="box">
-                <TagAndHeading
-                  tag="Service"
-                  heading="What we are offering"
-                  className="ver1"
-                />
+                <TagAndHeading tag="Service" heading="What we are offering" className="ver1" />
                 <div className="h-min w-full"></div>
               </div>
             </div>

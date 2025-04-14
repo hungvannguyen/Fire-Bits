@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Reviews from "./pages/Reviews.jsx";
 import Contact from "./pages/Contact.jsx";
 import Services from "./pages/Services.jsx";
+import Outsourcing from "./pages/Outsourcing.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/outsourcing" element={<Outsourcing />} />
           </Routes>
         </div>
       </div>

@@ -33,3 +33,43 @@
     }
   }
 }
+
+.review-with-icon {
+  @apply flex flex-col gap-[21px] rounded-[20px] bg-whiteo5 p-2.5 w-[290px] shrink-0;
+
+  .__head {
+    .__stars {
+      @apply flex h-[60px] w-[97px] items-center justify-between;
+
+      .__icon {
+        @apply text-lightTone;
+      }
+    }
+  }
+
+  .__content {
+    @apply border-b border-whiteo10;
+  }
+
+  .__footer {
+    @apply mb-[21px] flex gap-2.5;
+
+    .__avatar {
+      @apply h-[44px] w-[44px] rounded-[20px];
+
+      img {
+        @apply h-full w-full rounded-[12px];
+      }
+    }
+
+    .__bio {
+      h5 {
+        @apply text-white;
+      }
+
+      p {
+        @apply text-white;
+      }
+    }
+  }
+}
