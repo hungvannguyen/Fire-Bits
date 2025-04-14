@@ -4,6 +4,7 @@ import GalleryItem from "../components/GalleryItem.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
 import TagAndHeading from "../components/TagAndHeading.jsx";
 import Step from "../components/Step.jsx";
+import CircleTag from "../components/CircleTag.jsx";
 
 export default function About() {
   const items = [
@@ -287,8 +288,12 @@ export default function About() {
       </div>
 
       <div className="value">
-        <div className="__wrapper">
+        <div className="__wrapper relative">
           <p className="__text">Values</p>
+
+          <div className="absolute top-18 md:-top-7 lg:top-18">
+            <CircleTag />
+          </div>
         </div>
       </div>
 

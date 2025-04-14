@@ -58,7 +58,7 @@
       @apply mx-auto flex w-full max-w-[1440px] items-center justify-center;
 
       .__text {
-        @apply flex w-full items-center justify-center text-center font-Unbounded text-[25vw] leading-[1.2] font-normal text-white;
+        @apply flex w-full items-center justify-center text-center font-Unbounded text-[20vw] leading-[1.2] font-normal text-white uppercase;
       }
     }
   }
