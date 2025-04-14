@@ -1,6 +1,39 @@
-import {Atom} from "@phosphor-icons/react";
+import React, { useEffect } from "react";
+import { Atom } from "@phosphor-icons/react";
+import gsap from "gsap";
+import { Draggable } from "gsap/Draggable";
 
-const CircleTag = ({}) => {
+const CircleTag = () => {
+  useEffect(() => {
+    gsap.registerPlugin(Draggable);
+
+    Draggable.create(".-item", {
+      type: "x,y",
+      // Không sử dụng bounds để cho phép kéo tự do ra ngoài container
+      throwProps: true,
+      onDragStart: function () {
+        // Lưu lại vị trí ban đầu của phần tử nếu chưa lưu
+        if (!this.target.dataset.initialX) {
+          const initialX = gsap.getProperty(this.target, "x") || 0;
+          const initialY = gsap.getProperty(this.target, "y") || 0;
+          this.target.dataset.initialX = initialX;
+          this.target.dataset.initialY = initialY;
+        }
+      },
+      onDragEnd: function () {
+        // Lấy vị trí ban đầu và animate về đó với hiệu ứng bounce
+        const initialX = parseFloat(this.target.dataset.initialX) || 0;
+        const initialY = parseFloat(this.target.dataset.initialY) || 0;
+        gsap.to(this.target, {
+          x: initialX,
+          y: initialY,
+          duration: 0.3,
+          ease: "back.out",
+        });
+      },
+    });
+  }, []);
+
   return (
     <div className="CircleTag">
       <div
@@ -13,7 +46,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Quality</p>
           </div>
@@ -29,7 +61,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Personalization</p>
           </div>
@@ -45,7 +76,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Reliability</p>
           </div>
@@ -61,7 +91,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Collaboration</p>
           </div>
@@ -77,7 +106,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Innovation</p>
           </div>
@@ -93,7 +121,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Customer Focus</p>
           </div>
@@ -109,9 +136,10 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
-            <p className="paragraphXS text-darkTone">Long-Term Relationships</p>
+            <p className="paragraphXS text-darkTone">
+              Long-Term Relationships{" "}
+            </p>
           </div>
         </div>
       </div>
@@ -125,7 +153,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Positive Experience</p>
           </div>
@@ -141,7 +168,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Trustworthiness</p>
           </div>
@@ -157,7 +183,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Passion</p>
           </div>
@@ -173,7 +198,6 @@ const CircleTag = ({}) => {
               <Atom size={20} className="relative text-darkTone" />
             </div>
           </div>
-
           <div className="-text richTextContainer">
             <p className="paragraphXS text-darkTone">Customer Support</p>
           </div>

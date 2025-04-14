@@ -31,20 +31,23 @@ export default function Footer() {
               </label>
 
               <label className="__label">
-                <span>Name</span>
+                <span>Email</span>
                 <div>
                   <input
                     type="text"
-                    placeholder="Your Name"
+                    placeholder="Your Email"
                     className="__input"
                   />
                 </div>
               </label>
 
               <label className="__label">
-                <span>Name</span>
+                <span>Message</span>
                 <div>
-                  <textarea placeholder="Your Name" className="__input" />
+                  <textarea
+                    placeholder="Write your messgage"
+                    className="__input"
+                  />
                 </div>
               </label>
 
