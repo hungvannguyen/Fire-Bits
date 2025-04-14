@@ -1,5 +1,5 @@
 @theme {
-    /* font */
+  /* font */
   --font-Unbounded: "Unbounded", sans-serif;
   --font-Satoshi: "Satoshi", sans-serif;
   --font-Inter: "Inter", sans-serif;
@@ -23,38 +23,38 @@
   --color-lightBlack: #1f1d1d;
 
   /* breakpoint */
-    --breakpoint-sm: 0px;
-    --breakpoint-md: 810px;
-    --breakpoint-lg: 1200px;
+  --breakpoint-sm: 0px;
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
 }
 
 @layer base {
   h1 {
-    @apply font-Unbounded lg:text-[70px] md:text-[52px] sm:text-[36px] leading-[0.9em] sm:leading-[1em] font-normal text-white;
+    @apply font-Unbounded leading-[0.9em] font-normal text-white sm:text-[36px] sm:leading-[1em] md:text-[52px] lg:text-[70px];
     letter-spacing: -3px;
     paragraph-spacing: 1px;
   }
 
-  h1.inner-page {
-    @apply font-Unbounded lg:text-[50px] md:text-[40px] sm:text-[27px] leading-[1.1em] font-normal text-white;
+  .h1-inner-page {
+    @apply font-Unbounded leading-[1.1em] font-normal text-white sm:text-[27px] md:text-[40px] lg:text-[50px];
     letter-spacing: -0.05em;
     paragraph-spacing: 40px;
   }
 
   h2 {
-    @apply font-Unbounded lg:text-[40px] md:text-[36px] sm:text-[28px] leading-[1.1em] font-normal text-white;
+    @apply font-Unbounded leading-[1.1em] font-normal text-white sm:text-[28px] md:text-[36px] lg:text-[40px];
     letter-spacing: -1.8px;
     paragraph-spacing: 40px;
   }
 
   h3 {
-    @apply font-Unbounded md:text-[20px] sm:text-[18px] leading-[1.3em] md:leading-[1.4em] sm:leading-[1.4em] font-normal text-white;
+    @apply font-Unbounded leading-[1.3em] font-normal text-white sm:text-[18px] sm:leading-[1.4em] md:text-[20px] md:leading-[1.4em];
     letter-spacing: -0.1px;
     paragraph-spacing: 40px;
   }
 
   h4 {
-    @apply font-Unbounded md:text-[16px] sm:text-[14px] leading-[150%] font-light text-white;
+    @apply font-Unbounded leading-[150%] font-light text-white sm:text-[14px] md:text-[16px];
     letter-spacing: -0.02em;
   }
 
@@ -64,7 +64,7 @@
   }
 
   .paragraphL {
-    @apply font-Satoshi lg:text-[30px] md:text-[26px] sm:text-[22px] leading-[1.3em] font-normal text-white;
+    @apply font-Satoshi leading-[1.3em] font-normal text-white sm:text-[22px] md:text-[26px] lg:text-[30px];
     letter-spacing: -0.04em;
     paragraph-spacing: 20px;
   }
@@ -76,7 +76,7 @@
   }
 
   .paragraphS {
-    @apply font-Satoshi lg:text-[18px] text-[17px] leading-[1.5em] font-normal text-white;
+    @apply font-Satoshi text-[17px] leading-[1.5em] font-normal text-white lg:text-[18px];
     letter-spacing: -0.02em;
     paragraph-spacing: 20px;
   }
@@ -87,18 +87,18 @@
   }
 
   .bodyXXL {
-    @apply font-Unbounded lg:text-[96px] md:text-[52px] sm:text-[46px] leading-[1.2em] font-normal text-white;
+    @apply font-Unbounded leading-[1.2em] font-normal text-white sm:text-[46px] md:text-[52px] lg:text-[96px];
     paragraph-spacing: 20px;
   }
 
   .bodyUppercase {
-    @apply font-Unbounded lg:text-[20px] text-[16px] leading-[1.3em] font-normal text-white uppercase;
+    @apply font-Unbounded text-[16px] leading-[1.3em] font-normal text-white uppercase lg:text-[20px];
     letter-spacing: -0.02em;
     paragraph-spacing: 20px;
   }
 
   .displayText {
-    @apply font-Unbounded lg:text-[50px] md:text-[41px] sm:text-[35px] leading-[0.8em] font-semibold text-white;
+    @apply font-Unbounded leading-[0.8em] font-semibold text-white sm:text-[35px] md:text-[41px] lg:text-[50px];
     letter-spacing: -0.05em;
     @media only screen and (max-width: 809px) {
       paragraph-spacing: 10px;
@@ -106,7 +106,7 @@
   }
 
   .label {
-    @apply font-Satoshi lg:text-[11px] text-[12px] leading-[2em] font-black text-white uppercase;
+    @apply font-Satoshi text-[12px] leading-[2em] font-black text-white uppercase lg:text-[11px];
     paragraph-spacing: 24px;
   }
 

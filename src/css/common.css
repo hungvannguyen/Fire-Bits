@@ -38,3 +38,11 @@
     word-break: break-word;
     word-wrap: break-word;
 }
+
+/* .main{
+    @apply flex items-center flex-[0_0_auto] gap-0 h-min overflow-visible p-0 w-full z-[1] relative;
+
+    @media only screen and (max-width: 809px) {
+        order: 3;
+    }
+} */

@@ -19,7 +19,7 @@ export default function Header() {
           <a href="/about" className="navText">
             About
           </a>
-          <a href="/contact" className="navText">
+          <a href="/services" className="navText">
             Services
           </a>
           <a href="/reviews" className="navText">

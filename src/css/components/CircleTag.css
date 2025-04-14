@@ -1,0 +1,20 @@
+.CircleTag {
+  @apply relative h-[366px] w-[366px] flex-none overflow-hidden rounded-full border border-whiteo50;
+  backdrop-filter: blur(8px);
+
+  .-item {
+    @apply absolute z-[1] h-auto w-auto cursor-grab;
+
+    .-wrapper {
+      @apply relative flex h-min w-min flex-nowrap items-center justify-center gap-[4px] overflow-hidden rounded-full bg-lightTone px-[20px] py-[10px];
+
+      .-icon {
+        @apply relative h-[20px] w-[20px] flex-none text-darkTone;
+      }
+
+      .-text {
+        @apply relative h-auto w-auto flex-none whitespace-pre text-darkTone;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.services_page {
+  ._services_section {
+    @apply flex h-min w-full flex-[0_0_auto] items-center gap-[60px] overflow-visible sm:px-[12px] sm:pb-[50px] md:px-[40px] md:pb-[80px] lg:pb-[100px];
+
+    ._container {
+      @apply relative z-[1] mx-auto flex h-min flex-[1_0_0px] flex-col items-center overflow-visible p-0 sm:justify-normal sm:gap-[40px] md:max-w-[1000px] md:justify-start md:gap-[60px] lg:max-w-[1440px] lg:justify-normal lg:gap-[10px];
+
+      ._grid {
+        @apply relative h-min w-full flex-none justify-center gap-[10px] overflow-visible p-0 sm:flex sm:flex-col sm:items-center md:grid;
+        grid-auto-rows: min-content;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: repeat(2, min-content);
+      }
+    }
+  }
+
+  .whyChooseUs_section {
+    @apply relative flex h-min w-full flex-[0_0_auto] items-center gap-[60px] overflow-visible sm:px-[12px] sm:pb-[50px] md:px-[40px] md:py-[80px] lg:py-[100px];
+
+    ._container {
+      @apply relative z-[1] mx-auto flex h-min flex-[1_0_0px] flex-col items-center overflow-visible p-0 sm:gap-[40px] md:max-w-[1000px] md:justify-start md:gap-[60px] lg:max-w-[1440px] lg:justify-normal;
+
+      ._card_container{
+        @apply flex items-start flex-col flex-[0_0_auto] gap-[23px] h-min max-w-[1440px] overflow-hidden p-0 relative w-full;
+
+        ._grid{
+            @apply grid flex-[0_0_auto] gap-[10px] h-min justify-center overflow-hidden p-0 relative w-full z-[1];
+            grid-auto-rows: minmax(0px, 1fr);
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            grid-template-rows: repeat(2, minmax(0px, 1fr));
+
+            @media only screen and (max-width: 1199px) {
+                gap: 3px;
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+            }
+
+            @media only screen and (max-width: 809px) {
+                align-items: center;
+                display: flex;
+                flex-flow: column;
+                gap: 10px;
+            }
+        }
+      }
+    }
+  }
+}
