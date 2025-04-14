@@ -11,7 +11,7 @@ export default function Accordion({
 
   return (
     <div
-      className="accordion group cursor-pointer"
+      className={`accordion group cursor-pointer ${!isOpen ? "border border-whiteo15" : ""}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="__heading">

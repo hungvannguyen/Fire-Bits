@@ -3,6 +3,7 @@ import MarqueeCarousel from "../components/MarqueeCarousel.jsx";
 import GalleryItem from "../components/GalleryItem.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
 import TagAndHeading from "../components/TagAndHeading.jsx";
+import Step from "../components/Step.jsx";
 
 export default function About() {
   const items = [
@@ -299,90 +300,47 @@ export default function About() {
             className="only_center"
           />
 
-          <div className="__footer">
-            <div className="__step">
-              <div className="__wrapper">
-                <div className="__timeline">01</div>
-                <div className="__progress-bar"></div>
-              </div>
-              <div className="__content">
-                <div className="__header">
-                  <div className="__badge">
-                    <p className="paragraphL">Step 01</p>
-                  </div>
-                  <h3 className="__title">Discovery & Consultation</h3>
-                </div>
-                <p className="__text paragraphXS">
-                  In the first stage, we focus on understanding our clients'
+          <div>
+            <Step
+              title="Discovery & Consultation"
+              badgeText="Step 01"
+              stepNumber="01"
+              text="In the first stage, we focus on understanding our clients'
                   needs, goals, and challenges. Our expert team conducts
                   in-depth research on the market, competitors, and technology
-                  trends to provide the most suitable direction.{" "}
-                </p>
-              </div>
-            </div>
+                  trends to provide the most suitable direction."
+            />
 
-            <div className="__step">
-              <div className="__wrapper">
-                <div className="__timeline">02</div>
-                <div className="__progress-bar"></div>
-              </div>
-              <div className="__content">
-                <div className="__header">
-                  <div className="__badge">
-                    <p className="paragraphL">Step 02</p>
-                  </div>
-                  <h3 className="__title">Strategy & Solution Design</h3>
-                </div>
-                <p className="__text paragraphXS">
-                  Based on the collected data, we develop a customized strategy
+            <Step
+              title="Strategy & Solution Design"
+              badgeText="Step 02"
+              stepNumber="02"
+              text="Based on the collected data, we develop a customized strategy
                   for each client. Whether it’s a SaaS solution, SEO
                   optimization, eCommerce development, or AI implementation, we
                   ensure that your strategy has a clear roadmap aligned with
-                  your business objectives.{" "}
-                </p>
-              </div>
-            </div>
+                  your business objectives."
+            />
 
-            <div className="__step">
-              <div className="__wrapper">
-                <div className="__timeline">03</div>
-                <div className="__progress-bar"></div>
-              </div>
-              <div className="__content">
-                <div className="__header">
-                  <div className="__badge">
-                    <p className="paragraphL">Step 03</p>
-                  </div>
-                  <h3 className="__title">Implementation and Execution</h3>
-                </div>
-                <p className="__text paragraphXS">
-                  Once the strategy is finalized, the Firebits team executes the
+            <Step
+              title="Implementation and Execution"
+              badgeText="Step 03"
+              stepNumber="03"
+              text="Once the strategy is finalized, the Firebits team executes the
                   plan with precision and efficiency. We leverage cutting-edge
                   technologies to develop products, optimize performance, and
-                  ensure an outstanding user experience.{" "}
-                </p>
-              </div>
-            </div>
+                  ensure an outstanding user experience."
+            />
 
-            <div className="__step">
-              <div className="__wrapper">
-                <div className="__timeline">04</div>
-              </div>
-              <div className="__content">
-                <div className="__header">
-                  <div className="__badge">
-                    <p className="paragraphL">Step 04</p>
-                  </div>
-                  <h3 className="__title">Optimization & Growth</h3>
-                </div>
-                <p className="__text paragraphXS">
-                  Beyond implementation, Firebits is committed to monitoring,
+            <Step
+              title="Optimization & Growth"
+              badgeText="Step 04"
+              stepNumber="04"
+              text=" Beyond implementation, Firebits is committed to monitoring,
                   analyzing data, and continuously optimizing solutions. We help
                   clients scale up, enhance performance, and ensure sustainable
-                  growth in the global market.{" "}
-                </p>
-              </div>
-            </div>
+                  growth in the global market."
+            />
           </div>
         </div>
       </div>

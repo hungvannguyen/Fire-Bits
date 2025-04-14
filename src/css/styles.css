@@ -24,6 +24,7 @@
 @import "./components/PageHeading.css";
 @import "./components/CardBgBlur.css";
 @import "./components/CircleTag.css";
+@import "./components/Step.css";
 
 body {
   @apply bg-black;

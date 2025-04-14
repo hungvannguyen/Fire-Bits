@@ -1,0 +1,36 @@
+.step {
+  @apply flex gap-[48px];
+
+  .__timeline-container {
+    @apply hidden h-full flex-col items-center justify-center gap-[20px] md:flex;
+
+    .__timeline {
+      @apply px-[18px] pt-[20px] font-Unbounded text-[66px] leading-[0.7em] text-[rgba(255,221,0,0.43)];
+      letter-spacing: -1px;
+    }
+
+    .__progress-bar {
+      @apply h-[295px] w-[3px] bg-whiteo5;
+    }
+  }
+
+  .__content {
+    @apply flex h-fit max-w-[600px] flex-col items-start gap-2.5 rounded-[30px] bg-whiteo5 px-[30px] pt-5 pb-[30px];
+
+    .__header {
+      @apply flex flex-col gap-[11px];
+
+      .__badge {
+        @apply h-fit w-fit overflow-visible rounded-[39px] bg-whiteo10 px-3 py-[3px];
+
+        p {
+          @apply flex h-[22px] items-center text-[11px] font-bold text-lightTone uppercase;
+        }
+      }
+    }
+
+    .__text {
+      @apply font-thin opacity-70;
+    }
+  }
+}

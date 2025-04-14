@@ -1,5 +1,5 @@
 .accordion {
-  @apply box-border flex flex-col gap-[38px] rounded-[30px] border border-whiteo15 bg-whiteo10 p-5;
+  @apply box-border flex flex-col gap-[38px] rounded-[30px] bg-whiteo10 p-5;
 
   .__heading {
     @apply flex w-full justify-between;
@@ -19,7 +19,7 @@
 
   .__content {
     p {
-      @apply font-thin;
+      @apply font-thin opacity-70;
     }
   }
 }
