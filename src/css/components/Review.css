@@ -34,7 +34,7 @@
   }
 }
 
-.review-with-icon {
+/* .review-with-icon {
   @apply flex flex-col gap-[21px] rounded-[20px] bg-whiteo5 p-2.5 w-[290px] shrink-0;
 
   .__head {
@@ -69,6 +69,96 @@
 
       p {
         @apply text-white;
+      }
+    }
+  }
+} */
+
+.review-with-icon {
+  @apply h-[541px] w-[330px];
+  will-change: transform;
+
+  ._container {
+    @apply relative h-[541px] w-[330px] shrink-0;
+
+    ._wrapper {
+      @apply relative flex h-min items-start gap-[17px] overflow-hidden rounded-[20px] border border-whiteo30 bg-blacko10 p-[20px];
+      flex-flow: column;
+
+      .__top_content {
+        @apply relative flex h-min w-full flex-[0_0_auto] items-center gap-[10px] overflow-visible p-0;
+        flex-flow: column;
+
+        .-star_ratting {
+          @apply relative flex h-min w-full flex-[0_0_auto] items-center overflow-hidden p-0 gap-[7px];
+          flex-flow: row;
+
+          svg {
+            @apply text-lightTone;
+          }
+        }
+
+        .-comment{
+          @apply relative flex h-min w-full flex-[0_0_auto] items-center gap-[10px] overflow-visible pt-[30px];
+          flex-flow: row;
+
+          .-text_container{
+            @apply flex-[1_0_0px] h-auto relative opacity-[0.8] shrink-0 justify-start;
+          }
+
+          .-quoteMark{
+            @apply flex flex-[0_0_auto] items-center h-min left-[-10px] overflow-visible p-0 absolute top-[0px] w-min z-[-1];
+
+            .svgContainer{
+              @apply shrink-0 opacity-[0.3] flex-[0_0_auto] h-[55px] relative w-[55px] rotate-[180deg]; 
+              image-rendering: pixelated;
+            }
+          }
+        }
+      }
+
+      .__bottom_content{
+        @apply flex flex-[0_0_auto] flex-col items-center gap-[10px] h-min overflow-visible p-0 relative w-full;
+
+
+        .divide{
+          @apply bg-whiteo10 h-[1px] w-full relative;
+        }
+
+        .user_info{
+          @apply flex items-center flex-[0_0_auto] gap-[10px] h-min overflow-hidden p-0 relative w-full;
+
+          ._avatar{
+            @apply bg-lightGray rounded-[20px] flex items-center flex-[0_0_auto] h-[52px] overflow-hidden p-[4px] relative w-[52px];
+            aspect-ratio: 1/1;
+
+            ._container{
+              @apply rounded-[17px] flex-[1_0_0px] overflow-hidden relative w-full;
+
+              img{
+                @apply block w-full h-full;
+                object-position: center center;
+                object-fit: cover;
+              }
+            }
+          }
+
+          ._nameAndJob{
+            @apply flex flex-[1_0_0px] flex-col gap-0 items-center h-min overflow-hidden p-0 relative;
+
+            .-name{
+              @apply justify-start;
+
+              h5{
+                @apply text-white;
+              }
+            }
+
+            ._job{
+              @apply justify-start;
+            }
+          }
+        }
       }
     }
   }

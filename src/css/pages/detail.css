@@ -50,9 +50,11 @@
   }
 
   .whyChooseUs {
+    @apply flex flex-[0_0_auto] items-center gap-[60px] h-min overflow-visible w-full z-[1] relative;
     .bg_gradient {
-      @apply absolute top-[48%] left-[50%] z-[1] md:h-[432px] sm:h-[1038px] lg:max-h-full lg:h-[641px]  w-[72%] flex-[0_0_auto] overflow-hidden opacity-[0.56];
+      @apply absolute top-[50%] left-[50%] z-[1] md:h-[432px] sm:h-[1038px] w-[72%] flex-[0_0_auto] overflow-hidden opacity-[0.56];
       aspect-ratio: 1.34951 / 1;
+      height: var(--aspsect-retro, 641px);
       background: radial-gradient(
         50% 50% at 50% 50%,
         var(--color-lightTone, #e85442) 0%,
