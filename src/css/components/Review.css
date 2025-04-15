@@ -75,11 +75,11 @@
 } */
 
 .review-with-icon {
-  @apply h-[541px] w-[330px];
+  @apply h-min w-[330px];
   will-change: transform;
 
   ._container {
-    @apply relative h-[541px] w-[330px] shrink-0;
+    @apply relative h-min w-[330px] shrink-0;
 
     ._wrapper {
       @apply relative flex h-min items-start gap-[17px] overflow-hidden rounded-[20px] border border-whiteo30 bg-blacko10 p-[20px];
@@ -90,7 +90,7 @@
         flex-flow: column;
 
         .-star_ratting {
-          @apply relative flex h-min w-full flex-[0_0_auto] items-center overflow-hidden p-0 gap-[7px];
+          @apply relative flex h-min w-full flex-[0_0_auto] items-center gap-[7px] overflow-hidden p-0;
           flex-flow: row;
 
           svg {
@@ -98,63 +98,62 @@
           }
         }
 
-        .-comment{
+        .-comment {
           @apply relative flex h-min w-full flex-[0_0_auto] items-center gap-[10px] overflow-visible pt-[30px];
           flex-flow: row;
 
-          .-text_container{
-            @apply flex-[1_0_0px] h-auto relative opacity-[0.8] shrink-0 justify-start;
+          .-text_container {
+            @apply relative h-auto flex-[1_0_0px] shrink-0 justify-start opacity-[0.8];
           }
 
-          .-quoteMark{
-            @apply flex flex-[0_0_auto] items-center h-min left-[-10px] overflow-visible p-0 absolute top-[0px] w-min z-[-1];
+          .-quoteMark {
+            @apply absolute top-[0px] left-[-10px] z-[-1] flex h-min w-min flex-[0_0_auto] items-center overflow-visible p-0;
 
-            .svgContainer{
-              @apply shrink-0 opacity-[0.3] flex-[0_0_auto] h-[55px] relative w-[55px] rotate-[180deg]; 
+            .svgContainer {
+              @apply relative h-[55px] w-[55px] flex-[0_0_auto] shrink-0 rotate-[180deg] opacity-[0.3];
               image-rendering: pixelated;
             }
           }
         }
       }
 
-      .__bottom_content{
-        @apply flex flex-[0_0_auto] flex-col items-center gap-[10px] h-min overflow-visible p-0 relative w-full;
+      .__bottom_content {
+        @apply relative flex h-min w-full flex-[0_0_auto] flex-col items-center gap-[10px] overflow-visible p-0;
 
-
-        .divide{
-          @apply bg-whiteo10 h-[1px] w-full relative;
+        .divide {
+          @apply relative h-[1px] w-full bg-whiteo10;
         }
 
-        .user_info{
-          @apply flex items-center flex-[0_0_auto] gap-[10px] h-min overflow-hidden p-0 relative w-full;
+        .user_info {
+          @apply relative flex h-min w-full flex-[0_0_auto] items-center gap-[10px] overflow-hidden p-0;
 
-          ._avatar{
-            @apply bg-lightGray rounded-[20px] flex items-center flex-[0_0_auto] h-[52px] overflow-hidden p-[4px] relative w-[52px];
+          ._avatar {
+            @apply relative flex h-[52px] w-[52px] flex-[0_0_auto] items-center overflow-hidden rounded-[20px] bg-lightGray p-[4px];
             aspect-ratio: 1/1;
 
-            ._container{
-              @apply rounded-[17px] flex-[1_0_0px] overflow-hidden relative w-full;
+            ._container {
+              @apply relative w-full flex-[1_0_0px] overflow-hidden rounded-[17px];
 
-              img{
-                @apply block w-full h-full;
+              img {
+                @apply block h-full w-full;
                 object-position: center center;
                 object-fit: cover;
               }
             }
           }
 
-          ._nameAndJob{
-            @apply flex flex-[1_0_0px] flex-col gap-0 items-center h-min overflow-hidden p-0 relative;
+          ._nameAndJob {
+            @apply relative flex h-min flex-[1_0_0px] flex-col items-center gap-0 overflow-hidden p-0;
 
-            .-name{
+            .-name {
               @apply justify-start;
 
-              h5{
+              h5 {
                 @apply text-white;
               }
             }
 
-            ._job{
+            ._job {
               @apply justify-start;
             }
           }
