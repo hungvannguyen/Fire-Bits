@@ -359,53 +359,55 @@ export default function Outsourcing() {
         </div>
       </div>
 
-      <div className="why">
-        <div className="__wrapper">
+      <section className="whyChooseUs my_wrapper">
+        <div className="bg_gradient"></div>
+        <div className="_container">
           <TagAndHeading
             tag="Why Choose Us"
             heading="Why we are your best choice"
             className="only_center"
           />
-
-          <div className="__grid">
+          <div className="_card_container">
+            <div className="__grid">
             <CardBgBlur
-              icon={Rocket}
-              heading="Proven Track Record"
-              subText="We have built a reputation as a trusted and reliable partner in achieving business success."
-            />
+                icon={Rocket}
+                heading="Proven Track Record"
+                subText="We have built a reputation as a trusted and reliable partner in achieving business success."
+              />
 
-            <CardBgBlur
-              icon={Graph}
-              heading="Tailored Solutions"
-              subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
-            />
+              <CardBgBlur
+                icon={Graph}
+                heading="Tailored Solutions"
+                subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
+              />
 
-            <CardBgBlur
-              icon={UserFocus}
-              heading="Client-Centric Focus"
-              subText="Your success is our priority. We prioritize understanding your business goals."
-            />
+              <CardBgBlur
+                icon={UserFocus}
+                heading="Client-Centric Focus"
+                subText="Your success is our priority. We prioritize understanding your business goals."
+              />
 
-            <CardBgBlur
-              icon={ChatsTeardrop}
-              heading="Transparent Communication"
-              subText="We believe in open and honest communication every step of the way."
-            />
+              <CardBgBlur
+                icon={ChatsTeardrop}
+                heading="Transparent Communication"
+                subText="We believe in open and honest communication every step of the way."
+              />
 
-            <CardBgBlur
-              icon={HandHeart}
-              heading="Dedicated Support"
-              subText="Your success is our priority, and we're here to support you every step of the way."
-            />
+              <CardBgBlur
+                icon={HandHeart}
+                heading="Dedicated Support"
+                subText="Your success is our priority, and we're here to support you every step of the way."
+              />
 
-            <CardBgBlur
-              icon={Atom}
-              heading="Expertise Across Industries"
-              subText="Our team has extensive experience working across various industries."
-            />
+              <CardBgBlur
+                icon={Atom}
+                heading="Expertise Across Industries"
+                subText="Our team has extensive experience working across various industries."
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="brands">
         <div className="__wrapper">

@@ -49,15 +49,43 @@
     }
   }
 
-  .why {
-    @apply px-3 py-[50px] md:px-[40px] md:py-[80px] lg:py-[100px];
+  .whyChooseUs {
+    .bg_gradient {
+      @apply absolute top-[48%] left-[50%] z-[1] md:h-[432px] sm:h-[1038px] lg:max-h-full lg:h-[641px]  w-[72%] flex-[0_0_auto] overflow-hidden opacity-[0.56];
+      aspect-ratio: 1.34951 / 1;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        var(--color-lightTone, #e85442) 0%,
+        rgba(232, 84, 65, 0) 100%
+      );
+      transform: translate(-50%, -50%);
 
-    .__wrapper {
-      @apply mx-auto flex max-w-[1440px] flex-col gap-[60px];
+      @media only screen and (max-width: 809px) {
+        aspect-ratio: unset;
+        left: calc(14%);
+        top: calc(51.9418% - 519px);
+        transform: unset;
+      }
     }
 
-    .__grid {
-      @apply grid grid-cols-1 gap-[10px] md:grid-cols-2 lg:grid-cols-3;
+    ._container {
+      @apply relative z-[1] flex h-min lg:max-w-[1440px] mx-auto flex-[1_0_0px] flex-col overflow-visible p-0 sm:justify-normal sm:gap-[40px] md:max-w-[1000px] md:justify-start md:gap-[60px] lg:justify-normal;
+
+      ._card_container{
+        @apply flex flex-[0_0_auto] sm:gap-[10px] lg:gap-[23px] items-start h-min lg:max-w-[1440px] overflow-hidden p-0 relative w-full;
+        flex-flow: column;
+
+        .__grid{
+          @apply md:grid sm:flex sm:flex-col sm:items-center flex-[0_0_auto] gap-[10px] h-min justify-center overflow-hidden p-0 relative w-full z-[1];
+          grid-auto-rows: minmax(0px, 1fr);
+          grid-template-columns: repeat(3, minmax(200px, 1fr));
+          grid-template-rows: repeat(2, minmax(0px, 1fr));
+          @media only screen and (min-width: 810px) and (max-width: 1199px) {
+            gap: 3px;
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+          }
+        }
+      }
     }
   }
 
