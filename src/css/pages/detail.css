@@ -42,6 +42,10 @@
           @apply font-bold;
         }
 
+        .paragraphXS {
+          @apply text-xl;
+        }
+
         p {
           @apply opacity-70;
         }

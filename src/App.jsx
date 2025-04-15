@@ -5,6 +5,9 @@ import Reviews from "./pages/Reviews.jsx";
 import Contact from "./pages/Contact.jsx";
 import Services from "./pages/Services.jsx";
 import Outsourcing from "./pages/Outsourcing.jsx";
+import Sass from "./pages/Sass.jsx";
+import Ecommerce from "./pages/Ecommerce.jsx";
+import AiAgency from "./pages/AiAgency.jsx";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/outsourcing" element={<Outsourcing />} />
+            <Route path="/sass" element={<Sass />} />
+            <Route path="/ecommerce" element={<Ecommerce />} />
+            <Route path="/ai-agency" element={<AiAgency />} />
           </Routes>
         </div>
       </div>
