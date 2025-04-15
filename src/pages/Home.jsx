@@ -6,6 +6,8 @@ import TagAndHeading from "../components/TagAndHeading";
 import ServiceCard from "../components/ServiceCard";
 import CardBgBlur from "../components/CardBgBlur";
 import CircleTag from "../components/CircleTag";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
 import {
   Network,
   Cloud,
@@ -19,59 +21,108 @@ import {
 } from "@phosphor-icons/react";
 
 export default function Home() {
+  const textRunnerRef = useRef(null);
+
+  useEffect(() => {
+    const container = textRunnerRef.current;
+    const track = container.querySelector(".track");
+
+    const clone = track.innerHTML;
+    track.innerHTML += clone;
+
+    const singleWidth = track.scrollWidth / 2;
+
+    gsap.set(track, { x: 0 });
+
+    const anim = gsap.to(track, {
+      x: -singleWidth,
+      ease: "none",
+      duration: 40,
+      repeat: -1,
+      onRepeat: () => {
+        gsap.set(track, { x: 0 });
+      },
+    });
+
+    return () => anim.kill();
+  }, []);
+
+  const heroHeadingRef = useRef(null);
+  const heroBannerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(heroHeadingRef.current, {
+        y: -500,
+        opacity: 0,
+        duration: 1,
+      });
+      gsap.from(heroBannerRef.current, {
+        y: 500,
+        opacity: 0,
+        duration: 1,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="home">
       {/* hero section */}
       <div className="hero">
-        <div className="heading-content">
-          <div className="subheading">
-            <div className="__text">
-              <h1>Leading</h1>
-            </div>
-            <div className="bg-text">
+        <div class="relative flex flex-col h-min w-full justify-center gap-[31px] overflow-hidden" ref={heroHeadingRef}>
+          <div className="heading-content">
+            <div className="subheading">
               <div className="__text">
-                <h1>Innovation</h1>
+                <h1>Leading</h1>
+              </div>
+              <div className="bg-text">
+                <div className="__text">
+                  <h1>Innovation</h1>
+                </div>
+              </div>
+              <div className="__text">
+                <h1>in</h1>
+              </div>
+              <div className="__text">
+                <h1>Digital</h1>
+              </div>
+              <div className="bg-icon">
+                <div className="__icon">
+                  <img src={loaImage} alt="" className="" />
+                </div>
+              </div>
+              <div className="__text">
+                <h1>Solution.</h1>
               </div>
             </div>
-            <div className="__text">
-              <h1>in</h1>
-            </div>
-            <div className="__text">
-              <h1>Digital</h1>
-            </div>
-            <div className="bg-icon">
-              <div className="__icon">
-                <img src={loaImage} alt="" className="" />
-              </div>
-            </div>
-            <div className="__text">
-              <h1>Solution.</h1>
+
+            <div className="rich-text">
+              <p className="paragraphS text-white/80">
+                We are a strategic partner, working alongside businesses to
+                create innovative solutions that help them achieve sustainable
+                success and exceptional growth.
+              </p>
             </div>
           </div>
 
-          <div className="rich-text">
-            <p className="paragraphS text-white/80">
-              We are a strategic partner, working alongside businesses to create
-              innovative solutions that help them achieve sustainable success
-              and exceptional growth.
-            </p>
-          </div>
+          <ExploreButton text="Explore our service" link="#" />
         </div>
-        <ExploreButton text="Explore our service" link="#" />
 
         <div className="background_gradient"></div>
-        <div className="image_content">
+
+        <div className="image_content" ref={heroBannerRef}>
           <div className="image_container">
             <img src={heroImage} alt="" className="hero_image" />
           </div>
-          <div className="text_runner">
+          <div className="text_runner" ref={textRunnerRef}>
             <section className="">
-              <ul className="">
+              <ul className="track">
                 <li>
                   <div className="wrapper">
                     <div className="text_container">
                       <p className="bodyXXL text-white">
-                        Best Marketing Agency
+                        Innovation Digital Solution
                       </p>
                     </div>
                   </div>
@@ -80,25 +131,7 @@ export default function Home() {
                   <div className="wrapper">
                     <div className="text_container">
                       <p className="bodyXXL text-white">
-                        Best Marketing Agency
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="wrapper">
-                    <div className="text_container">
-                      <p className="bodyXXL text-white">
-                        Best Marketing Agency
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="wrapper">
-                    <div className="text_container">
-                      <p className="bodyXXL text-white">
-                        Best Marketing Agency
+                        Innovation Digital Solution
                       </p>
                     </div>
                   </div>
@@ -115,7 +148,11 @@ export default function Home() {
           <div className="heading">
             <div className="content_1">
               <div className="box">
-                <TagAndHeading tag="Service" heading="What we are offering" className="ver1" />
+                <TagAndHeading
+                  tag="Service"
+                  heading="What we are offering"
+                  className="ver1"
+                />
                 <div className="h-min w-full"></div>
               </div>
             </div>

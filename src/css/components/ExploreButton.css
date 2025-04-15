@@ -1,27 +1,56 @@
-.ExploreButton{
-    @apply flex items-center cursor-pointer h-min overflow-hidden relative w-min rounded-[30px];
+.ExploreButton {
+  @apply relative flex h-min w-min cursor-pointer items-center overflow-hidden rounded-[30px] transition-all duration-300;
 
-    .__wrapText{
-        @apply bg-lightTone flex items-center gap-[10px] h-[50px] justify-start px-[30px] py-[25px] relative w-min overflow-visible;
-        flex: none;
+  .__wrapText {
+    @apply relative flex h-[50px] w-min flex-none items-center justify-start gap-[10px] overflow-visible bg-lightTone px-[30px] py-[25px];
+    will-change: transform;
+    transform-origin: 50% 50% 0px;
 
-        .__text{
-            @apply outline-none flex flex-col justify-start shrink-0 w-auto h-auto;
-            white-space: pre;
+    .__text {
+      @apply flex h-auto w-auto shrink-0 flex-col justify-start outline-none;
+      white-space: pre;
 
-            p{
-                @apply text-[13px] leading-[1.5em] font-normal text-darkTone font-Unbounded uppercase;
-            }
-        }
+      p {
+        @apply font-Unbounded text-[13px] leading-[1.5em] font-normal text-darkTone uppercase;
+      }
     }
+  }
 
-    .__icon{
-        @apply bg-lightTone flex flex-none flex-col gap-[10px] flex-nowrap items-center justify-center self-stretch h-auto p-0 relative w-[50px] overflow-visible;
-        transform: none;
-        transform-origin: 50% 50% 0px;
+  .__icon {
+    @apply relative flex h-auto w-[50px] flex-none flex-col flex-nowrap items-center justify-center gap-[10px] self-stretch overflow-visible bg-lightTone p-0;
+    will-change: transform;
+    transform-origin: 50% 50% 0px;
 
-        svg{
-            @apply rotate-[45deg] h-[20px] w-[20px];
-        }
+    svg {
+      @apply h-[20px] w-[20px] rotate-[45deg] transition-all duration-300;
     }
+  }
 }
+.ExploreButton .__wrapText,
+.ExploreButton .__icon {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+
+.ExploreButton:after {
+  @apply absolute inset-0 h-full w-full rounded-full border border-lightTone transition-all duration-300;
+  content: "";
+}
+
+.ExploreButton:hover{
+    @apply scale-x-[1.02];
+}
+
+.ExploreButton:hover .__wrapText {
+  transform: translate3d(-3px, 0, 0);
+}
+
+.ExploreButton:hover .__icon {
+  transform: translate3d(3px, 0, 0);
+
+  svg {
+    @apply rotate-[90deg];
+  }
+}
+

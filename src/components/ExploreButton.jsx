@@ -12,7 +12,7 @@ const ExploreButton = ({ text = "", link = "#" }) => {
   
           <div className="__icon">
             <div>
-                <ArrowUp size={20} className="__icon" />
+                <ArrowUp size={20} className="-icon" />
             </div>
           </div>
         </a>

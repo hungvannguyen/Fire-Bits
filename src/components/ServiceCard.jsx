@@ -22,7 +22,7 @@ const ServiceCard = ({icon: Icon, title, description, link=""}) => {
                         <p>learn more</p>
                     </div>
                     <div className="-icon">
-                        <ArrowUp size={14} className="text-white rotate-[45deg]" />
+                        <ArrowUp size={14} className="text-white" />
                     </div>
                 </div>
             </a>
