@@ -4,6 +4,10 @@
   .__head {
     @apply flex flex-col items-center justify-center gap-[10px];
 
+    h1 {
+      @apply text-[50px];
+    }
+
     p {
       @apply max-w-[510px] text-center text-white opacity-[0.6];
     }

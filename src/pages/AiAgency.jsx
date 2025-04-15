@@ -14,6 +14,7 @@ import {
 import CardBgBlur from "../components/CardBgBlur.jsx";
 import Step from "../components/Step.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
+import TextBlock from "../components/TextBlock.jsx";
 
 export default function AiAgency() {
   const items = [
@@ -304,151 +305,104 @@ export default function AiAgency() {
           </div>
 
           <div className="__body">
-            <p className="paragraphM">AI Strategy & Consultation</p>
-            <p className="paragraphXS">
-              We begin by understanding your business goals and challenges, then
-              craft a customized AI strategy that aligns with your objectives.
-              Our expert team works with you to explore AI opportunities,
-              ensuring the implementation of the most effective solutions for
-              your business.{" "}
-            </p>
-            <p className="paragraphM">Machine Learning (ML) Solutions</p>
-            <p className="paragraphXS">
-              Our team develops machine learning models that enable businesses
-              to make data-driven decisions and improve processes. From
-              predictive analytics and demand forecasting to recommendation
-              engines and customer segmentation, we build tailored ML models to
-              solve complex problems and optimize operations.{" "}
-            </p>
-            <p className="paragraphM">Natural Language Processing (NLP)</p>
-            <p className="paragraphXS">
-              We specialize in NLP solutions that enable businesses to extract
-              valuable insights from text and voice data. Our AI-driven tools
-              include chatbots, sentiment analysis, language translation, and
-              content generation, improving customer interactions and data
-              analysis.{" "}
-            </p>
-            <p className="paragraphM">Computer Vision & Image Recognition</p>
-            <p className="paragraphXS">
-              Our AI solutions include advanced computer vision and image
-              recognition capabilities. We build systems that can analyze and
-              interpret visual data, enabling applications in industries like
-              retail, healthcare, and security for tasks such as object
-              detection, facial recognition, and image classification.{" "}
-            </p>
-            <p className="paragraphM">
-              AI-Powered Chatbots & Virtual Assistants{" "}
-            </p>
-            <p className="paragraphXS">
-              We create intelligent chatbots and virtual assistants that can
-              handle customer inquiries, automate support, and improve
-              engagement. Our AI-powered solutions are designed to understand
-              natural language and provide accurate, timely responses, enhancing
-              customer service and reducing operational costs.{" "}
-            </p>
-            <p className="paragraphM">AI in Business Automation</p>
-            <p className="paragraphXS">
-              We help businesses automate repetitive tasks and optimize
-              workflows with AI-driven process automation solutions. From
-              automating data entry and report generation to enhancing supply
-              chain management, we ensure that AI helps you improve efficiency
-              and reduce manual work.{" "}
-            </p>
-            <p className="paragraphM">Predictive Analytics</p>
-            <p className="paragraphXS">
-              We develop predictive analytics models that forecast future
-              trends, customer behavior, and market dynamics. Our AI-driven
-              models allow businesses to anticipate changes, make informed
-              decisions, and gain a competitive edge.{" "}
-            </p>
-            <p className="paragraphM">AI Integration with Existing Systems</p>
-            <p className="paragraphXS">
-              Firebits integrates AI capabilities into your existing platforms
-              and systems, enhancing functionality without disrupting your
-              current operations. Whether it’s integrating AI into your CRM,
-              ERP, or ecommerce platform, we ensure smooth and secure
-              integration for optimal performance.{" "}
-            </p>
-            <p className="paragraphM">AI Solutions for Personalization</p>
-            <p className="paragraphXS">
-              We build AI-powered personalization systems that enhance the
-              customer experience by delivering tailored content,
-              recommendations, and offers based on user behavior and
-              preferences. This drives engagement, conversions, and customer
-              loyalty.{" "}
-            </p>
-            <p className="paragraphM">AI Data Analysis & Insights</p>
-            <p className="paragraphXS">
-              Our team uses AI to analyze vast amounts of data, identifying
-              patterns, trends, and insights that inform business strategies.
-              From marketing analytics to financial modeling, we empower
-              businesses with actionable data to make smarter decisions.{" "}
-            </p>
-            <p className="paragraphM">Ongoing AI Optimization & Support</p>
-            <p className="paragraphXS">
-              AI solutions require continuous monitoring and optimization. We
-              provide ongoing support and improvements to your AI systems,
-              ensuring that models stay accurate and effective over time,
-              adapting to changing data and business requirements.{" "}
-            </p>
-            <p className="paragraphXS">
-              Partnering with Firebits allows your business to unlock the full
-              potential of AI, automating processes, enhancing customer
-              experiences, and driving innovation. Let us help you integrate
-              cutting-edge AI solutions that elevate your business to the next
-              level.{" "}
-            </p>
+            <TextBlock
+              title="AI Strategy & Consultation"
+              content="We begin by understanding your business goals and challenges, then craft a customized AI strategy that aligns with your objectives. Our expert team works with you to explore AI opportunities, ensuring the implementation of the most effective solutions for your business."
+            />
+            <TextBlock
+              title="Machine Learning (ML) Solutions"
+              content="Our team develops machine learning models that enable businesses to make data-driven decisions and improve processes. From predictive analytics and demand forecasting to recommendation engines and customer segmentation, we build tailored ML models to solve complex problems and optimize operations."
+            />
+            <TextBlock
+              title="Natural Language Processing (NLP)"
+              content="We specialize in NLP solutions that enable businesses to extract valuable insights from text and voice data. Our AI-driven tools include chatbots, sentiment analysis, language translation, and content generation, improving customer interactions and data analysis."
+            />
+            <TextBlock
+              title="Computer Vision & Image Recognition"
+              content="Our AI solutions include advanced computer vision and image recognition capabilities. We build systems that can analyze and interpret visual data, enabling applications in industries like retail, healthcare, and security for tasks such as object detection, facial recognition, and image classification."
+            />
+            <TextBlock
+              title="AI-Powered Chatbots & Virtual Assistants"
+              content="We create intelligent chatbots and virtual assistants that can handle customer inquiries, automate support, and improve engagement. Our AI-powered solutions are designed to understand natural language and provide accurate, timely responses, enhancing customer service and reducing operational costs."
+            />
+            <TextBlock
+              title="AI in Business Automation"
+              content="We help businesses automate repetitive tasks and optimize workflows with AI-driven process automation solutions. From automating data entry and report generation to enhancing supply chain management, we ensure that AI helps you improve efficiency and reduce manual work."
+            />
+            <TextBlock
+              title="Predictive Analytics"
+              content="We develop predictive analytics models that forecast future trends, customer behavior, and market dynamics. Our AI-driven models allow businesses to anticipate changes, make informed decisions, and gain a competitive edge."
+            />
+            <TextBlock
+              title="AI Integration with Existing Systems"
+              content="Firebits integrates AI capabilities into your existing platforms and systems, enhancing functionality without disrupting your current operations. Whether it’s integrating AI into your CRM, ERP, or ecommerce platform, we ensure smooth and secure integration for optimal performance."
+            />
+            <TextBlock
+              title="AI Solutions for Personalization"
+              content="We build AI-powered personalization systems that enhance the customer experience by delivering tailored content, recommendations, and offers based on user behavior and preferences. This drives engagement, conversions, and customer loyalty."
+            />
+            <TextBlock
+              title="AI Data Analysis & Insights"
+              content="Our team uses AI to analyze vast amounts of data, identifying patterns, trends, and insights that inform business strategies. From marketing analytics to financial modeling, we empower businesses with actionable data to make smarter decisions."
+            />
+            <TextBlock
+              title="Ongoing AI Optimization & Support"
+              content="AI solutions require continuous monitoring and optimization. We provide ongoing support and improvements to your AI systems, ensuring that models stay accurate and effective over time, adapting to changing data and business requirements."
+            />
+            <TextBlock content="Partnering with Firebits allows your business to unlock the full potential of AI, automating processes, enhancing customer experiences, and driving innovation. Let us help you integrate cutting-edge AI solutions that elevate your business to the next level." />
           </div>
         </div>
       </div>
 
-      <div className="why">
-        <div className="__wrapper">
+      <section className="whyChooseUs my_wrapper">
+        <div className="bg_gradient"></div>
+        <div className="_container">
           <TagAndHeading
             tag="Why Choose Us"
             heading="Why we are your best choice"
             className="only_center"
           />
+          <div className="_card_container">
+            <div className="__grid">
+              <CardBgBlur
+                icon={Rocket}
+                heading="Proven Track Record"
+                subText="We have built a reputation as a trusted and reliable partner in achieving business success."
+              />
 
-          <div className="__grid">
-            <CardBgBlur
-              icon={Rocket}
-              heading="Proven Track Record"
-              subText="We have built a reputation as a trusted and reliable partner in achieving business success."
-            />
+              <CardBgBlur
+                icon={Graph}
+                heading="Tailored Solutions"
+                subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
+              />
 
-            <CardBgBlur
-              icon={Graph}
-              heading="Tailored Solutions"
-              subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
-            />
+              <CardBgBlur
+                icon={UserFocus}
+                heading="Client-Centric Focus"
+                subText="Your success is our priority. We prioritize understanding your business goals."
+              />
 
-            <CardBgBlur
-              icon={UserFocus}
-              heading="Client-Centric Focus"
-              subText="Your success is our priority. We prioritize understanding your business goals."
-            />
+              <CardBgBlur
+                icon={ChatsTeardrop}
+                heading="Transparent Communication"
+                subText="We believe in open and honest communication every step of the way."
+              />
 
-            <CardBgBlur
-              icon={ChatsTeardrop}
-              heading="Transparent Communication"
-              subText="We believe in open and honest communication every step of the way."
-            />
+              <CardBgBlur
+                icon={HandHeart}
+                heading="Dedicated Support"
+                subText="Your success is our priority, and we're here to support you every step of the way."
+              />
 
-            <CardBgBlur
-              icon={HandHeart}
-              heading="Dedicated Support"
-              subText="Your success is our priority, and we're here to support you every step of the way."
-            />
-
-            <CardBgBlur
-              icon={Atom}
-              heading="Expertise Across Industries"
-              subText="Our team has extensive experience working across various industries."
-            />
+              <CardBgBlur
+                icon={Atom}
+                heading="Expertise Across Industries"
+                subText="Our team has extensive experience working across various industries."
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="brands">
         <div className="__wrapper">

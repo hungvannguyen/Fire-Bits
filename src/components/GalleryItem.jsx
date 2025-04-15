@@ -4,8 +4,9 @@ const GalleryItem = ({ first, second, reversed = false }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleHover = (index) => {
-    if (activeIndex !== index) {
-      setActiveIndex(index);
+    const newIndex = reversed ? (index === 0 ? 1 : 0) : index;
+    if (activeIndex !== newIndex) {
+      setActiveIndex(newIndex);
     }
   };
 

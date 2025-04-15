@@ -8,6 +8,7 @@ import Outsourcing from "./pages/Outsourcing.jsx";
 import Sass from "./pages/Sass.jsx";
 import Ecommerce from "./pages/Ecommerce.jsx";
 import AiAgency from "./pages/AiAgency.jsx";
+import Seo from "./pages/Seo.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/outsourcing" element={<Outsourcing />} />
             <Route path="/sass" element={<Sass />} />
+            <Route path="/seo" element={<Seo />} />
             <Route path="/ecommerce" element={<Ecommerce />} />
             <Route path="/ai-agency" element={<AiAgency />} />
           </Routes>

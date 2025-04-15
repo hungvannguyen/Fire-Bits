@@ -1,33 +1,63 @@
+import React, { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/img/logo.png";
-import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const serviceRoutes = [
+    "/outsourcing",
+    "/sass",
+    "/seo",
+    "/ecommerce",
+    "/ai-agency",
+  ];
+  const isServiceActive =
+    location.pathname === "/services" ||
+    serviceRoutes.includes(location.pathname);
+
+  // Hàm giúp quyết định class cho các NavLink thông thường
+  const getNavClass = (isActive) => (isActive ? "navText active" : "navText");
+
   return (
     <header className="header">
       <div className="__container">
         <div className="__logo">
-          <a href="/">
+          <NavLink to="/">
             <img src={logo} alt="Logo" />
-          </a>
+          </NavLink>
         </div>
 
         <nav className="__nav">
-          <a href="/" className="navText active">
+          <NavLink to="/" className={({ isActive }) => getNavClass(isActive)}>
             Home
-          </a>
-          <a href="/about" className="navText">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => getNavClass(isActive)}
+          >
             About
-          </a>
-          <a href="/services" className="navText">
+          </NavLink>
+          {/* Với Services, dùng điều kiện tùy chỉnh từ useLocation */}
+          <NavLink
+            to="/services"
+            className={() => (isServiceActive ? "navText active" : "navText")}
+          >
             Services
-          </a>
-          <a href="/reviews" className="navText">
+          </NavLink>
+          <NavLink
+            to="/reviews"
+            className={({ isActive }) => getNavClass(isActive)}
+          >
             Reviews
-          </a>
-          <a href="/contact" className="navText">
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => getNavClass(isActive)}
+          >
             Contact
-          </a>
+          </NavLink>
         </nav>
 
         <div className="hidden w-[144px] lg:flex"></div>
@@ -56,29 +86,41 @@ export default function Header() {
       {isOpen && (
         <nav className="__nav-mobile">
           <div>
-            <a href="/" className="navText active">
+            <NavLink to="/" className={({ isActive }) => getNavClass(isActive)}>
               Home
-            </a>
+            </NavLink>
           </div>
           <div>
-            <a href="/about" className="navText">
+            <NavLink
+              to="/about"
+              className={({ isActive }) => getNavClass(isActive)}
+            >
               About
-            </a>
+            </NavLink>
           </div>
           <div>
-            <a href="/contact" className="navText">
+            <NavLink
+              to="/services"
+              className={() => (isServiceActive ? "navText active" : "navText")}
+            >
               Services
-            </a>
+            </NavLink>
           </div>
           <div>
-            <a href="/reviews" className="navText">
+            <NavLink
+              to="/reviews"
+              className={({ isActive }) => getNavClass(isActive)}
+            >
               Reviews
-            </a>
+            </NavLink>
           </div>
           <div>
-            <a href="/contact" className="navText">
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => getNavClass(isActive)}
+            >
               Contact
-            </a>
+            </NavLink>
           </div>
         </nav>
       )}

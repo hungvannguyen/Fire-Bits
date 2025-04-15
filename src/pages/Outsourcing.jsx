@@ -14,6 +14,7 @@ import {
 import CardBgBlur from "../components/CardBgBlur.jsx";
 import Step from "../components/Step.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
+import TextBlock from "../components/TextBlock.jsx";
 
 export default function Outsourcing() {
   const items = [
@@ -307,54 +308,30 @@ export default function Outsourcing() {
           </div>
 
           <div className="__body">
-            <p className="paragraphM">IT & Software Development Outsourcing</p>
-            <p className="paragraphXS">
-              Firebits offers full-cycle software development services tailored
-              to your business goals. From custom software and mobile apps to
-              scalable cloud infrastructure, we deliver high-quality, secure,
-              and high-performance solutions. Our expertise spans web and mobile
-              development, cloud and DevOps, as well as AI-driven applications
-              and data analytics to support smarter business decisions.{" "}
-            </p>
-            <p className="paragraphM">Business Process Outsourcing (BPO)</p>
-            <p className="paragraphXS">
-              We help companies optimize operations through reliable and
-              professional BPO services. Whether it's 24/7 multilingual customer
-              support, accurate data entry and processing, or full HR and
-              payroll management, Firebits ensures your back-office functions
-              run efficiently and securely.{" "}
-            </p>
-            <p className="paragraphM">Digital Marketing & SEO Outsourcing</p>
-            <p className="paragraphXS">
-              Firebits boosts your online presence with targeted digital
-              marketing strategies. Our SEO and content marketing solutions are
-              designed to drive visibility and engagement, while our social
-              media and paid advertising campaigns are built to deliver
-              measurable ROI and business growth.{" "}
-            </p>
-            <p className="paragraphM">eCommerce & Retail Outsourcing</p>
-            <p className="paragraphXS">
-              We support eCommerce businesses with end-to-end services,
-              including store development on platforms like Shopify,
-              WooCommerce, and Magento. Our team handles everything from product
-              listing and SEO optimization to logistics and order fulfillment,
-              helping clients scale efficiently in a competitive market.{" "}
-            </p>
-            <p className="paragraphM">IT Support & Infrastructure Management</p>
-            <p className="paragraphXS">
-              Our round-the-clock IT support ensures seamless business
-              operations. We provide proactive maintenance, robust cybersecurity
-              solutions, and scalable cloud infrastructure management to keep
-              your systems secure, compliant, and high-performing.{" "}
-            </p>
-            <p className="paragraphM">Dedicated Development Teams</p>
-            <p className="paragraphXS">
-              Firebits offers flexible, scalable development teams tailored to
-              your specific project needs. With experienced engineers across
-              multiple technologies and a strong Agile project management
-              approach, we ensure transparency, speed, and quality in every
-              delivery.{" "}
-            </p>
+            <TextBlock
+              title="IT & Software Development Outsourcing"
+              content="Firebits offers full-cycle software development services tailored to your business goals. From custom software and mobile apps to scalable cloud infrastructure, we deliver high-quality, secure, and high-performance solutions. Our expertise spans web and mobile development, cloud and DevOps, as well as AI-driven applications and data analytics to support smarter business decisions."
+            />
+            <TextBlock
+              title="Business Process Outsourcing (BPO)"
+              content="We help companies optimize operations through reliable and professional BPO services. Whether it's 24/7 multilingual customer support, accurate data entry and processing, or full HR and payroll management, Firebits ensures your back-office functions run efficiently and securely."
+            />
+            <TextBlock
+              title="Digital Marketing & SEO Outsourcing"
+              content="Firebits boosts your online presence with targeted digital marketing strategies. Our SEO and content marketing solutions are designed to drive visibility and engagement, while our social media and paid advertising campaigns are built to deliver measurable ROI and business growth."
+            />
+            <TextBlock
+              title="eCommerce & Retail Outsourcing"
+              content="We support eCommerce businesses with end-to-end services, including store development on platforms like Shopify, WooCommerce, and Magento. Our team handles everything from product listing and SEO optimization to logistics and order fulfillment, helping clients scale efficiently in a competitive market."
+            />
+            <TextBlock
+              title="IT Support & Infrastructure Management"
+              content="Our round-the-clock IT support ensures seamless business operations. We provide proactive maintenance, robust cybersecurity solutions, and scalable cloud infrastructure management to keep your systems secure, compliant, and high-performing."
+            />
+            <TextBlock
+              title="Dedicated Development Teams"
+              content="Firebits offers flexible, scalable development teams tailored to your specific project needs. With experienced engineers across multiple technologies and a strong Agile project management approach, we ensure transparency, speed, and quality in every delivery."
+            />
           </div>
         </div>
       </div>
@@ -369,7 +346,7 @@ export default function Outsourcing() {
           />
           <div className="_card_container">
             <div className="__grid">
-            <CardBgBlur
+              <CardBgBlur
                 icon={Rocket}
                 heading="Proven Track Record"
                 subText="We have built a reputation as a trusted and reliable partner in achieving business success."

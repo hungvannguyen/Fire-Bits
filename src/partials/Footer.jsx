@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Envelope,
   FacebookLogo,
@@ -8,7 +9,7 @@ import {
   TwitterLogo,
 } from "@phosphor-icons/react";
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className="footer">
       <div className="__container">
@@ -175,7 +176,6 @@ export default function Footer() {
               </div>
               <form className="__subscribe">
                 <input type="email" placeholder="Your email" />
-
                 <button type="submit" className="__btn">
                   Subscribe for newsletter
                 </button>
@@ -192,3 +192,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default React.memo(Footer);

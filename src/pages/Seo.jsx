@@ -14,6 +14,7 @@ import {
 import CardBgBlur from "../components/CardBgBlur.jsx";
 import Step from "../components/Step.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
+import TextBlock from "../components/TextBlock.jsx";
 
 export default function Seo() {
   const items = [
@@ -304,123 +305,97 @@ export default function Seo() {
           </div>
 
           <div className="__body">
-            <p className="paragraphM">SEO Strategy & Consultation </p>
-            <p className="paragraphXS">
-              We start with a detailed SEO audit and in-depth market research to
-              understand your business and industry. Our team then develops a
-              customized SEO strategy that aligns with your goals, ensuring a
-              tailored approach to improve your search rankings.{" "}
-            </p>
-            <p className="paragraphM">On-Page SEO Optimization</p>
-            <p className="paragraphXS">
-              Our experts optimize your website’s content, metadata, header
-              tags, images, and internal linking structure, making sure that
-              search engines can crawl, index, and rank your pages effectively.
-              We focus on enhancing content quality and user experience to drive
-              higher engagement.{" "}
-            </p>
-            <p className="paragraphM">Technical SEO & Site Performance</p>
-            <p className="paragraphXS">
-              We handle technical aspects like site speed, mobile-friendliness,
-              URL structure, and schema markup. Our team ensures your website is
-              technically sound, fast, and optimized for all devices, providing
-              an excellent user experience while boosting your SEO efforts.{" "}
-            </p>
-            <p className="paragraphM">Keyword Research & Content Strategy</p>
-            <p className="paragraphXS">
-              We identify high-value keywords and create compelling,
-              SEO-optimized content that resonates with both users and search
-              engines. Our content strategy includes blog posts, articles,
-              landing pages, and more, tailored to attract and convert your
-              target audience.{" "}
-            </p>
-            <p className="paragraphM">Link Building & Off-Page SEO</p>
-            <p className="paragraphXS">
-              We help improve your website’s authority by acquiring high-quality
-              backlinks from reputable sources. Our link-building strategies
-              focus on ethical, white-hat practices to ensure long-term SEO
-              success and enhance your domain authority.{" "}
-            </p>
-            <p className="paragraphM">
-              Local SEO & Google My Business Optimization{" "}
-            </p>
-            <p className="paragraphXS">
-              If you're a local business, we optimize your website for local
-              search results and ensure your Google My Business profile is fully
-              optimized. We help you appear in local searches and map results,
-              driving traffic from nearby customers.{" "}
-            </p>
-            <p className="paragraphM">Analytics & Reporting Dashboards</p>
-            <p className="paragraphXS">
-              We provide real-time reporting tools and detailed analytics
-              dashboards to help you track your SEO performance. You can easily
-              monitor rankings, traffic, and conversions, allowing you to make
-              data-driven decisions.{" "}
-            </p>
-            <p className="paragraphM">Continuous Monitoring & Optimization</p>
-            <p className="paragraphXS">
-              SEO is an ongoing process. Our team employs continuous monitoring
-              and optimization to adjust strategies based on performance and
-              changes in search engine algorithms, ensuring your rankings remain
-              high and your website continues to perform at its best.{" "}
-            </p>
-            <p className="paragraphXS">
-              By partnering with Firebits, you gain access to a dedicated team
+            <TextBlock
+              title="SEO Strategy & Consultation"
+              content="We start with a detailed SEO audit and in-depth market research to understand your business and industry. Our team then develops a customized SEO strategy that aligns with your goals, ensuring a tailored approach to improve your search rankings."
+            />
+            <TextBlock
+              title="On-Page SEO Optimization"
+              content="Our experts optimize your website’s content, metadata, header tags, images, and internal linking structure, making sure that search engines can crawl, index, and rank your pages effectively. We focus on enhancing content quality and user experience to drive higher engagement."
+            />
+            <TextBlock
+              title="Technical SEO & Site Performance"
+              content="We handle technical aspects like site speed, mobile-friendliness, URL structure, and schema markup. Our team ensures your website is technically sound, fast, and optimized for all devices, providing an excellent user experience while boosting your SEO efforts."
+            />
+            <TextBlock
+              title="Keyword Research & Content Strategy"
+              content="We identify high-value keywords and create compelling, SEO-optimized content that resonates with both users and search engines. Our content strategy includes blog posts, articles, landing pages, and more, tailored to attract and convert your target audience."
+            />
+            <TextBlock
+              title="Link Building & Off-Page SEO"
+              content="We help improve your website’s authority by acquiring high-quality backlinks from reputable sources. Our link-building strategies focus on ethical, white-hat practices to ensure long-term SEO success and enhance your domain authority."
+            />
+            <TextBlock
+              title="Local SEO & Google My Business Optimization"
+              content="If you're a local business, we optimize your website for local search results and ensure your Google My Business profile is fully optimized. We help you appear in local searches and map results, driving traffic from nearby customers."
+            />
+            <TextBlock
+              title="Analytics & Reporting Dashboards"
+              content="We provide real-time reporting tools and detailed analytics dashboards to help you track your SEO performance. You can easily monitor rankings, traffic, and conversions, allowing you to make data-driven decisions."
+            />
+            <TextBlock
+              title="Continuous Monitoring & Optimization"
+              content="SEO is an ongoing process. Our team employs continuous monitoring and optimization to adjust strategies based on performance and changes in search engine algorithms, ensuring your rankings remain high and your website continues to perform at its best. By partnering with Firebits, you gain access to a dedicated team of SEO experts who work tirelessly to improve your website's visibility, attract more qualified leads, and help you grow your online presence."
+            />
+            <TextBlock
+              content="  By partnering with Firebits, you gain access to a dedicated team
               of SEO experts who work tirelessly to improve your website's
               visibility, attract more qualified leads, and help you grow your
-              online presence.{" "}
-            </p>
+              online presence."
+            />
           </div>
         </div>
       </div>
 
-      <div className="why">
-        <div className="__wrapper">
+      <section className="whyChooseUs my_wrapper">
+        <div className="bg_gradient"></div>
+        <div className="_container">
           <TagAndHeading
             tag="Why Choose Us"
             heading="Why we are your best choice"
             className="only_center"
           />
+          <div className="_card_container">
+            <div className="__grid">
+              <CardBgBlur
+                icon={Rocket}
+                heading="Proven Track Record"
+                subText="We have built a reputation as a trusted and reliable partner in achieving business success."
+              />
 
-          <div className="__grid">
-            <CardBgBlur
-              icon={Rocket}
-              heading="Proven Track Record"
-              subText="We have built a reputation as a trusted and reliable partner in achieving business success."
-            />
+              <CardBgBlur
+                icon={Graph}
+                heading="Tailored Solutions"
+                subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
+              />
 
-            <CardBgBlur
-              icon={Graph}
-              heading="Tailored Solutions"
-              subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
-            />
+              <CardBgBlur
+                icon={UserFocus}
+                heading="Client-Centric Focus"
+                subText="Your success is our priority. We prioritize understanding your business goals."
+              />
 
-            <CardBgBlur
-              icon={UserFocus}
-              heading="Client-Centric Focus"
-              subText="Your success is our priority. We prioritize understanding your business goals."
-            />
+              <CardBgBlur
+                icon={ChatsTeardrop}
+                heading="Transparent Communication"
+                subText="We believe in open and honest communication every step of the way."
+              />
 
-            <CardBgBlur
-              icon={ChatsTeardrop}
-              heading="Transparent Communication"
-              subText="We believe in open and honest communication every step of the way."
-            />
+              <CardBgBlur
+                icon={HandHeart}
+                heading="Dedicated Support"
+                subText="Your success is our priority, and we're here to support you every step of the way."
+              />
 
-            <CardBgBlur
-              icon={HandHeart}
-              heading="Dedicated Support"
-              subText="Your success is our priority, and we're here to support you every step of the way."
-            />
-
-            <CardBgBlur
-              icon={Atom}
-              heading="Expertise Across Industries"
-              subText="Our team has extensive experience working across various industries."
-            />
+              <CardBgBlur
+                icon={Atom}
+                heading="Expertise Across Industries"
+                subText="Our team has extensive experience working across various industries."
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="brands">
         <div className="__wrapper">

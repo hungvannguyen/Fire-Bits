@@ -14,7 +14,7 @@
       @apply absolute z-2 mx-auto flex h-full w-full max-w-[740px] items-end justify-center text-center;
 
       h1 {
-        @apply px-[5px] pt-[5px] pb-[30px] text-lightTone;
+        @apply px-[5px] pt-[5px] pb-[30px] text-[27px] text-lightTone md:text-[40px] lg:text-[50px];
       }
     }
   }

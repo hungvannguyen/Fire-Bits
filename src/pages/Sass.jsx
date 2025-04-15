@@ -14,6 +14,7 @@ import {
 import CardBgBlur from "../components/CardBgBlur.jsx";
 import Step from "../components/Step.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
+import TextBlock from "../components/TextBlock.jsx";
 
 export default function Sass() {
   const items = [
@@ -306,107 +307,87 @@ export default function Sass() {
           </div>
 
           <div className="__body">
-            <p className="paragraphM">
-              SaaS Development & Cloud-Based Solutions{" "}
-            </p>
-            <p className="paragraphXS">
-              Firebits builds end-to-end SaaS platforms that empower businesses
-              to scale efficiently and deliver value to their users. We provide
-              full-cycle development services—covering everything from product
-              discovery to deployment—ensuring your platform is secure,
-              scalable, and built for performance.{" "}
-            </p>
-            <p className="paragraphM">Custom SaaS Development</p>
-            <p className="paragraphXS">
-              We turn your ideas into market-ready products with tailored
-              architectures, clean UI/UX, and seamless user experiences. Our
-              team handles both frontend and backend development using modern,
-              scalable tech stacks.{" "}
-            </p>
-            <p className="paragraphM">Multi-Tenant Cloud Architecture</p>
-            <p className="paragraphXS">
-              Firebits develops robust cloud-native infrastructures that support
-              multi-tenancy, ensuring your platform can serve many customers
-              securely and efficiently. We leverage AWS, Azure, and other
-              top-tier cloud providers to deliver high availability and global
-              scalability.{" "}
-            </p>
-            <p className="paragraphM">Subscription & Billing Systems</p>
-            <p className="paragraphXS">
-              Our team integrates or custom-builds subscription models, billing
-              engines, user management, and access controls—ensuring a smooth
-              and monetizable experience for your end-users.{" "}
-            </p>
-            <p className="paragraphM">Analytics & Reporting Dashboards</p>
-            <p className="paragraphXS">
-              We design built-in reporting tools and real-time analytics
-              dashboards to help both you and your users make informed,
-              data-driven decisions from day one.{" "}
-            </p>
-            <p className="paragraphM">Third-Party Integrations</p>
-            <p className="paragraphXS">
-              Need to connect your SaaS with CRMs, ERPs, payment gateways, or
-              third-party APIs? We've done it all—and make integration seamless
-              and secure.{" "}
-            </p>
-            <p className="paragraphM">DevOps & Ongoing Optimization</p>
-            <p className="paragraphXS">
-              We use modern DevOps practices, CI/CD pipelines, automated
-              testing, and monitoring to ensure smooth deployment, continuous
-              improvement, and high availability—across staging and production
-              environments.{" "}
-            </p>
+            <TextBlock
+              title="SaaS Development & Cloud-Based Solutions"
+              content="Firebits builds end-to-end SaaS platforms that empower businesses to scale efficiently and deliver value to their users. We provide full-cycle development services—covering everything from product discovery to deployment—ensuring your platform is secure, scalable, and built for performance."
+            />
+            <TextBlock
+              title="Custom SaaS Development"
+              content="We turn your ideas into market-ready products with tailored architectures, clean UI/UX, and seamless user experiences. Our team handles both frontend and backend development using modern, scalable tech stacks."
+            />
+            <TextBlock
+              title="Multi-Tenant Cloud Architecture"
+              content="Firebits develops robust cloud-native infrastructures that support multi-tenancy, ensuring your platform can serve many customers securely and efficiently. We leverage AWS, Azure, and other top-tier cloud providers to deliver high availability and global scalability."
+            />
+            <TextBlock
+              title="Subscription & Billing Systems"
+              content="Our team integrates or custom-builds subscription models, billing engines, user management, and access controls—ensuring a smooth and monetizable experience for your end-users."
+            />
+            <TextBlock
+              title="Analytics & Reporting Dashboards"
+              content="We design built-in reporting tools and real-time analytics dashboards to help both you and your users make informed, data-driven decisions from day one."
+            />
+            <TextBlock
+              title="Third-Party Integrations"
+              content="Need to connect your SaaS with CRMs, ERPs, payment gateways, or third-party APIs? We've done it all—and make integration seamless and secure."
+            />
+            <TextBlock
+              title="DevOps & Ongoing Optimization"
+              content="We use modern DevOps practices, CI/CD pipelines, automated testing, and monitoring to ensure smooth deployment, continuous improvement, and high availability—across staging and production environments."
+            />
           </div>
         </div>
       </div>
 
-      <div className="why">
-        <div className="__wrapper">
+      <section className="whyChooseUs my_wrapper">
+        <div className="bg_gradient"></div>
+        <div className="_container">
           <TagAndHeading
             tag="Why Choose Us"
             heading="Why we are your best choice"
             className="only_center"
           />
+          <div className="_card_container">
+            <div className="__grid">
+              <CardBgBlur
+                icon={Rocket}
+                heading="Proven Track Record"
+                subText="We have built a reputation as a trusted and reliable partner in achieving business success."
+              />
 
-          <div className="__grid">
-            <CardBgBlur
-              icon={Rocket}
-              heading="Proven Track Record"
-              subText="We have built a reputation as a trusted and reliable partner in achieving business success."
-            />
+              <CardBgBlur
+                icon={Graph}
+                heading="Tailored Solutions"
+                subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
+              />
 
-            <CardBgBlur
-              icon={Graph}
-              heading="Tailored Solutions"
-              subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
-            />
+              <CardBgBlur
+                icon={UserFocus}
+                heading="Client-Centric Focus"
+                subText="Your success is our priority. We prioritize understanding your business goals."
+              />
 
-            <CardBgBlur
-              icon={UserFocus}
-              heading="Client-Centric Focus"
-              subText="Your success is our priority. We prioritize understanding your business goals."
-            />
+              <CardBgBlur
+                icon={ChatsTeardrop}
+                heading="Transparent Communication"
+                subText="We believe in open and honest communication every step of the way."
+              />
 
-            <CardBgBlur
-              icon={ChatsTeardrop}
-              heading="Transparent Communication"
-              subText="We believe in open and honest communication every step of the way."
-            />
+              <CardBgBlur
+                icon={HandHeart}
+                heading="Dedicated Support"
+                subText="Your success is our priority, and we're here to support you every step of the way."
+              />
 
-            <CardBgBlur
-              icon={HandHeart}
-              heading="Dedicated Support"
-              subText="Your success is our priority, and we're here to support you every step of the way."
-            />
-
-            <CardBgBlur
-              icon={Atom}
-              heading="Expertise Across Industries"
-              subText="Our team has extensive experience working across various industries."
-            />
+              <CardBgBlur
+                icon={Atom}
+                heading="Expertise Across Industries"
+                subText="Our team has extensive experience working across various industries."
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="brands">
         <div className="__wrapper">

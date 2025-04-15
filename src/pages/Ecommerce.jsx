@@ -14,6 +14,7 @@ import {
 import CardBgBlur from "../components/CardBgBlur.jsx";
 import Step from "../components/Step.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
+import TextBlock from "../components/TextBlock.jsx";
 
 export default function Ecommerce() {
   const items = [
@@ -303,148 +304,104 @@ export default function Ecommerce() {
           </div>
 
           <div className="__body">
-            <p className="paragraphM">Custom Ecommerce Website Development</p>
-            <p className="paragraphXS">
-              We create fully custom ecommerce platforms that deliver a superior
-              user experience and are optimized for both desktop and mobile
-              devices. Our team builds intuitive, responsive, and scalable
-              stores with clean UI/UX design, ensuring your customers enjoy an
-              engaging shopping experience.{" "}
-            </p>
-            <p className="paragraphM">Shopping Cart & Checkout Optimization</p>
-            <p className="paragraphXS">
-              We optimize your ecommerce website’s shopping cart and checkout
-              process to reduce cart abandonment and improve conversion rates.
-              With user-friendly interfaces and secure payment processing, we
-              make the buying process fast, easy, and reliable.{" "}
-            </p>
-            <p className="paragraphM">Product Catalog Management</p>
-            <p className="paragraphXS">
-              Our team helps you create and manage a comprehensive product
-              catalog that is easy to navigate and update. We integrate advanced
-              search and filtering features, making it simple for your customers
-              to find the products they are looking for.{" "}
-            </p>
-            <p className="paragraphM">Payment Gateway Integration</p>
-            <p className="paragraphXS">
-              Firebits integrates a wide range of secure and reliable payment
-              gateways, including PayPal, Stripe, and other global or local
-              payment solutions. We ensure that transactions are processed
-              safely and smoothly, providing your customers with a seamless
-              checkout experience.{" "}
-            </p>
-            <p className="paragraphM">Multi-Channel Ecommerce Solutions</p>
-            <p className="paragraphXS">
-              We help you expand your reach by integrating your ecommerce
-              platform with popular marketplaces and social media channels.
-              Whether you’re selling on Amazon, eBay, or through Instagram, our
-              solutions allow you to manage all your sales from a single,
-              centralized platform.{" "}
-            </p>
-            <p className="paragraphM">Inventory & Order Management </p>
-            <p className="paragraphXS">
-              Our ecommerce solutions provide seamless inventory and order
-              management, ensuring that your stock levels are always accurate,
-              orders are tracked efficiently, and customers are kept up to date
-              on their order status. We automate many aspects of the process to
-              improve efficiency and reduce manual errors.{" "}
-            </p>
-            <p className="paragraphM">SEO for Ecommerce</p>
-            <p className="paragraphXS">
-              We implement SEO best practices to ensure your ecommerce site is
-              discoverable by search engines and ranks high for relevant
-              keywords. Our team optimizes product pages, metadata, content, and
-              technical elements to drive organic traffic and boost your store’s
-              visibility.{" "}
-            </p>
-            <p className="paragraphM">Mobile Ecommerce Development</p>
-            <p className="paragraphXS">
-              With more people shopping on mobile devices, we ensure your
-              ecommerce platform is fully optimized for mobile. We build
-              mobile-responsive websites and create dedicated mobile apps that
-              provide an excellent shopping experience on smartphones and
-              tablets.{" "}
-            </p>
-            <p className="paragraphM">Customer Account Management</p>
-            <p className="paragraphXS">
-              We integrate advanced customer account features, including
-              personalized shopping experiences, wish lists, order history, and
-              loyalty programs. These features help you build stronger customer
-              relationships and encourage repeat business.{" "}
-            </p>
-            <p className="paragraphM">Ecommerce Analytics & Reporting</p>
-            <p className="paragraphXS">
-              Our team implements advanced analytics and reporting tools,
-              providing you with insights into customer behavior, sales
-              performance, and marketing effectiveness. This data helps you make
-              informed decisions and continuously improve your ecommerce
-              business.{" "}
-            </p>
-            <p className="paragraphM">Ongoing Support & Maintenance </p>
-            <p className="paragraphXS">
-              We provide continuous support and maintenance for your ecommerce
-              platform, ensuring your store remains secure, up-to-date, and
-              optimized. Whether it’s troubleshooting issues, implementing new
-              features, or upgrading your system, we’re here to ensure your
-              ecommerce business thrives.{" "}
-            </p>
-            <p className="paragraphXS">
-              By partnering with Firebits, you gain access to a dedicated team
-              of ecommerce experts who will help you build a successful online
-              store that drives sales, enhances the customer experience, and
-              supports your business growth.{" "}
-            </p>
+            <TextBlock
+              title="Custom Ecommerce Website Development"
+              content="We create fully custom ecommerce platforms that deliver a superior user experience and are optimized for both desktop and mobile devices. Our team builds intuitive, responsive, and scalable stores with clean UI/UX design, ensuring your customers enjoy an engaging shopping experience."
+            />
+            <TextBlock
+              title="Shopping Cart & Checkout Optimization"
+              content="We optimize your ecommerce website’s shopping cart and checkout process to reduce cart abandonment and improve conversion rates. With user-friendly interfaces and secure payment processing, we make the buying process fast, easy, and reliable."
+            />
+            <TextBlock
+              title="Product Catalog Management"
+              content="Our team helps you create and manage a comprehensive product catalog that is easy to navigate and update. We integrate advanced search and filtering features, making it simple for your customers to find the products they are looking for."
+            />
+            <TextBlock
+              title="Payment Gateway Integration"
+              content="Firebits integrates a wide range of secure and reliable payment gateways, including PayPal, Stripe, and other global or local payment solutions. We ensure that transactions are processed safely and smoothly, providing your customers with a seamless checkout experience."
+            />
+            <TextBlock
+              title="Multi-Channel Ecommerce Solutions"
+              content="We help you expand your reach by integrating your ecommerce platform with popular marketplaces and social media channels. Whether you’re selling on Amazon, eBay, or through Instagram, our solutions allow you to manage all your sales from a single, centralized platform."
+            />
+            <TextBlock
+              title="Inventory & Order Management"
+              content="Our ecommerce solutions provide seamless inventory and order management, ensuring that your stock levels are always accurate, orders are tracked efficiently, and customers are kept up to date on their order status. We automate many aspects of the process to improve efficiency and reduce manual errors."
+            />
+            <TextBlock
+              title="SEO for Ecommerce"
+              content="We implement SEO best practices to ensure your ecommerce site is discoverable by search engines and ranks high for relevant keywords. Our team optimizes product pages, metadata, content, and technical elements to drive organic traffic and boost your store’s visibility."
+            />
+            <TextBlock
+              title="Mobile Ecommerce Development"
+              content="With more people shopping on mobile devices, we ensure your ecommerce platform is fully optimized for mobile. We build mobile-responsive websites and create dedicated mobile apps that provide an excellent shopping experience on smartphones and tablets."
+            />
+            <TextBlock
+              title="Customer Account Management"
+              content="We integrate advanced customer account features, including personalized shopping experiences, wish lists, order history, and loyalty programs. These features help you build stronger customer relationships and encourage repeat business."
+            />
+            <TextBlock
+              title="Ecommerce Analytics & Reporting"
+              content="Our team implements advanced analytics and reporting tools, providing you with insights into customer behavior, sales performance, and marketing effectiveness. This data helps you make informed decisions and continuously improve your ecommerce business."
+            />
+            <TextBlock
+              title="Ongoing Support & Maintenance"
+              content="We provide continuous support and maintenance for your ecommerce platform, ensuring your store remains secure, up-to-date, and optimized. Whether it’s troubleshooting issues, implementing new features, or upgrading your system, we’re here to ensure your ecommerce business thrives."
+            />
+            <TextBlock content="By partnering with Firebits, you gain access to a dedicated team of ecommerce experts who will help you build a successful online store that drives sales, enhances the customer experience, and supports your business growth." />
           </div>
         </div>
       </div>
 
-      <div className="why">
-        <div className="__wrapper">
+      <section className="whyChooseUs my_wrapper">
+        <div className="bg_gradient"></div>
+        <div className="_container">
           <TagAndHeading
             tag="Why Choose Us"
             heading="Why we are your best choice"
             className="only_center"
           />
+          <div className="_card_container">
+            <div className="__grid">
+              <CardBgBlur
+                icon={Rocket}
+                heading="Proven Track Record"
+                subText="We have built a reputation as a trusted and reliable partner in achieving business success."
+              />
 
-          <div className="__grid">
-            <CardBgBlur
-              icon={Rocket}
-              heading="Proven Track Record"
-              subText="We have built a reputation as a trusted and reliable partner in achieving business success."
-            />
+              <CardBgBlur
+                icon={Graph}
+                heading="Tailored Solutions"
+                subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
+              />
 
-            <CardBgBlur
-              icon={Graph}
-              heading="Tailored Solutions"
-              subText="We offer personalized solutions tailored to your specific goals, audience, and industry."
-            />
+              <CardBgBlur
+                icon={UserFocus}
+                heading="Client-Centric Focus"
+                subText="Your success is our priority. We prioritize understanding your business goals."
+              />
 
-            <CardBgBlur
-              icon={UserFocus}
-              heading="Client-Centric Focus"
-              subText="Your success is our priority. We prioritize understanding your business goals."
-            />
+              <CardBgBlur
+                icon={ChatsTeardrop}
+                heading="Transparent Communication"
+                subText="We believe in open and honest communication every step of the way."
+              />
 
-            <CardBgBlur
-              icon={ChatsTeardrop}
-              heading="Transparent Communication"
-              subText="We believe in open and honest communication every step of the way."
-            />
+              <CardBgBlur
+                icon={HandHeart}
+                heading="Dedicated Support"
+                subText="Your success is our priority, and we're here to support you every step of the way."
+              />
 
-            <CardBgBlur
-              icon={HandHeart}
-              heading="Dedicated Support"
-              subText="Your success is our priority, and we're here to support you every step of the way."
-            />
-
-            <CardBgBlur
-              icon={Atom}
-              heading="Expertise Across Industries"
-              subText="Our team has extensive experience working across various industries."
-            />
+              <CardBgBlur
+                icon={Atom}
+                heading="Expertise Across Industries"
+                subText="Our team has extensive experience working across various industries."
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="brands">
         <div className="__wrapper">

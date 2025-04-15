@@ -1,4 +1,6 @@
-const HeadingPageWithButton = ({ title, content, buttonText }) => {
+import { NavLink } from "react-router-dom";
+
+const HeadingPageWithButton = ({ title, content, buttonText, link = "" }) => {
   return (
     <div className="headingPageWithButton">
       <div className="__head">
@@ -6,9 +8,9 @@ const HeadingPageWithButton = ({ title, content, buttonText }) => {
         <p className="paragraphS">{content}</p>
       </div>
 
-      <button className="__btn">
+      <NavLink to={link} className="__btn">
         <p className="navText">{buttonText}</p>
-      </button>
+      </NavLink>
     </div>
   );
 };
