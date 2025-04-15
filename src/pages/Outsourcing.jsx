@@ -213,7 +213,7 @@ export default function Outsourcing() {
         <div className="__wrapper">
           <TagAndHeading tag="benefits" heading="Why you need our service?" />
 
-          <p className="paragraphL">
+          <p className="paragraphL font-thin">
             Outsourcing is a strategic solution that allows businesses to stay
             competitive, scale efficiently, and access specialized expertise
             without the burden of managing in-house teams. By leveraging

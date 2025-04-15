@@ -17,10 +17,6 @@
     .__wrapper {
       @apply mx-auto flex max-w-[1440px] flex-col gap-[39px];
 
-      p {
-        @apply font-thin;
-      }
-
       .__accordion {
         @apply grid grid-cols-1 gap-2.5 lg:grid-cols-2;
       }
