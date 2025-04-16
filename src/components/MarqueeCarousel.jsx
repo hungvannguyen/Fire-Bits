@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export default function MarqueeCarousel({
   className = "",
@@ -6,24 +7,45 @@ export default function MarqueeCarousel({
   speed = 20,
   direction = "left",
 }) {
-  const duplicatedItems = Array.from(
-    { length: items.length * 3 },
-    () => items,
-  ).flat();
+  const containerRef = useRef(null);
+  const marqueeRef = useRef(null);
 
-  const animationDuration = speed * (duplicatedItems.length / items.length);
+  const duplicatedItems = [...items, ...items];
+
+  useEffect(() => {
+    const marqueeEl = marqueeRef.current;
+    if (!marqueeEl) return;
+
+    const totalWidth = marqueeEl.scrollWidth / 2;
+
+    gsap.to(marqueeEl, {
+      x: -totalWidth,
+      ease: "none",
+      duration: speed,
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+      },
+    });
+  }, [speed, items]);
+
+  const containerStyle =
+    direction === "right" ? { transform: "scaleX(-1)" } : {};
+  const itemStyle = direction === "right" ? { transform: "scaleX(-1)" } : {};
 
   return (
-    <div className={`marquee-wrapper w-full overflow-hidden ${className}`}>
-      <ul
-        className="marquee-list whitespace-nowrap"
-        style={{
-          animationDuration: `${animationDuration}s`,
-          animationDirection: direction === "right" ? "reverse" : "normal",
-        }}
-      >
+    <div
+      ref={containerRef}
+      className={`marquee-wrapper w-full overflow-hidden ${className}`}
+      style={containerStyle}
+    >
+      <ul ref={marqueeRef} className="marquee-list whitespace-nowrap">
         {duplicatedItems.map((item, index) => (
-          <li key={index} className="marquee-item">
+          <li
+            key={index}
+            className="marquee-item mx-[5px] inline-block"
+            style={itemStyle}
+          >
             {item}
           </li>
         ))}
