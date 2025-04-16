@@ -48,6 +48,53 @@ export default function Home() {
 
     return () => anim.kill();
   }, []);
+
+  // gsap animation for brand collaboration section
+  const brandCollabRef = useRef(null);
+  const brandCollabSectionRef = useRef(null);
+  useEffect(() => {
+    const section = brandCollabSectionRef.current;
+    const container = brandCollabRef.current;
+    const track = container.querySelector("ul");
+
+    // Clone nội dung để tạo loop
+    const clone = track.innerHTML;
+    const singleWidth = track.scrollWidth / 2;
+    track.innerHTML += clone;
+
+    console.log(singleWidth);
+
+    gsap.set(track, { x: 0 });
+
+    const anim = gsap.to(track, {
+      x: -singleWidth,
+      ease: "none",
+      duration: 30,
+      repeat: -1,
+      onRepeat: () => {
+        gsap.set(track, { x: 0 });
+      },
+    });
+
+    const fadeIn = gsap.from(section, {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        toggleActions: "play none none none",
+        // markers: true,
+      },
+    });
+
+    return () => {
+      anim.kill();
+      fadeIn.revert();
+    };
+  }, []);
+
   // gsap animation for hero heading and banner
   const heroHeadingRef = useRef(null);
   const heroBannerRef = useRef(null);
@@ -81,7 +128,7 @@ export default function Home() {
           y: 100,
           opacity: 0,
           duration: 1,
-          
+
           scrollTrigger: {
             trigger: group[0],
             start: "top 80%",
@@ -101,7 +148,7 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const aboutUsSection = aboutUsSectionRef.current;
-      
+
       gsap.from(aboutUsSection, {
         opacity: 0,
         y: 100,
@@ -114,7 +161,21 @@ export default function Home() {
           // markers: true,
         },
       });
-    }, aboutUsSectionRef);
+
+      const circleUp = aboutUsSection.querySelectorAll(".circleUp");
+      gsap.to(circleUp, {
+        y: 0,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: aboutUsSection,
+          start: "top 90%",
+          end: "bottom 90%",
+          scrub: true,
+          // markers: true,
+        },
+      });
+    });
 
     return () => ctx.revert();
   }, []);
@@ -132,19 +193,71 @@ export default function Home() {
         scrollTrigger: {
           trigger: videoSection,
           start: "top 80%",
-          toggleActions: "play none none none",
-          // markers: true, 
+          toggleActions: "play reverse play reverse",
+          // markers: true,
         },
       });
     }, videoSectionRef);
 
     return () => ctx.revert();
   }, []);
+
+  // gsap animation for whyUs_section
+  const whyUsSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const whyUsSection = whyUsSectionRef.current;
+      const heading = whyUsSection.querySelector(".heading");
+      gsap.from(heading, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: heading,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+      const content1 = whyUsSection.querySelector("._content-center");
+      gsap.from(content1, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: content1,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+
+      const content2 = whyUsSection.querySelector("._content-end");
+      gsap.from(content2, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: content2,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <div className="home">
       {/* hero section */}
       <div className="hero">
-        <div className="relative flex flex-col h-min w-full justify-center gap-[31px] overflow-hidden" ref={heroHeadingRef}>
+        <div
+          className="relative flex h-min w-full flex-col justify-center gap-[31px] overflow-hidden"
+          ref={heroHeadingRef}
+        >
           <div className="heading-content">
             <div className="subheading">
               <div className="__text">
@@ -238,7 +351,7 @@ export default function Home() {
           <div className="service_container">
             <div className="_grid">
               <ServiceCard
-              className="ServiceCard"
+                className="ServiceCard"
                 icon={Network}
                 title="Outsourcing"
                 description="We offer high-quality outsourcing services that help businesses reduce costs and optimize operations by outsourcing tasks such as software development, customer support, and IT services."
@@ -276,6 +389,123 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Brand collap section */}
+      <section
+        className="my_wrapper brand_collapse_section"
+        ref={brandCollabSectionRef}
+      >
+        <div className="_heading">
+          <div className="_container">
+            <TagAndHeading
+              tag="brand collabboration"
+              heading="Brands that trust us"
+              className="only_center"
+            />
+          </div>
+        </div>
+
+        <div className="_brand_marqueeCarousel" ref={brandCollabRef}>
+          <div className="_container">
+            <div className="relative h-[98px] flex-[1_0_0px]">
+              <div className="_wrapper">
+                <ul>
+                  <li>
+                    <div className="_brandCollap">
+                      <div className="_container">
+                        <div className="_logo">
+                          <div className="absolute inset-0">
+                            <img
+                              src="https://framerusercontent.com/images/oOpuDU7egRCE7Z1D3eJKZYWJs50.svg"
+                              alt="brand-logo"
+                              className=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="_brandCollap">
+                      <div className="_container">
+                        <div className="_logo">
+                          <div className="absolute inset-0">
+                            <img
+                              src="https://framerusercontent.com/images/YuN93JWcWdSzH0odGho5bcZyHOg.svg"
+                              alt="brand-logo"
+                              className=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="_brandCollap">
+                      <div className="_container">
+                        <div className="_logo">
+                          <div className="absolute inset-0">
+                            <img
+                              src="https://framerusercontent.com/images/ai5aTS5GwmknA02FMovLXZcdo.svg"
+                              alt="brand-logo"
+                              className=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="_brandCollap">
+                      <div className="_container">
+                        <div className="_logo">
+                          <div className="absolute inset-0">
+                            <img
+                              src="https://framerusercontent.com/images/qgI0hIf34aPuuJedXqVNVWx1gI.svg"
+                              alt="brand-logo"
+                              className=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="_brandCollap">
+                      <div className="_container">
+                        <div className="_logo">
+                          <div className="absolute inset-0">
+                            <img
+                              src="https://framerusercontent.com/images/or0Wlg5UKFRZGfVPFnLR5bath6I.svg"
+                              alt="brand-logo"
+                              className=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="_brandCollap">
+                      <div className="_container">
+                        <div className="_logo">
+                          <div className="absolute inset-0">
+                            <img
+                              src="https://framerusercontent.com/images/HtNOvy5spiFjxciDATmaZhCH9U.svg"
+                              alt="brand-logo"
+                              className=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* about us section */}
       <section className="aboutUs_section" ref={aboutUsSectionRef}>
         <div className="backGround_img">
@@ -289,8 +519,8 @@ export default function Home() {
         <div className="topContent">
           <div className="statistics">
             <div
-              className="_item"
-              style={{ transform: "translateY(28.6152px)" }}
+              className="_item circleUp"
+              style={{ transform: "translateY(70px)" }}
             >
               <div className="_circleBox">
                 <div className="_circleContent">
@@ -320,8 +550,8 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="_item"
-              style={{ transform: "translateY(28.6152px)" }}
+              className="_item circleUp"
+              style={{ transform: "translateY(70px)" }}
             >
               <div className="_circleBox">
                 <div className="_circleContent">
@@ -464,7 +694,7 @@ export default function Home() {
         </div>
       </section>
       {/* why us section */}
-      <section className="whyUs_section my_wrapper">
+      <section className="whyUs_section my_wrapper" ref={whyUsSectionRef}>
         <div className="_container">
           <div className="heading">
             <div className="content_1">
