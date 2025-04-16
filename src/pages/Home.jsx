@@ -7,6 +7,8 @@ import ServiceCard from "../components/ServiceCard";
 import CardBgBlur from "../components/CardBgBlur";
 import CircleTag from "../components/CircleTag";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef } from "react";
 import {
   Network,
@@ -21,8 +23,8 @@ import {
 } from "@phosphor-icons/react";
 
 export default function Home() {
+  // gsap animation for text runner
   const textRunnerRef = useRef(null);
-
   useEffect(() => {
     const container = textRunnerRef.current;
     const track = container.querySelector(".track");
@@ -46,10 +48,9 @@ export default function Home() {
 
     return () => anim.kill();
   }, []);
-
+  // gsap animation for hero heading and banner
   const heroHeadingRef = useRef(null);
   const heroBannerRef = useRef(null);
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(heroHeadingRef.current, {
@@ -66,11 +67,84 @@ export default function Home() {
     return () => ctx.revert();
   }, []);
 
+  // gsap animation for service section
+  const serviceSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const serviceSection = serviceSectionRef.current;
+      const cards = Array.from(serviceSection.querySelectorAll(".ServiceCard"));
+
+      for (let i = 0; i < cards.length; i += 2) {
+        const group = cards.slice(i, i + 2);
+
+        gsap.from(group, {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          
+          scrollTrigger: {
+            trigger: group[0],
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+            // markers: true,
+          },
+        });
+      }
+    }, serviceSectionRef);
+
+    return () => ctx.revert();
+  }, [serviceSectionRef]);
+
+  // gsap animation for about us section
+  const aboutUsSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const aboutUsSection = aboutUsSectionRef.current;
+      
+      gsap.from(aboutUsSection, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutUsSection,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+    }, aboutUsSectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // gsap animation for video section
+  const videoSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const videoSection = videoSectionRef.current;
+      gsap.from(videoSection, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: videoSection,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // markers: true, 
+        },
+      });
+    }, videoSectionRef);
+
+    return () => ctx.revert();
+  }, []);
   return (
     <div className="home">
       {/* hero section */}
       <div className="hero">
-        <div class="relative flex flex-col h-min w-full justify-center gap-[31px] overflow-hidden" ref={heroHeadingRef}>
+        <div className="relative flex flex-col h-min w-full justify-center gap-[31px] overflow-hidden" ref={heroHeadingRef}>
           <div className="heading-content">
             <div className="subheading">
               <div className="__text">
@@ -143,7 +217,7 @@ export default function Home() {
         </div>
       </div>
       {/* service section */}
-      <section className="service_section my_wrapper">
+      <section className="service_section my_wrapper" ref={serviceSectionRef}>
         <div className="_container">
           <div className="heading">
             <div className="content_1">
@@ -164,30 +238,35 @@ export default function Home() {
           <div className="service_container">
             <div className="_grid">
               <ServiceCard
+              className="ServiceCard"
                 icon={Network}
                 title="Outsourcing"
                 description="We offer high-quality outsourcing services that help businesses reduce costs and optimize operations by outsourcing tasks such as software development, customer support, and IT services."
                 link="#"
               />
               <ServiceCard
+                className="ServiceCard"
                 icon={Cloud}
                 title="SaaS (Software as a Service)"
                 description="We provide SaaS solutions that allow businesses to access powerful tools without worrying about infrastructure and maintenance, enabling more efficient and scalable operations."
                 link="#"
               />
               <ServiceCard
+                className="ServiceCard"
                 icon={ShieldCheck}
                 title="SEO (Search Engine Optimization)"
                 description="Our SEO services help businesses enhance their online presence, improve search engine rankings, attract potential customers, and increase revenue."
                 link="#"
               />
               <ServiceCard
+                className="ServiceCard"
                 icon={ShoppingCart}
                 title="Ecommerce"
                 description="Firebits offers comprehensive eCommerce solutions that empower businesses to build and scale online stores, optimize user experience, and drive revenue growth in the digital marketplace."
                 link="#"
               />
               <ServiceCard
+                className="ServiceCard"
                 icon={Robot}
                 title="AI Agency"
                 description="Our AI services help businesses implement artificial intelligence solutions, from data analysis to process automation, optimizing efficiency and boosting creativity in business strategies."
@@ -198,7 +277,7 @@ export default function Home() {
         </div>
       </section>
       {/* about us section */}
-      <section className="aboutUs_section">
+      <section className="aboutUs_section" ref={aboutUsSectionRef}>
         <div className="backGround_img">
           <div className="">
             <img src={whyUsImage} alt="" className="" />
@@ -340,7 +419,7 @@ export default function Home() {
         </div>
       </section>
       {/* video section */}
-      <section className="video_section">
+      <section className="video_section" ref={videoSectionRef}>
         <div className="_container">
           <div className="bgGradient"></div>
           <div className="_videoContainer">
