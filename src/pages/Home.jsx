@@ -195,7 +195,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: videoSection,
           start: "top 80%",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none none none",
           // markers: true,
         },
       });
@@ -252,6 +252,27 @@ export default function Home() {
     });
     return () => ctx.revert();
   }, []);
+
+  // gsap animation for FAQ section
+  const FAQSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const FAQSection = FAQSectionRef.current;
+      gsap.from(FAQSection, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: FAQSection,
+          start: "top 80%",
+          toggleAcctions:"play none none none"
+        }
+      });
+    }, FAQSectionRef);
+
+    return () => ctx.revert();
+  },[])
   return (
     <div className="home">
       {/* hero section */}
@@ -815,7 +836,7 @@ export default function Home() {
         </div>
       </section>
       {/* FAQ section */}
-      <section className="questions">
+      <section className="questions" ref={FAQSectionRef}>
         <div className="__wrapper">
           <TagAndHeading
             tag="Frequently Asked Questions"
