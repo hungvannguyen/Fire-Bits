@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { CaretDown } from "@phosphor-icons/react";
 
 export default function AccordionArrow({
@@ -9,14 +9,24 @@ export default function AccordionArrow({
   content = "",
 }) {
   const [isOpen, setIsOpen] = useState(initialOpen);
+  const [height, setHeight] = useState(0);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      setHeight(contentRef.current.scrollHeight);
+    } else {
+      setHeight(0);
+    }
+  }, [isOpen]);
 
   return (
     <div
-      className={`accordion-arrow group cursor-pointer ${className}`}
+      className={`accordion-arrow group cursor-pointer ${isOpen ? "is-open" : ""} ${className}`}
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="__heading">
-        <div className={`__title ${!isOpen ? "group-hover:pl-4" : ""}`}>
+        <div className={`__title ${!isOpen ? "" : "__isOpen"}`}>
           <h4>{title}</h4>
           {subtitle && <h4>{subtitle}</h4>}
         </div>
@@ -29,11 +39,15 @@ export default function AccordionArrow({
           />
         </div>
       </div>
-      {isOpen && (
-        <div className="__content">
+
+      <div
+        className="__content-wrapper"
+        style={{ height: `${height}px` }}
+      >
+        <div ref={contentRef} className="__content">
           <p className="paragraphXS">{content}</p>
         </div>
-      )}
+      </div>
     </div>
   );
 }

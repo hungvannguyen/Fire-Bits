@@ -1,5 +1,5 @@
 .accordion-arrow {
-  @apply box-border flex w-full flex-col gap-[38px] rounded-[30px] bg-whiteo10 p-5;
+  @apply box-border flex w-full flex-col rounded-[30px] bg-whiteo5 p-5 transition-all duration-300 ease-in-out;
 
   .__heading {
     @apply flex w-full justify-between;
@@ -12,16 +12,31 @@
       }
     }
 
+    .__isOpen{
+      @apply translate-x-0 transition-transform duration-300 ease-in-out;
+    }
+
     .__icon {
       @apply flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-lightTone text-black;
     }
   }
 
+  .__content-wrapper {
+    @apply overflow-hidden transition-all duration-500 ease-in-out;
+  }
+
   .__content {
-    @apply mx-auto max-w-[800px];
+    @apply mx-auto max-w-[800px] pt-[38px];
 
     p {
       @apply font-thin opacity-70;
     }
+  }
+}
+
+.accordion-arrow:hover:not(.is-open) {
+  @apply bg-whiteo10;
+  .__title {
+    @apply translate-x-4 transition-transform duration-300 ease-in-out;
   }
 }
