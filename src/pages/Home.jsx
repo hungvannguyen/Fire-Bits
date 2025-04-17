@@ -103,14 +103,14 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(heroHeadingRef.current, {
-        y: -500,
+        y: -200,
         opacity: 0,
-        duration: 1,
+        duration: 1.5,
       });
       gsap.from(heroBannerRef.current, {
-        y: 500,
+        y: 200,
         opacity: 0,
-        duration: 1,
+        duration: 2,
       });
     });
     return () => ctx.revert();
