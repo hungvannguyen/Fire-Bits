@@ -115,7 +115,6 @@ function Footer() {
                     </li>
                   </ul>
                 </div>
-
                 <div className="__item">
                   <h5 className="__label">Services</h5>
                   <ul className="__list">
