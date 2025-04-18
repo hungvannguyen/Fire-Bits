@@ -13,18 +13,49 @@
     }
   }
 
-  .__nav {
-    @apply box-border hidden h-[60px] items-center rounded-[160px] border border-whiteo15 bg-black p-2.5 lg:flex;
+  ._nav{
+    @apply border border-whiteo15 rounded-full bg-black flex flex-none items-center flex-nowrap h-min h-min justify-end overflow-hidden p-[10px] relative w-min;
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.32) 0px -9px 22px 0px;
 
-    a {
-      @apply flex h-10 w-fit items-center justify-center px-5 text-white uppercase no-underline;
+    ._linkContainer{
+      @apply flex-none h-[40px] relative w-auto;
+
+      ._link{
+        @apply h-full rounded-full flex items-center cursor-pointer flex-nowrap gap-[10px] justify-center overflow-hidden px-[20px] relative w-min no-underline transition-all duration-500 ease-in-out uppercase;
+
+        .overlay {
+          @apply bg-whiteo30 flex-none left-[-17%%] overflow-visible absolute top-[-84%] w-[111px] z-0 rounded-full transform;
+          aspect-ratio: 1/1;
+          height: var(--aspect-retro, 111px);
+        }
+        
+
+        ._text{
+          @apply justify-start flex-none h-auto relative whitespace-pre w-auto; 
+
+          p{
+            @apply text-white;
+          }
+        }
+      }
+
+      ._link.active{
+        @apply rounded-full bg-whiteo10;
+
+        p{
+          @apply text-lightTone;
+        }
+      }
     }
+    ._linkContainer:hover{
 
-    .active {
-      @apply rounded-[220px] bg-whiteo10 text-lightTone transition-all duration-200 hover:scale-90;
+      ._link{
+        @apply scale-90 transition-transform duration-500 ease-in-out;
+      }
     }
   }
-
+  
   .__hamburger {
     @apply flex h-[44px] w-[44px] flex-col items-center justify-center gap-2.5 rounded-[10px] bg-whiteo10 lg:hidden;
 
