@@ -23,7 +23,7 @@
 }
 
 .ver1{
-    @apply sm:flex-col sm:items-center md:flex-row;
+    @apply sm:flex-col sm:items-center md:items-start lg:items-center lg:flex-row ;
 }
 
 .only_center{

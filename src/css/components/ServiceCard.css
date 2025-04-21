@@ -41,7 +41,7 @@
       }
 
       .-icon {
-        @apply relative flex h-[28px] w-[28px] flex-none rotate-[45deg] flex-nowrap items-center justify-center overflow-hidden rounded-full border border-whiteo10 p-[7px] transition-all duration-300;
+        @apply relative flex h-[28px] w-[28px] flex-none flex-nowrap items-center justify-center overflow-hidden rounded-full border border-whiteo10 p-[7px] transition-all duration-300;
       }
     }
   }
@@ -49,6 +49,6 @@
 
 .ServiceCard:hover {
   ._buttonContainer .-icon {
-    @apply rotate-[90deg] bg-lightTone text-darkTone transition-all duration-300;
+    @apply rotate-[45deg] bg-lightTone text-darkTone transition-all duration-300;
   }
 }

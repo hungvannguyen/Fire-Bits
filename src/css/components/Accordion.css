@@ -1,5 +1,5 @@
 .accordion {
-  @apply box-border flex flex-col gap-[38px] rounded-[30px] bg-whiteo10 p-5;
+  @apply box-border flex flex-col  border border-whiteo15 rounded-[30px] bg-whiteo10 p-5 transition-all duration-300 ease-in-out;
 
   .__heading {
     @apply flex w-full justify-between;
@@ -8,18 +8,45 @@
       @apply flex items-center gap-[10px] transition-transform duration-300 ease-in-out;
 
       h4 {
-        @apply group-hover:text-lightTone;
+        @apply group-hover:text-lightTone transition-all duration-300 ease-in-out;
       }
     }
 
-    .__icon {
-      @apply flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-whiteo15 text-white group-hover:bg-lightTone group-hover:text-black;
+    .__isOpen{
+      @apply translate-x-0 transition-transform duration-300 ease-in-out;
     }
+
+    .__icon {
+      @apply flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-whiteo15 text-white group-hover:bg-lightTone group-hover:text-black transition-all duration-300 ease-in-out;
+    }
+  }
+  .__content-wrapper{
+    @apply overflow-hidden transition-all duration-500 ease-in-out;
   }
 
   .__content {
+    @apply pt-[38px];
+
     p {
       @apply font-thin opacity-70;
     }
+  }
+}
+
+.accordion.is-open{
+  @apply bg-whiteo5 border-blacko10 transition-all duration-300 ease-in-out;
+
+  h4{
+    @apply text-lightTone
+  }
+
+  .__icon{
+    @apply bg-lightTone text-black;
+  }
+}
+
+.accordion:hover:not(.is-open){
+  .__title{
+    @apply translate-x-4 transition-transform duration-300 ease-in-out;
   }
 }

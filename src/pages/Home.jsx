@@ -8,19 +8,21 @@ import CardBgBlur from "../components/CardBgBlur";
 import CircleTag from "../components/CircleTag";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef } from "react";
 import {
-  Network,
+  Atom,
   Cloud,
+  Graph,
+  Network,
+  Robot,
+  Rocket,
   ShieldCheck,
   ShoppingCart,
-  Robot,
-  Graph,
-  Rocket,
   UserFocus,
-  Atom,
 } from "@phosphor-icons/react";
+import AccordionArrow from "../components/AccordionArrow.jsx";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   // gsap animation for text runner
@@ -101,14 +103,14 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(heroHeadingRef.current, {
-        y: -500,
+        y: -200,
         opacity: 0,
-        duration: 1,
+        duration: 1.5,
       });
       gsap.from(heroBannerRef.current, {
-        y: 500,
+        y: 200,
         opacity: 0,
-        duration: 1,
+        duration: 2,
       });
     });
     return () => ctx.revert();
@@ -193,7 +195,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: videoSection,
           start: "top 80%",
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none none none",
           // markers: true,
         },
       });
@@ -250,6 +252,27 @@ export default function Home() {
     });
     return () => ctx.revert();
   }, []);
+
+  // gsap animation for FAQ section
+  const FAQSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const FAQSection = FAQSectionRef.current;
+      gsap.from(FAQSection, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: FAQSection,
+          start: "top 80%",
+          toggleAcctions:"play none none none"
+        }
+      });
+    }, FAQSectionRef);
+
+    return () => ctx.revert();
+  },[])
   return (
     <div className="home">
       {/* hero section */}
@@ -288,7 +311,7 @@ export default function Home() {
               <p className="paragraphS text-white/80">
                 We are a strategic partner, working alongside businesses to
                 create innovative solutions that help them achieve sustainable
-                success and exceptional growth.
+                success and exceptional growth.{" "}
               </p>
             </div>
           </div>
@@ -309,7 +332,7 @@ export default function Home() {
                   <div className="wrapper">
                     <div className="text_container">
                       <p className="bodyXXL text-white">
-                        Innovation Digital Solution
+                        Innovation Digital Solution{" "}
                       </p>
                     </div>
                   </div>
@@ -318,7 +341,7 @@ export default function Home() {
                   <div className="wrapper">
                     <div className="text_container">
                       <p className="bodyXXL text-white">
-                        Innovation Digital Solution
+                        Innovation Digital Solution{" "}
                       </p>
                     </div>
                   </div>
@@ -529,7 +552,7 @@ export default function Home() {
                   </div>
                   <div className="-subText">
                     <p className="paragraphXS text-white/80">
-                      Support everywhere
+                      Support everywhere{" "}
                     </p>
                   </div>
                 </div>
@@ -543,7 +566,7 @@ export default function Home() {
                   </div>
                   <div className="-subText">
                     <p className="paragraphXS text-white/80">
-                      Customer Satisfaction
+                      Customer Satisfaction{" "}
                     </p>
                   </div>
                 </div>
@@ -624,7 +647,7 @@ export default function Home() {
 
                 <div className="-text">
                   <p className="paragraphXS text-white">
-                    Positive Client Experiencies
+                    Positive Client Experiencies{" "}
                   </p>
                 </div>
               </div>
@@ -640,7 +663,7 @@ export default function Home() {
 
                 <div className="-text">
                   <p className="paragraphXS text-white">
-                    Commitment to Excellence
+                    Commitment to Excellence{" "}
                   </p>
                 </div>
               </div>
@@ -720,7 +743,7 @@ export default function Home() {
                   automate processes and enhance decision-making. With a
                   commitment to quality, efficiency, and innovation, Firebits is
                   the trusted partner for businesses looking to scale and
-                  succeed in the digital era.
+                  succeed in the digital era.{" "}
                 </p>
               </div>
             </div>
@@ -752,7 +775,7 @@ export default function Home() {
                       Firebits helps businesses achieve remarkable growth with
                       comprehensive digital transformation strategies. Our
                       clients trust us for outstanding results and long-term
-                      partnerships.
+                      partnerships.{" "}
                     </p>
                   </div>
                 </div>
@@ -772,7 +795,7 @@ export default function Home() {
                   <p className="paragraphXS text-white/80">
                     With international funding and strategic partnerships,
                     Firebits is built for long-term innovation and sustainable
-                    growth in the global market.
+                    growth in the global market.{" "}
                   </p>
                 </div>
               </div>
@@ -793,7 +816,7 @@ export default function Home() {
                 <div className="_heading">
                   <div className="richTextContainer justify-start">
                     <p className="bodyUppercase text-right text-darkTone">
-                      enhanced brand visibility
+                      enhanced brand visibility{" "}
                     </p>
                   </div>
                   <div className="richTextContainer justify-center">
@@ -804,11 +827,66 @@ export default function Home() {
                 <div className="richTextContainer justify-start">
                   <p className="paragraphXS text-darkTone">
                     With advanced AI and SaaS strategies, Firebits boosts your
-                    brand’s visibility by 80% within just six months.
+                    brand’s visibility by 80% within just six months.{" "}
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* FAQ section */}
+      <section className="questions" ref={FAQSectionRef}>
+        <div className="__wrapper">
+          <TagAndHeading
+            tag="Frequently Asked Questions"
+            heading="Got Questions?
+We've Got Answers!"
+            className="only_center"
+          />
+
+          <div className="__accordion">
+            <AccordionArrow
+              className="__accordion-item"
+              title="How does Firebits’ outsourcing service help businesses optimize efficiency?"
+              content="Firebits offers software development outsourcing services that help businesses reduce costs and accelerate product development. Our expert teams in the US and Europe ensure high-quality, scalable solutions. We provide flexible collaboration models—ranging from full product development to supporting in-house teams—ensuring maximum efficiency for our clients."
+            />
+
+            <AccordionArrow
+              className="__accordion-item"
+              title="What benefits do Firebits’ SaaS solutions bring to businesses?"
+              content="Firebits’ SaaS (Software as a Service) solutions help businesses reduce infrastructure costs and streamline operations. We offer software for business management, data analytics, and workflow automation, allowing companies to scale effortlessly without worrying about maintenance or system updates."
+            />
+
+            <AccordionArrow
+              className="__accordion-item"
+              title="How does Firebits implement SEO strategies to drive business growth?"
+              content="Our SEO services focus on optimizing websites according to the latest Google standards, improving search rankings, and increasing organic traffic. Firebits provides a comprehensive SEO strategy, including keyword research, content optimization, and link-building, helping clients enhance their global market presence."
+            />
+
+            <AccordionArrow
+              className="__accordion-item"
+              title="How does Firebits support businesses in the e-commerce sector?"
+              content="We develop and optimize e-commerce platforms, including Shopify, Magento, WooCommerce, and custom solutions. Firebits also offers payment integration, logistics solutions, and user experience optimization to help clients maximize online revenue."
+            />
+
+            <AccordionArrow
+              className="__accordion-item"
+              title="How does Firebits’ AI Agency service help businesses, and why should they invest in AI?"
+              content="Firebits enables businesses to integrate AI into their operations to improve efficiency and gain a competitive edge. We develop AI models for chatbots, data analysis, and process automation, helping businesses leverage data effectively, optimize decision-making, and enhance customer experiences."
+            />
+
+            <AccordionArrow
+              className="__accordion-item"
+              title="How does Firebits’ experience with clients in the UK, China, and Vietnam benefit businesses?"
+              content="Having worked with multinational companies in the UK, China, and Vietnam, we understand the specific needs and market dynamics of each region. Firebits provides flexible services, from product development to strategic consulting, ensuring smooth and efficient project execution."
+            />
+
+            <AccordionArrow
+              className="__accordion-item"
+              title="How does Firebits ensure security and scalability in its technology solutions?"
+              content="Security and scalability are at the core of Firebits’ technology solutions. We follow industry best practices for data protection, compliance, and cybersecurity. Our scalable architectures ensure that businesses can grow without performance issues, while our cloud-based solutions guarantee high availability and reliability."
+            />
           </div>
         </div>
       </section>

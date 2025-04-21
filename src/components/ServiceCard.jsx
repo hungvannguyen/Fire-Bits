@@ -1,4 +1,4 @@
-import { ArrowUp } from "@phosphor-icons/react";
+import { ArrowUpRight } from "@phosphor-icons/react";
 import { NavLink } from "react-router-dom";
 
 const ServiceCard = ({ icon: Icon, title, description, link = "" }) => {
@@ -21,7 +21,7 @@ const ServiceCard = ({ icon: Icon, title, description, link = "" }) => {
             <p>learn more</p>
           </div>
           <div className="-icon">
-            <ArrowUp size={14} className="rotate-[45deg] text-white" />
+            <ArrowUpRight size={14} className="text-white" />
           </div>
         </div>
       </NavLink>

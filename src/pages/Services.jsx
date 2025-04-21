@@ -15,13 +15,57 @@ import {
   ShoppingCart,
   UserFocus,
 } from "@phosphor-icons/react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
+  // gsap animate for pageHeading and service section
+  const pageHeadingRef = useRef(null);
+  const servicesSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(pageHeadingRef.current, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+      });
+      gsap.from(servicesSectionRef.current, {
+        y: 200,
+        opacity: 0,
+        duration: 1,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
+  // gsap animate for whyChooseUs section
+  const whyChooseUsRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(whyChooseUsRef.current, {
+        opacity: 0,
+        y: 100,
+        duration:1,
+        ease: "power2.out",
+        scrollTrigger:{
+          trigger: whyChooseUsRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        }
+      })
+    },whyChooseUsRef.current);
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="services_page">
-      <PageHeading title="Discovers" titleLine2="Our Services" />
+      <div className="" ref={pageHeadingRef}>
+        <PageHeading title="Discovers" titleLine2="Our Services" />
+      </div>
 
-      <section className="_services_section">
+      <section className="_services_section" ref={servicesSectionRef}>
         <div className="_container">
           <div className="_grid">
             <ServiceCard
@@ -58,7 +102,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="whyChooseUs_section my_wrapper">
+      <section className="whyChooseUs_section my_wrapper" ref={whyChooseUsRef}>
         <div className="_container">
           <TagAndHeading
             tag="why choose us"
