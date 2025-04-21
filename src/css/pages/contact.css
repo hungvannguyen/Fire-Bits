@@ -1,6 +1,4 @@
 .contact {
-  @apply mt-[74px];
-
   .__heading {
     @apply flex justify-center py-[40px] lg:py-[80px];
 

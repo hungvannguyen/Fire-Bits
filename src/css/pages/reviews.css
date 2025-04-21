@@ -1,6 +1,4 @@
 .reviews {
-  @apply mt-[74px];
-
   .__heading {
     @apply flex justify-center py-[40px];
 
