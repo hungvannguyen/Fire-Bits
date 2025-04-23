@@ -4,35 +4,35 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 const CircleTag = () => {
-  useEffect(() => {
-    gsap.registerPlugin(Draggable);
+  // useEffect(() => {
+  //   gsap.registerPlugin(Draggable);
 
-    Draggable.create(".-item", {
-      type: "x,y",
-      // Không sử dụng bounds để cho phép kéo tự do ra ngoài container
-      throwProps: true,
-      onDragStart: function () {
-        // Lưu lại vị trí ban đầu của phần tử nếu chưa lưu
-        if (!this.target.dataset.initialX) {
-          const initialX = gsap.getProperty(this.target, "x") || 0;
-          const initialY = gsap.getProperty(this.target, "y") || 0;
-          this.target.dataset.initialX = initialX;
-          this.target.dataset.initialY = initialY;
-        }
-      },
-      onDragEnd: function () {
-        // Lấy vị trí ban đầu và animate về đó với hiệu ứng bounce
-        const initialX = parseFloat(this.target.dataset.initialX) || 0;
-        const initialY = parseFloat(this.target.dataset.initialY) || 0;
-        gsap.to(this.target, {
-          x: initialX,
-          y: initialY,
-          duration: 0.3,
-          ease: "back.out",
-        });
-      },
-    });
-  }, []);
+  //   Draggable.create(".-item", {
+  //     type: "x,y",
+  //     // Không sử dụng bounds để cho phép kéo tự do ra ngoài container
+  //     throwProps: true,
+  //     onDragStart: function () {
+  //       // Lưu lại vị trí ban đầu của phần tử nếu chưa lưu
+  //       if (!this.target.dataset.initialX) {
+  //         const initialX = gsap.getProperty(this.target, "x") || 0;
+  //         const initialY = gsap.getProperty(this.target, "y") || 0;
+  //         this.target.dataset.initialX = initialX;
+  //         this.target.dataset.initialY = initialY;
+  //       }
+  //     },
+  //     onDragEnd: function () {
+  //       // Lấy vị trí ban đầu và animate về đó với hiệu ứng bounce
+  //       const initialX = parseFloat(this.target.dataset.initialX) || 0;
+  //       const initialY = parseFloat(this.target.dataset.initialY) || 0;
+  //       gsap.to(this.target, {
+  //         x: initialX,
+  //         y: initialY,
+  //         duration: 0.3,
+  //         ease: "back.out",
+  //       });
+  //     },
+  //   });
+  // }, []);
 
   return (
     <div className="CircleTag">

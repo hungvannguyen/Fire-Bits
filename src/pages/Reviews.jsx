@@ -1,15 +1,37 @@
 import Review from "../components/Review.jsx";
 import PageHeading from "../components/PageHeading.jsx";
-
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 export default function Reviews() {
+  // gsap animate for pageHeading and review section
+  const pageHeadingRef = useRef(null);
+  const reviewsSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(pageHeadingRef.current, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+      });
+      gsap.from(reviewsSectionRef.current, {
+        y: 200,
+        opacity: 0,
+        duration: 1,
+      });
+    });
+    return () => ctx.revert();
+  },[]);
+
   return (
     <div className="reviews">
-      <PageHeading
-        title="Check Our Works With"
-        titleLine2="Real Results"
-      />
+      <div ref={pageHeadingRef}>
+        <PageHeading
+          title="Check Our Works With"
+          titleLine2="Real Results"
+        />
+      </div>
 
-      <div className="__reviews">
+      <div className="__reviews" ref={reviewsSectionRef}>
         <div className="__wrapper">
           <Review
             content="Partnering with Firebits was one of the best decisions we made for our digital transformation. Their SEO and eCommerce solutions helped us expand into new markets, particularly in the UK and China. Our website traffic skyrocketed by 120%, and our online sales increased significantly. Their data-driven approach and proactive support made all the difference. If you're looking for a reliable tech partner, Firebits is the way to go!"

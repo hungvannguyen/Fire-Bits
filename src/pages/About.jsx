@@ -5,7 +5,10 @@ import AccordionArrow from "../components/AccordionArrow.jsx";
 import TagAndHeading from "../components/TagAndHeading.jsx";
 import Step from "../components/Step.jsx";
 import CircleTag from "../components/CircleTag.jsx";
-
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default function About() {
   const items = [
     <div className="flex h-[56px] w-[186px] shrink-0 items-center justify-center rounded-[20px] bg-whiteo10 px-7 py-[14px]">
@@ -216,23 +219,110 @@ export default function About() {
       />
     </div>,
   ];
+  // gsap animate heroSection
+  const heroSectionRef = useRef(null);
+  const companySectionRef = useRef(null);
+  const brandSectionRef = useRef(null);
+  const gallerySectionRef = useRef(null);
+  const questionsSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const heroSection = heroSectionRef.current;
+      gsap.from(heroSection.querySelectorAll("._imageContainer"), {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: "power2.out",
+      });
+      gsap.from(heroSection.querySelectorAll("._content"), {
+        y: -200,
+        opacity: 0,
+        duration: 1,
+        delay: 0.6,
+        ease: "power2.out",
+      });
+        // gsap animate for company section
+      gsap.from(companySectionRef.current, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.6,
+        ease: "power2.out",
+      });
+      
+        // gsap animate for brand section
+      const brandSection = brandSectionRef.current;
+      gsap.from(brandSection, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: brandSection,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          // markers: true,
+        },
+      });
+
+      // gsap animate for gallery section
+      gsap.from(gallerySectionRef.current,{
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease:"power2.out",
+        scrollTrigger: {
+          trigger: gallerySectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        }
+      });
+
+      //gsap animate for questions section
+      gsap.from(questionsSectionRef.current,{
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease:"power2.out",
+        scrollTrigger: {
+          trigger: questionsSectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        }
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <div className="about">
-      <div className="hero">
-        <div className="__image">
-          <div className="absolute inset-0 z-[1] h-full flex-none overflow-hidden bg-[linear-gradient(180deg,rgba(191,51,19,0)_19.980063795853216%,var(--token-2f560859-5998-4075-847c-9f666c5cfc0b,rgb(10,10,10))_73%)] opacity-75"></div>
+      <div className="hero" ref={heroSectionRef}>
+        <div className="contents">
+          <div className="_imageContainer">
+            <div className="-image">
+              <img
+                decoding="async"
+                sizes="calc(100vw - 80px)"
+                srcSet="https://framerusercontent.com/images/Y6NYme84Tn5BwsMnArrrvLNIM3g.jpg?scale-down-to=512 512w,https://framerusercontent.com/images/Y6NYme84Tn5BwsMnArrrvLNIM3g.jpg?scale-down-to=1024 1024w,https://framerusercontent.com/images/Y6NYme84Tn5BwsMnArrrvLNIM3g.jpg?scale-down-to=2048 2048w,https://framerusercontent.com/images/Y6NYme84Tn5BwsMnArrrvLNIM3g.jpg?scale-down-to=4096 4096w,https://framerusercontent.com/images/Y6NYme84Tn5BwsMnArrrvLNIM3g.jpg 4606w"
+                src="https://framerusercontent.com/images/Y6NYme84Tn5BwsMnArrrvLNIM3g.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="_backgroundGradient"></div>
+          <div className="_overlay"></div>
+        </div>
 
-          <div className="absolute top-1/2 left-1/2 z-[1] h-full w-full flex-none -translate-x-1/2 -translate-y-1/2 transform overflow-hidden bg-[var(--token-4fdd7769-e1d0-45b2-8e3d-fe484baba321,#e85442)] opacity-0 mix-blend-multiply"></div>
-
-          <div className="__content">
-            <h1 className="inner-page">
-              Firebits - Powering Innovation, Building Trust{" "}
-            </h1>
+        <div className="contents">
+          <div className="_content richTextContainer">
+            <p className="h1-inner-page">
+              <span>Firebits – Powering Innovation, Building Trust.</span>
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="company">
+      <div className="company" ref={companySectionRef}>
         <div className="__wrapper">
           <TagAndHeading tag="who are we" heading="About our Company" />
 
@@ -262,7 +352,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="brand">
+      <div className="brand" ref={brandSectionRef}>
         <div className="__wrapper">
           <TagAndHeading
             tag="brands"
@@ -307,6 +397,7 @@ export default function About() {
 
           <div>
             <Step
+              lightBar={true}
               title="Discovery & Consultation"
               badgeText="Step 01"
               stepNumber="01"
@@ -317,6 +408,7 @@ export default function About() {
             />
 
             <Step
+              lightBar={true}
               title="Strategy & Solution Design"
               badgeText="Step 02"
               stepNumber="02"
@@ -328,6 +420,7 @@ export default function About() {
             />
 
             <Step
+              lightBar={true}
               title="Implementation and Execution"
               badgeText="Step 03"
               stepNumber="03"
@@ -350,7 +443,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="gallery">
+      <div className="gallery" ref={gallerySectionRef}>
         <div className="__wrapper">
           <div className="__wrapper">
             <TagAndHeading tag="gallery" heading="Our Agency Snaps" />
@@ -386,7 +479,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="questions">
+      <div className="questions" ref={questionsSectionRef}>
         <div className="__wrapper">
           <TagAndHeading
             tag="Frequently Asked Questions"

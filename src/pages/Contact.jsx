@@ -5,15 +5,33 @@ import {
   TwitterLogo,
 } from "@phosphor-icons/react";
 import PageHeading from "../components/PageHeading";
-
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 export default function Contact() {
+  const pageHeadingRef = useRef(null);
+  const contectSectionRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(pageHeadingRef.current, {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+      });
+      gsap.from(contectSectionRef.current, {
+        y: 200,
+        opacity: 0,
+        duration: 1,
+      });
+    });
+    return () => ctx.revert();
+  },[]);
   return (
     <div className="contact">
-      <PageHeading
-        title="Let's Work Together"
-      />
+      <div ref={pageHeadingRef}>
+        <PageHeading title="Let's Work Together" />
+      </div>
 
-      <div className="__contact">
+      <div className="__contact" ref={contectSectionRef}>
         <div className="__wrapper">
           <div className="__head">
             <div className="__item-col-1">

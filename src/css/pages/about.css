@@ -1,20 +1,54 @@
 .about {
   .hero {
-    @apply h-[50vh] overflow-hidden pt-[90px] pb-[40px] sm:px-3 md:px-10 lg:h-[80vh] lg:pb-[60px];
+    @apply relative flex w-full flex-none flex-nowrap items-end justify-center gap-[10px] overflow-hidden sm:h-[50vh] sm:px-[30px] sm:py-[40px] md:pt-[40px] md:pb-[60px] lg:h-[80vh];
 
-    .__image {
-      @apply relative z-2 flex h-[510px] w-full flex-col items-center overflow-hidden rounded-[30px] bg-amber-400 object-cover;
+    ._imageContainer {
+      @apply absolute z-[1] flex-none overflow-hidden rounded-[30px];
+      filter: brightness(1);
+      inset: 90px 40px 40px;
 
-      image {
-        @apply h-full w-full rounded-[30px] object-cover object-center;
+      .-image {
+        @apply absolute inset-0;
+        border-radius: inherit;
+
+        img {
+          @apply block h-full w-full;
+          border-radius: inherit;
+          object-fit: cover;
+          object-position: center center;
+        }
       }
     }
 
-    .__content {
-      @apply absolute z-2 mx-auto flex h-full w-full max-w-[740px] items-end justify-center text-center;
+    ._backgroundGradient {
+      @apply absolute z-[1] h-full w-full overflow-hidden opacity-[0.75];
+      background: linear-gradient(
+        180deg,
+        rgba(191, 51, 19, 0) 19.980063795853216%,
+        var(--color-darkTone, rgb(10, 10, 10)) 73%
+      );
+      left: calc(2.13163e-14%);
+      top: calc(2.13163e-14%);
+    }
 
-      h1 {
-        @apply px-[5px] pt-[5px] pb-[30px] text-[27px] text-lightTone md:text-[40px] lg:text-[50px];
+    ._content {
+      @apply relative z-[1] h-auto lg:max-w-[740px] md:max-w-[490px] sm:max-w-none flex-[1_0_0px] shrink-0 justify-start;
+      text-shadow: 0px 1px 100px #000000;
+
+      p {
+        @apply text-center text-lightTone;
+
+        span {
+          @apply inline-block p-[5px];
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-image: conic-gradient(
+            from 0deg at 49% 56.89999999999999%,
+            var(--color-lightTone, rgb(245, 131, 39)) 129.6deg,
+            rgba(0, 0, 0, 0) 169.2deg,
+            rgb(127, 68, 20) 172.79999999999998deg
+          );
+        }
       }
     }
   }
@@ -47,6 +81,12 @@
 
       .__footer {
         @apply shrink-0;
+      }
+    }
+
+    .TagAndHeading{
+      .section_name{
+        @apply max-w-[500px];
       }
     }
   }

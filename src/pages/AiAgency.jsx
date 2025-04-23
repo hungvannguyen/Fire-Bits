@@ -15,6 +15,9 @@ import CardBgBlur from "../components/CardBgBlur.jsx";
 import Step from "../components/Step.jsx";
 import AccordionArrow from "../components/AccordionArrow.jsx";
 import TextBlock from "../components/TextBlock.jsx";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { animateOnScroll } from "../components/animateOnScroll.jsx";
 
 export default function AiAgency() {
   const items = [
@@ -196,21 +199,52 @@ export default function AiAgency() {
       role="CEO, Tech Innovations"
     />,
   ];
+
+  const headingPageRef = useRef(null);
+  const Section1Ref = useRef(null);
+  const Section2Ref = useRef(null);
+  const Section3Ref = useRef(null);
+  const Section4Ref = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() =>{
+      gsap.from(headingPageRef.current.querySelectorAll(".__content"),{
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+      });
+      gsap.from(headingPageRef.current.querySelectorAll(".__image"),{
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+      });
+
+      animateOnScroll(Section1Ref.current);
+      animateOnScroll(Section2Ref.current);
+      animateOnScroll(Section3Ref.current);
+      animateOnScroll(Section4Ref.current);
+
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <div className="detail">
-      <div className="__headingPage">
+      <div className="__headingPage" ref={headingPageRef}>
+      <div className="__content">
         <HeadingPageWithButton
           title="Service Details"
           content="At Firebits, we provide cutting-edge digital solutions tailored to your business needs. From outsourcing and SaaS to SEO, e-commerce, and AI-driven strategies, we empower companies to scale, optimize, and innovate in a fast-changing digital landscape."
           buttonText="Get Started"
         />
+        </div>
 
         <div className="__image">
           <img src="https://placehold.co/1440x700" alt="Heading Image" />
         </div>
       </div>
 
-      <div className="benefits">
+      <div className="benefits" ref={Section1Ref}>
         <div className="__wrapper">
           <TagAndHeading tag="benefits" heading="Why you need our service?" />
 
@@ -283,7 +317,7 @@ export default function AiAgency() {
         </div>
       </div>
 
-      <div className="services">
+      <div className="services" ref={Section2Ref}>
         <div className="__wrapper">
           <TagAndHeading
             tag="services detail"
@@ -354,7 +388,7 @@ export default function AiAgency() {
         </div>
       </div>
 
-      <section className="whyChooseUs my_wrapper">
+      <section className="whyChooseUs my_wrapper" ref={Section3Ref}>
         <div className="bg_gradient"></div>
         <div className="_container">
           <TagAndHeading
@@ -404,7 +438,7 @@ export default function AiAgency() {
         </div>
       </section>
 
-      <div className="brands">
+      <div className="brands" ref={Section4Ref}>
         <div className="__wrapper">
           <TagAndHeading
             tag="brands"
@@ -434,8 +468,9 @@ export default function AiAgency() {
             className="only_center"
           />
 
-          <div className="__footer">
+          <div>
             <Step
+              lightBar={true}
               title="Discovery & Consultation"
               badgeText="Step 01"
               stepNumber="01"
@@ -446,6 +481,7 @@ export default function AiAgency() {
             />
 
             <Step
+              lightBar={true}
               title="Strategy & Solution Design"
               badgeText="Step 02"
               stepNumber="02"
@@ -457,6 +493,7 @@ export default function AiAgency() {
             />
 
             <Step
+              lightBar={true}
               title="Implementation and Execution"
               badgeText="Step 03"
               stepNumber="03"

@@ -1,5 +1,5 @@
 .headingPageWithButton {
-  @apply flex flex-col items-center justify-center gap-[30px];
+  @apply flex flex-col items-center justify-center gap-[30px] relative;
 
   .__head {
     @apply flex flex-col items-center justify-center gap-[10px];

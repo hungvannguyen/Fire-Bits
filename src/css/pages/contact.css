@@ -8,7 +8,7 @@
   }
 
   .__contact {
-    @apply px-[15px] pb-[50px] md:px-[40px] md:pt-[40px] md:pb-[80px];
+    @apply px-[15px] pb-[50px] md:px-[40px] md:pt-[40px] md:pb-[80px] lg:pt-0;
 
     .__wrapper {
       @apply mx-auto flex max-w-[1200px] flex-col gap-2.5 rounded-[30px] bg-whiteo5 p-5;
