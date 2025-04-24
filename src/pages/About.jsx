@@ -8,6 +8,7 @@ import CircleTag from "../components/CircleTag.jsx";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 export default function About() {
   const items = [
@@ -242,7 +243,7 @@ export default function About() {
         delay: 0.6,
         ease: "power2.out",
       });
-        // gsap animate for company section
+      // gsap animate for company section
       gsap.from(companySectionRef.current, {
         y: 100,
         opacity: 0,
@@ -250,8 +251,8 @@ export default function About() {
         delay: 0.6,
         ease: "power2.out",
       });
-      
-        // gsap animate for brand section
+
+      // gsap animate for brand section
       const brandSection = brandSectionRef.current;
       gsap.from(brandSection, {
         y: 100,
@@ -267,29 +268,29 @@ export default function About() {
       });
 
       // gsap animate for gallery section
-      gsap.from(gallerySectionRef.current,{
+      gsap.from(gallerySectionRef.current, {
         y: 100,
         opacity: 0,
         duration: 1,
-        ease:"power2.out",
+        ease: "power2.out",
         scrollTrigger: {
           trigger: gallerySectionRef.current,
           start: "top 80%",
           toggleActions: "play none none none",
-        }
+        },
       });
 
       //gsap animate for questions section
-      gsap.from(questionsSectionRef.current,{
+      gsap.from(questionsSectionRef.current, {
         y: 100,
         opacity: 0,
         duration: 1,
-        ease:"power2.out",
+        ease: "power2.out",
         scrollTrigger: {
           trigger: questionsSectionRef.current,
           start: "top 80%",
           toggleActions: "play none none none",
-        }
+        },
       });
     });
     return () => ctx.revert();
@@ -324,7 +325,11 @@ export default function About() {
 
       <div className="company" ref={companySectionRef}>
         <div className="__wrapper">
-          <TagAndHeading tag="who are we" heading="About our Company" />
+          <TagAndHeading
+            tag="who are we"
+            heading="About our Company"
+            className="ver1"
+          />
 
           <div className="__footer">
             <p className="__content paragraphL">
@@ -446,7 +451,11 @@ export default function About() {
       <div className="gallery" ref={gallerySectionRef}>
         <div className="__wrapper">
           <div className="__wrapper">
-            <TagAndHeading tag="gallery" heading="Our Agency Snaps" />
+            <TagAndHeading
+              tag="gallery"
+              heading="Our Agency Snaps"
+              className="ver2"
+            />
             <div className="__sub-header">
               <p className="parageaphS">
                 At Firebits, we believe that a great work environment fuels
