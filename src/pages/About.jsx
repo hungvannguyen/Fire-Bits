@@ -382,15 +382,24 @@ export default function About() {
         </div>
       </div>
 
-      <div className="value">
-        <div className="__wrapper relative">
-          <p className="__text">Values</p>
-
-          <div className="absolute top-18 md:-top-7 lg:top-18">
-            <CircleTag />
-          </div>
-        </div>
+<div className="value">
+  <svg
+    className="_container"
+    width="100%"
+    height="100%"
+  >
+    <foreignObject x="0" y="0" width="100%" height="100%" className="_textContent">
+      <div
+        xmlns="http://www.w3.org/1999/xhtml"
+        className="_textContent flex items-center justify-center w-full h-full"
+      >
+        <p className="__text">Values</p>
       </div>
+    </foreignObject>
+  </svg>
+  <CircleTag />
+</div>
+
 
       <div className="process">
         <div className="__wrapper">
