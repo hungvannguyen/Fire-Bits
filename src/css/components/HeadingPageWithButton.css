@@ -1,5 +1,5 @@
 .headingPageWithButton {
-  @apply flex flex-col items-center justify-center gap-[30px] relative;
+  @apply relative flex flex-col items-center justify-center gap-[30px];
 
   .__head {
     @apply flex flex-col items-center justify-center gap-[10px];
@@ -14,6 +14,6 @@
   }
 
   .__btn {
-    @apply box-border h-[43px] rounded-[30px] border-[0.1px] border-white bg-lightTone px-5 py-2.5 uppercase;
+    @apply box-border h-[43px] rounded-[30px] border-[0.1px] border-whiteo30 bg-lightTone px-5 py-2.5 uppercase;
   }
 }

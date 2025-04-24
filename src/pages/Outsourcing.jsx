@@ -18,6 +18,7 @@ import TextBlock from "../components/TextBlock.jsx";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { animateOnScroll } from "../components/animateOnScroll.jsx";
+
 export default function Outsourcing() {
   const items = [
     <div className="flex h-[56px] w-[186px] shrink-0 items-center justify-center rounded-[20px] bg-whiteo10 px-7 py-[14px]">
@@ -448,7 +449,7 @@ export default function Outsourcing() {
             className="only_center"
           />
 
-          <div>
+          <div className="__footer">
             <Step
               lightBar={true}
               title="Discovery & Consultation"
