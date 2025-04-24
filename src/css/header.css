@@ -64,7 +64,7 @@
   }
 
   .__nav-mobile {
-    @apply flex h-[320px] flex-col bg-black px-5 pt-10 transition-all duration-700 lg:hidden;
+    @apply flex flex-col bg-black px-5 py-10 transition-all duration-700 lg:hidden overflow-hidden ease-in-out;
 
     .active {
       @apply rounded-[220px] bg-whiteo10 text-lightTone;
@@ -73,5 +73,13 @@
     a {
       @apply flex h-16 w-full items-center justify-center px-5 text-white;
     }
+  }
+
+  .open{
+    @apply transition-all duration-300 ease-in-out overflow-hidden;
+  }
+
+  .close{
+    @apply transition-all duration-300 ease-in-out overflow-hidden;
   }
 }

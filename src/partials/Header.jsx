@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 import { motion } from "framer-motion";
+import gsap from "gsap";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState("64px");
 
   const serviceRoutes = [
     "/outsourcing",
@@ -29,6 +32,18 @@ export default function Header() {
     { label: "REVIEWS", href: "/reviews" },
     { label: "CONTACT", href: "/contact" },
   ];
+
+  useEffect(() => {
+    if (isOpen) {
+      const contentHeight = contentRef.current.scrollHeight;
+      setHeight(`${contentHeight}px`);
+    } else {
+      setHeight("0px");
+    }
+  }, [isOpen]);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <header className="header">
@@ -106,9 +121,12 @@ export default function Header() {
           ></div>
         </div>
       </div>
-
-      {isOpen && (
-        <nav className="__nav-mobile">
+      <div
+        className={`transition-all duration-300 ease-in-out ${isOpen ? "open" : "close"}`}
+        style={{ height }}
+        ref={contentRef}
+      >
+        <nav className={`__nav-mobile`}>
           <div>
             <NavLink to="/" className={({ isActive }) => getNavClass(isActive)}>
               Home
@@ -147,7 +165,7 @@ export default function Header() {
             </NavLink>
           </div>
         </nav>
-      )}
+      </div>
     </header>
   );
 }
