@@ -13,49 +13,48 @@
     }
   }
 
-  ._nav{
-    @apply border border-whiteo15 rounded-full bg-black flex flex-none items-center flex-nowrap h-min h-min justify-end overflow-hidden p-[10px] relative w-min;
+  ._nav {
+    @apply relative hidden h-min w-min flex-none flex-nowrap items-center justify-end overflow-hidden rounded-full border border-whiteo15 bg-black p-[10px] lg:flex;
     backdrop-filter: blur(5px);
     box-shadow: rgba(0, 0, 0, 0.32) 0px -9px 22px 0px;
 
-    ._linkContainer{
-      @apply flex-none h-[40px] relative w-auto;
+    ._linkContainer {
+      @apply relative h-[40px] w-auto flex-none;
 
-      ._link{
-        @apply h-full rounded-full flex items-center cursor-pointer flex-nowrap gap-[10px] justify-center overflow-hidden px-[20px] relative w-min no-underline transition-all duration-500 ease-in-out uppercase;
+      ._link {
+        @apply relative flex h-full w-min cursor-pointer flex-nowrap items-center justify-center gap-[10px] overflow-hidden rounded-full px-[20px] uppercase no-underline transition-all duration-500 ease-in-out;
 
         .overlay {
-          @apply bg-whiteo30 flex-none left-[-17%%] overflow-visible absolute top-[-84%] w-[111px] z-0 rounded-full transform;
+          @apply absolute top-[-84%] left-[-17%%] z-0 w-[111px] flex-none transform overflow-visible rounded-full bg-whiteo30;
           aspect-ratio: 1/1;
           height: var(--aspect-retro, 111px);
         }
-        
 
-        ._text{
-          @apply justify-start flex-none h-auto relative whitespace-pre w-auto; 
+        ._text {
+          @apply relative h-auto w-auto flex-none justify-start whitespace-pre;
 
-          p{
+          p {
             @apply text-white;
           }
         }
       }
 
-      ._link.active{
+      ._link.active {
         @apply rounded-full bg-whiteo10;
 
-        p{
+        p {
           @apply text-lightTone;
         }
       }
     }
-    ._linkContainer:hover{
 
-      ._link{
+    ._linkContainer:hover {
+      ._link {
         @apply scale-90 transition-transform duration-500 ease-in-out;
       }
     }
   }
-  
+
   .__hamburger {
     @apply flex h-[44px] w-[44px] flex-col items-center justify-center gap-2.5 rounded-[10px] bg-whiteo10 lg:hidden;
 
