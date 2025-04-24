@@ -32,7 +32,7 @@
     }
 
     ._content {
-      @apply relative z-[1] h-auto lg:max-w-[740px] md:max-w-[490px] sm:max-w-none flex-[1_0_0px] shrink-0 justify-start;
+      @apply relative z-[1] h-auto flex-[1_0_0px] shrink-0 justify-start sm:max-w-none md:max-w-[490px] lg:max-w-[740px];
       text-shadow: 0px 1px 100px #000000;
 
       p {
@@ -84,21 +84,28 @@
       }
     }
 
-    .TagAndHeading{
-      .section_name{
+    .TagAndHeading {
+      .section_name {
         @apply max-w-[500px];
       }
     }
   }
 
   .value {
-    @apply px-5 py-[100px] md:px-10 md:py-[200px];
+    @apply relative z-[1] flex h-min w-full flex-[0_0_auto] flex-col items-center overflow-hidden sm:gap-[50px] sm:px-[20px] sm:py-[100px] md:gap-[20px] md:px-[40px] md:pt-[200px] md:pb-[100px];
 
-    .__wrapper {
-      @apply mx-auto flex w-full max-w-[1440px] items-center justify-center;
+    ._container {
+      @apply absolute md:top-1/2 sm:top-0 left-1/2 -translate-x-1/2 md:-translate-y-1/2 sm:-translate-y-0 flex h-auto w-full flex-[0_0_auto] shrink-0 justify-start whitespace-pre outline-none overflow-visible;
+      flex-direction: column;
 
-      .__text {
-        @apply flex w-full items-center justify-center text-center font-Unbounded text-[20vw] leading-[1.2] font-normal text-white uppercase;
+      ._textContent {
+        @apply h-full w-full overflow-visible;
+        transform: scale(1, 1);
+        transform-origin: center center;
+        --aspsect-retro: auto;
+        .__text {
+          @apply text-center font-Unbounded text-[20vw] leading-[1.2] font-normal whitespace-pre text-white uppercase;
+        }
       }
     }
   }
