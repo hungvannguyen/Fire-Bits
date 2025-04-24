@@ -18,8 +18,8 @@ import TextBlock from "../components/TextBlock.jsx";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { animateOnScroll } from "../components/animateOnScroll.jsx";
+
 export default function Seo() {
- 
   const items = [
     <div className="flex h-[56px] w-[186px] shrink-0 items-center justify-center rounded-[20px] bg-whiteo10 px-7 py-[14px]">
       <img
@@ -205,14 +205,14 @@ export default function Seo() {
   const Section3Ref = useRef(null);
   const Section4Ref = useRef(null);
   useEffect(() => {
-    const ctx = gsap.context(() =>{
-      gsap.from(headingPageRef.current.querySelectorAll(".__content"),{
+    const ctx = gsap.context(() => {
+      gsap.from(headingPageRef.current.querySelectorAll(".__content"), {
         y: -100,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
       });
-      gsap.from(headingPageRef.current.querySelectorAll(".__image"),{
+      gsap.from(headingPageRef.current.querySelectorAll(".__image"), {
         y: 100,
         opacity: 0,
         duration: 1,
@@ -223,7 +223,6 @@ export default function Seo() {
       animateOnScroll(Section2Ref.current);
       animateOnScroll(Section3Ref.current);
       animateOnScroll(Section4Ref.current);
-
     });
     return () => ctx.revert();
   }, []);
@@ -231,11 +230,11 @@ export default function Seo() {
     <div className="detail">
       <div className="__headingPage" ref={headingPageRef}>
         <div className="__content">
-        <HeadingPageWithButton
-          title="Service Details"
-          content="At Firebits, we provide cutting-edge digital solutions tailored to your business needs. From outsourcing and SaaS to SEO, e-commerce, and AI-driven strategies, we empower companies to scale, optimize, and innovate in a fast-changing digital landscape."
-          buttonText="Get Started"
-        />
+          <HeadingPageWithButton
+            title="Service Details"
+            content="At Firebits, we provide cutting-edge digital solutions tailored to your business needs. From outsourcing and SaaS to SEO, e-commerce, and AI-driven strategies, we empower companies to scale, optimize, and innovate in a fast-changing digital landscape."
+            buttonText="Get Started"
+          />
         </div>
 
         <div className="__image">
@@ -460,7 +459,7 @@ export default function Seo() {
             className="only_center"
           />
 
-          <div>
+          <div className="__footer">
             <Step
               lightBar={true}
               title="Discovery & Consultation"

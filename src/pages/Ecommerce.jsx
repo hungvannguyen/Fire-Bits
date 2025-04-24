@@ -206,14 +206,14 @@ export default function Ecommerce() {
   const Section3Ref = useRef(null);
   const Section4Ref = useRef(null);
   useEffect(() => {
-    const ctx = gsap.context(() =>{
-      gsap.from(headingPageRef.current.querySelectorAll(".__content"),{
+    const ctx = gsap.context(() => {
+      gsap.from(headingPageRef.current.querySelectorAll(".__content"), {
         y: -100,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
       });
-      gsap.from(headingPageRef.current.querySelectorAll(".__image"),{
+      gsap.from(headingPageRef.current.querySelectorAll(".__image"), {
         y: 100,
         opacity: 0,
         duration: 1,
@@ -224,19 +224,18 @@ export default function Ecommerce() {
       animateOnScroll(Section2Ref.current);
       animateOnScroll(Section3Ref.current);
       animateOnScroll(Section4Ref.current);
-
     });
     return () => ctx.revert();
   }, []);
   return (
     <div className="detail">
       <div className="__headingPage" ref={headingPageRef}>
-      <div className="__content">
-        <HeadingPageWithButton
-          title="Service Details"
-          content="At Firebits, we provide cutting-edge digital solutions tailored to your business needs. From outsourcing and SaaS to SEO, e-commerce, and AI-driven strategies, we empower companies to scale, optimize, and innovate in a fast-changing digital landscape."
-          buttonText="Get Started"
-        />
+        <div className="__content">
+          <HeadingPageWithButton
+            title="Service Details"
+            content="At Firebits, we provide cutting-edge digital solutions tailored to your business needs. From outsourcing and SaaS to SEO, e-commerce, and AI-driven strategies, we empower companies to scale, optimize, and innovate in a fast-changing digital landscape."
+            buttonText="Get Started"
+          />
         </div>
 
         <div className="__image">
@@ -467,7 +466,7 @@ export default function Ecommerce() {
             className="only_center"
           />
 
-          <div>
+          <div className="__footer">
             <Step
               lightBar={true}
               title="Discovery & Consultation"
@@ -514,7 +513,6 @@ export default function Ecommerce() {
           </div>
         </div>
       </div>
-
 
       <div className="questions">
         <div className="__wrapper">
