@@ -1,28 +1,28 @@
 .CardBgBlur {
-    @apply relative h-auto md:flex-1 sm:flex-none sm:w-full;
+  @apply relative h-auto sm:w-full sm:flex-none md:flex-1;
 
-    .-itemBox {
-      @apply relative flex h-min w-full flex-col items-center justify-center gap-[25px] overflow-hidden rounded-[20px] border border-whiteo10 bg-whiteo5 p-[20px];
-      backdrop-filter: blur(10px);
+  .-itemBox {
+    @apply relative flex h-min w-full flex-col items-center justify-center gap-[25px] overflow-hidden rounded-[20px] border border-whiteo5 bg-blacko10 p-[20px];
+    backdrop-filter: blur(10px);
 
-      .-icon {
-        @apply relative flex h-[42px] w-[42px] items-center justify-center gap-[10px] overflow-visible rounded-[20px] border border-lightTone bg-whiteo5 p-[30px];
+    .-icon {
+      @apply relative flex h-[42px] w-[42px] items-center justify-center gap-[10px] overflow-visible rounded-[20px] border border-lightTone bg-whiteo5 p-[30px];
+    }
+
+    .-text {
+      @apply relative flex h-min w-full flex-col items-center justify-center gap-[6px] overflow-visible p-0;
+
+      ._heading {
+        @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
+        word-break: break-word;
+        word-wrap: break-word;
       }
 
-      .-text {
-        @apply relative flex h-min w-full flex-col items-center justify-center gap-[6px] overflow-visible p-0;
-
-        ._heading {
-          @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
-          word-break: break-word;
-          word-wrap: break-word;
-        }
-
-        ._subText {
-          @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
-          word-break: break-word;
-          word-wrap: break-word;
-        }
+      ._subText {
+        @apply relative flex h-auto w-full shrink-0 flex-col justify-start whitespace-pre-wrap outline-none;
+        word-break: break-word;
+        word-wrap: break-word;
       }
     }
   }
+}

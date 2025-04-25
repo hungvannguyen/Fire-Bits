@@ -382,24 +382,25 @@ export default function About() {
         </div>
       </div>
 
-<div className="value">
-  <svg
-    className="_container"
-    width="100%"
-    height="100%"
-  >
-    <foreignObject x="0" y="0" width="100%" height="100%" className="_textContent">
-      <div
-        xmlns="http://www.w3.org/1999/xhtml"
-        className="_textContent flex items-center justify-center w-full h-full"
-      >
-        <p className="__text">Values</p>
+      <div className="value">
+        <svg className="_container" width="100%" height="100%">
+          <foreignObject
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            className="_textContent"
+          >
+            <div
+              xmlns="http://www.w3.org/1999/xhtml"
+              className="_textContent flex h-full w-full items-center justify-center"
+            >
+              <p className="__text">Values</p>
+            </div>
+          </foreignObject>
+        </svg>
+        <CircleTag />
       </div>
-    </foreignObject>
-  </svg>
-  <CircleTag />
-</div>
-
 
       <div className="process">
         <div className="__wrapper">
@@ -409,7 +410,7 @@ export default function About() {
             className="only_center"
           />
 
-          <div>
+          <div className="__footer">
             <Step
               lightBar={true}
               title="Discovery & Consultation"
