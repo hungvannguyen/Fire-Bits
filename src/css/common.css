@@ -1,42 +1,43 @@
-.background{
-    @apply flex gap-[10px] h-screen items-center justify-center overflow-hidden fixed top-0 left-0 w-full z-0;
+.background {
+  @apply flex gap-[10px] h-screen items-center justify-center overflow-hidden fixed top-0 left-0 w-full z-0;
 
-    .overlay{
-        transform: perspective(1200px);
-        background: radial-gradient(43.2% 25% at 50% 18.8%,rgba(84,84,84,0) 0%,var(--color-darkTone, rgb(10, 10, 10)) 100%);
-        @apply h-full w-full overflow-hidden absolute z-[1];
-        top: calc(50.00000000000002% - 100% / 2);
-        left: calc(50.00000000000002% - 100% / 2);
-    }
-    .bg-pattern{
-        @apply w-full h-full bg-darkTone relative;
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40c5.523 0 10-4.477 10-10V0C4.477 0 0 4.477 0 10v30zm22 0c-5.523 0-10-4.477-10-10V0c5.523 0 10 4.477 10 10v30z' fill='%23171717' fill-rule='evenodd'/%3E%3C/svg%3E");
-        background-size: 129.6px 216px;
-        border-radius: 0px;
-    }
+  .overlay {
+    transform: perspective(1200px);
+    background: radial-gradient(43.2% 25% at 50% 18.8%, rgba(84, 84, 84, 0) 0%, var(--color-darkTone, rgb(10, 10, 10)) 100%);
+    @apply h-full w-full overflow-hidden absolute z-[1];
+    top: calc(50.00000000000002% - 100% / 2);
+    left: calc(50.00000000000002% - 100% / 2);
+  }
+
+  .bg-pattern {
+    @apply w-full h-full bg-darkTone relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40c5.523 0 10-4.477 10-10V0C4.477 0 0 4.477 0 10v30zm22 0c-5.523 0-10-4.477-10-10V0c5.523 0 10 4.477 10 10v30z' fill='%23171717' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: 129.6px 216px;
+    border-radius: 0px;
+  }
 }
 
 
-.my_container{
-    @apply max-w-[1440px] mx-auto px-[40px] sm:px-[20px];
+.my_container {
+  @apply max-w-[1440px] mx-auto px-[40px] sm:px-[20px];
 }
 
-.my_wrapper{
-    @apply md:px-[40px] md:pt-[150px] md:pb-[100px] sm:px-[12px] sm:py-[50px];
+.my_wrapper {
+  @apply md:px-[40px] md:pt-[150px] md:pb-[100px] sm:px-[12px] sm:py-[50px];
 }
 
-.main{
-    @apply relative z-[1] w-full overflow-hidden h-fit; 
+.main {
+  @apply relative z-[1] w-full overflow-visible h-fit;
 }
 
-.flex-none-nowrap{
-    @apply flex flex-none flex-nowrap;
+.flex-none-nowrap {
+  @apply flex flex-none flex-nowrap;
 }
 
-.richTextContainer{
-    @apply outline-none flex flex-col shrink-0 whitespace-pre-wrap w-full;
-    word-break: break-word;
-    word-wrap: break-word;
+.richTextContainer {
+  @apply outline-none flex flex-col shrink-0 whitespace-pre-wrap w-full;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 /* .main{
