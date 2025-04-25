@@ -33,7 +33,7 @@ export default function Review({
       </div>
 
       <div className="__content">
-        <p className="paragraphS">{content}</p>
+        <p className="paragraphS text-white/80">{content}</p>
       </div>
 
       <div className="__footer">
@@ -45,7 +45,7 @@ export default function Review({
 
         <div className="__bio">
           <h5 className="__name">{name}</h5>
-          <p className="__role">{role}</p>
+          <p className="label">{role}</p>
         </div>
       </div>
     </div>
